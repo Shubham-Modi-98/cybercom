@@ -1,0 +1,18 @@
+Work Report on Git [06/01/2021]
+
+• Today, I watch the some git tutorials on youtube also see the difference between git and github. how to drag and drop folder on GitHub.
+• Also learn that git is a version control system which is very usedful to programmers and it is used to co-ordinate with differenet developers.
+• Git is a open-source platform and where we can 
+See the difference between git and Github and get to know that git is a version control system which is developed to co -ordinate with the other programmer.
+• Learn new things about SSH Key,In this i learnt there are two keys generate 
+	1) id_rsa : this is the private key.
+	2) id_rsa.pub : This is the public key
+• Whenever we want to share a key always share a public key not a private key.
+• > file_name.txt :- It will create text file in your current working directory.
+• pwd :- It show full current path or root to current directory.
+• git pull :- This command will fetch and merge the changes from the server to our local machine.
+• git revert :- This command will revert the excute by providing the commit id with it. This command also learn the use of HEAD prefix which is used with it.
+• git rm demo.txt :- This command remove the file name demo from your git repo.
+• Also see read some terminology and useage of commands on Google.
+
+• Apart from that I solved some queries of my friend and colleagues which is related to git.
