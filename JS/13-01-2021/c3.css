@@ -1,0 +1,22 @@
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    text-align: center;
+    color: goldenrod;
+}
+
+h3 {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+    color: darkmagenta;
+}
+
+.container {
+    padding-top: 10px;
+    font-style: inherit;
+    font-stretch: wider;
+    font-weight: 500;
+}
