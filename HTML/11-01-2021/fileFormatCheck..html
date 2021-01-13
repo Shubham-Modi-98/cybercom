@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>PDF file</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="container">
+        <h1 style="text-align: center;">Check File Format</h1>
+      </div>
+      <div class="form-group">
+          <form action="#" method="POST">
+              <div class="control-group" style="padding: 15px;"> 
+                  <!-- <label for="file" class="contrl-label" id="lblfile">Select File</label><br/> -->
+                  <input type="file" id="filePDF" name="filePDF" multiple size="100" accept="application/pdf" onchange="selectPDF()"/>
+                  <br/><br/>
+                  <span id="msg"></span>
+              </div>
+          </form>
+      </div>
+
+    <script>
+        function selectPDF() {
+            var fileName = document.getElementById("filePDF");
+            for(var i=0; i< fileName.files.length; i++) {
+                var x = fileName.files[i];
+                if(x.type == 'application/pdf') {
+                    document.getElementById("msg").style.color = "green";
+                    document.getElementById("msg").innerHTML = x.name + " File format is PDF";
+                }
+                else {
+                    document.getElementById("msg").style.color = "red";
+                    document.getElementById("msg").innerHTML = x.name + " File format must be PDF";
+                }
+            }
+        }
+    </script>
+    
+    <!-- jQuery Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
