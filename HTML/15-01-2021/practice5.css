@@ -1,0 +1,101 @@
+table {
+    width: 50%;
+    margin-right: auto;
+    border-style: double;
+    border-color: black;
+    text-align: center;
+}
+
+td {
+    border: double;
+    border-style: double;
+    text-align: left;
+    /* vertical-align: baseline; */
+    padding: 10px;
+}
+
+thead {
+    background-color: mediumspringgreen;
+}
+
+b {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: large;
+    text-align: left;
+}
+
+li {
+   padding-left: 2em;
+}
+
+ul {
+    padding-left: 1em;
+}
+
+footer {
+    font-weight: bold;
+    font-size: large;
+    text-align: center;
+}
+
+sup {
+    font-weight: bolder;
+    font-size: 500px;
+}
+
+.csH1 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: royalblue;
+}
+
+.stH1 {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tdFirst {
+    vertical-align: baseline;
+    font-weight: bolder;
+    font-size: smaller;
+    background-color: powderblue;
+}
+
+.tdSecond {
+    vertical-align: baseline;
+    font-weight: bold;
+    font-size: 12px;
+    background-color: whitesmoke;
+}
+
+.tdThird {
+    vertical-align: baseline;
+    font-weight: bold;
+    font-size: smaller;
+    background-color: lightpink;
+}
+
+.tdFourth {
+    vertical-align: baseline;
+    font-weight: bolder;
+    font-size: smaller;
+    background-color: #fcf4a4;
+}
+
+.tdThirdEx {
+    font-weight: bold;
+    font-size: smaller;
+    vertical-align: text-top;
+    color: purple;
+    border-color: black;
+    background-color: lightpink;
+}
+
