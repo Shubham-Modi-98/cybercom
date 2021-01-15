@@ -1,0 +1,15 @@
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 15px;
+    text-align: center;
+    color: goldenrod;
+}
+
+.h1Tag {
+    padding-left: 30px;
+    padding-top: 10px;
+    font-style: inherit;
+    font-stretch: wider;
+    font-weight: 500;
+}
