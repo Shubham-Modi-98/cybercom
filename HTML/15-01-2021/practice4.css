@@ -1,0 +1,36 @@
+.csH1 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    color: royalblue;
+}
+
+.stH1 {
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    width: auto;
+    border-style: double;
+    border-color: black;
+    text-align: center;
+}
+
+td {
+    border: double;
+    border-style: double;
+    text-align: left;
+    padding: 10px;
+}
+
+b {
+    font-size: large;
+}
+
+img {
+    width: 120px;
+    height: 120px;
+}
