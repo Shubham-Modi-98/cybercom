@@ -1,0 +1,72 @@
+Work Report on HTML and JavaScript [18/01/2021]
+
+• Today, I watched the videos on Javascript on Google Drive link.
+• Today, I learn the more detailed on Prototype chaining, and function chaining
+• Object chaining, In that one object function is used by another object function like inheritance
+
+	var shubh = {
+	    name: 'Shubham Modi',
+	    doy: 1998,
+	    age: function() {
+	        var curYear = new Date().getFullYear();
+	        var curAge = curYear - this.doy;
+	        document.writeln(`${this.name} age is ${curAge}.`);
+	        console.log(`${this.name} age is ${curAge}.`);
+	    }
+	}
+
+	//Diff object used diff object funcion
+	var teenu = {
+	    name: 'Teenu Modi',
+	    doy: 1969
+	};
+
+	shubh.age();
+	teenu.age = shubh.age;
+	teenu.age();
+
+• Also, learn diference for loop and for in loop and also implement Practically.
+• Learn, more detailed on object and it's property
+	var a = {x:'ABC'};
+	for(var i=0; i<5; i++)
+	{
+	    console.log(a.x);
+	    console.log(a);
+	}
+	for (X in a) {
+	    document.writeln(a.x);
+	    document.writeln(X.a);
+	    document.writeln(X);    
+	    console.log(a.x);
+	    console.log(X.a);
+	    console.log(X);
+	}
+
+• Learn the difference between feature of Array in ES5 and ES6.
+• Watched and Search some topics which contains basic HTML and JS:
+	FieldSet and Legend and Used in Form
+
+• Also learn how to create registration form Fieldset, Dropdown and Redirect on another page.
+• Then completed HTML Practices given by Pritee Mam.
+• Attend the meeting taken by Pritee mam and ask some doubt and solved doubts and give answer of their questions.
+
+• Prototype chaninig snippet
+	// Function Prototype Chaining
+	var Person = function(name,doy) {
+	    this.name = name;
+	    this.doy = doy;
+	}
+	Person.prototype.calcAge = 
+	function() {
+	    var curYear = new Date().getFullYear();
+	    var curAge = curYear - this.doy;
+	    document.writeln(`${this.name} age is ${curAge}.`);
+	    console.log(`${this.name} age is ${curAge}.`);
+	}
+	virat = {
+	    name: 'Virat Kohli',
+	    doy: 1988
+	};
+	var vk = new Person(virat.name,virat.doy);
+	vk.calcAge();
+	var chris = new Person('Chris Hemsworth',1983).calcAge();
