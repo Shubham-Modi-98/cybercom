@@ -1,0 +1,14 @@
+Work Report on HTML and JavaScript [15/01/2021]
+
+• Today, I watched the videos on Javascript on Google Drive link.
+• Today, I learn the object in JS.
+	Primitive 
+	Non Primitive
+
+• Also, learn diference between object and object.create().
+• Watched and Search some topics which contains basic HTML and JS:
+	JavaScript Events
+	Tables related topics
+• Then completed HTML Practices and JS Coding Challenges given by Pritee Mam.
+• Also see the inheritance concept and prototype concept.
+• At, last attend the meeting and mam solved diff queries.

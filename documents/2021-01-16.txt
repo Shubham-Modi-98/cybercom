@@ -1,0 +1,17 @@
+Work Report on HTML and JavaScript [16/01/2021]
+
+• Today, I watched the videos on Javascript on Google Drive link.
+• Today, I learn the object-oriented concept in JS.
+	Class and Object
+	Function Retring
+	Bind, call and Apply
+
+• Also, learn diference between var,let and const
+• Learn the features of ES6 above ES5
+• Strings in ES6.
+• Watched and Search some topics which contains basic HTML and JS:
+	JavaScript Events
+	Registration Form
+• Also learn how to create registration form with favicon icons.
+• Then completed HTML Practices given by Pritee Mam.
+• Also see the the more object oriented concepts.
