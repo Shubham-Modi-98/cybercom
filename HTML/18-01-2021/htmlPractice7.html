@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>HTML Practice 7</title>
+    <!-- external css link added -->
+    <link href="practice7.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <h3>HTML Practice 6</h3>
+    <h1>Registration Form...</h1>
+    <hr/>
+    <form class="formRegi" method="post" action="success.html" >
+        <fieldset>
+            <legend><b>Your Address</b></legend>
+            <table>
+                <tr  class="tRow">
+                    <td class="tCol1">First Name</td>
+                    <td><input type="text" name="txtFirstName"/></td>
+                </tr>
+                <tr class="tRow">
+                    <td class="tCol1">Last Name</td>
+                    <td><input type="text" name="txtLastName"/></td>
+                </tr>
+                <tr class="tRow">
+                    <td class="tCol1">Street</td>
+                    <td><input type="text" name="txtStreet"/></td>
+                </tr>
+                <tr class="tRow">
+                    <td class="tCol1">City</td>
+                    <td><input type="text" name="txtCity"/></td>
+                </tr>
+            </table>
+        </fieldset>
+        <br/>
+    
+        <fieldset>
+            <legend><b>Additional Details</b></legend>
+            <table>
+                <tr class="tRow">
+                    <td class="tCol2">Biography</td>
+                    <td><textarea  name="txtAreaBiography"></textarea></td>
+                </tr>
+                <tr class="tRow">
+                    <td class="tCol2">Image</td>
+                    <td><input type="file" name="fileImage"/></td>
+                </tr>
+                <tr class="tRow">
+                    <td class="tCol2">Age Group</td>
+                    <td><input type="number" id="txtAgeGroup" placeholder="0 to 9 Years" name="age" min="1" max="9" /></td>
+                </tr>
+        </table>
+        </fieldset>
+        <br/>
+        
+        <fieldset>
+            <legend><b>Interests</b></legend>
+            <table>
+                <tr class="tRow">
+                  <td valign="top" class="tCol3">Hobbies</td>
+                  <td>
+                      <select name="drpHobbies" id="drpHobbies" multiple="multiple">
+                          <option value="Playing Soccer">Playing Soccer</option>
+                          <option value="Dancing">Dancing</option>
+                          <option value="Gardening">Gardening</option>
+                          <option value="Watching Movies">Watching Movies</option>
+                      </select>
+                  </td>
+              </tr>
+              <tr class="tRow">
+                  <td class="tCol3">Favourite Car?</td>
+                  <td>
+                      <select name="drpFavouriteCar" id="drpFavouriteCar">
+                          <option value="Volvo">Volvo</option>
+                          <option value="Morris Garages">Morris Garages</option>
+                          <option value="Tesla">Tesla</option>
+                          <option value="BMW">BMW</option>
+                      </select> 
+                  </td>
+              </tr>
+              <tr class="tRow">
+                  <td class="tCol3">Favourite Public Transport?</td>
+                  <td>
+                      <select name="drptransport" id="drptransport">
+                          <optgroup label="Ground">
+                            <option value="Train">Train</option>
+                            <option value="Bus">Bus</option>
+                          </optgroup>
+                          <optgroup label="Water">
+                          </optgroup>
+                        </select>
+                  </td>
+              </tr>
+        </table>
+        </fieldset>
+        <br/>
+        
+        <fieldset>
+            <!-- <legend><b>Buttons</b></legend> -->
+            <input type="submit" class="btn" name="btnSubmit" value="Submit" />
+            <input type="reset" class="btn2" name="btnReset" value="Reset"/> <br/>
+        </fieldset>
+        </form>
+    </body>
+</html>
