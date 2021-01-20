@@ -13,29 +13,34 @@ function validateForm()
         document.getElementById("msgMonth").innerHTML = "Select month first";
         document.getElementById("drpMonth").focus();
         console.log("Select month first");
+        return false;
     }
 
-    if(day == "Day") {
+    else if(day == "Day") {
         document.getElementById("msgDay").innerHTML = "Select day first";
         document.getElementById("drpDay").focus();
+        return false;
     }
 
-    if(year == "Year") {
+    else if(year == "Year") {
         document.getElementById("msgYear").innerHTML = "Select year first";
         document.getElementById("drpYear").focus();
+        return false;
     }    
-
-    function checkEmail() {
-        if(email != reemail) {
+    
+    else if(email != reemail) {
             document.getElementById("msgReEmail").innerHTML = "Email and Re-type Email must be same";
             document.getElementById("txtReTypeEmail").focus();
-        }
+            return false;
     }
-    
-    function checPassword() {
-        if(password != repassword) {
+
+    else if(password != repassword) {
             document.getElementById("msgRePassword").innerHTML = "Password and Re-type Password must be same";
             document.getElementById("txtReTypePassword").focus();
-        }
+            return false;
+    }
+
+    else {
+        return true;
     }
 }
