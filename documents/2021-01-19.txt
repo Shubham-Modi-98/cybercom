@@ -1,0 +1,18 @@
+Work Report on HTML and JavaScript [19/01/2021]
+
+• Today, I watched the videos on Javascript on Google Drive link.
+• Today, I learn the more Detailed in HTML5 elements
+	fieldset tag
+	legend tag
+	detailed on css
+	small tag
+• And also learn properties of HTML5 elements.
+• Also learn JS Precedence :- This determines the way in which operators are given priority amongst each other. An operator with higher precedence is evaluated before an operator of lower precedence.
+
+• Map Method : This method creates a new array with the results of calling a function for every array element and 
+		calls the provided function once for each element in an array, in order.
+• Arrow Function: This introduced in ES6. By using this we can shorter the syntax
+• difference in Array in ES5 and ES6.
+
+• Also learn create registration form with gives validations and transfer data to another php page.
+• Then completed HTML Practices given by Pritee Mam.
