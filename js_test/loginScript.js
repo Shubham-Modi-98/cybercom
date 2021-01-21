@@ -1,3 +1,4 @@
+sessionStorage.removeItem("loginData");
 function checkLogin() 
 {
     var email = document.getElementById("txtEmail").value;
