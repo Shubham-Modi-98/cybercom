@@ -2,3 +2,21 @@
     padding-top: 30px;
     padding-left: 30px;
 }
+
+#card1 {
+    background-color: lightsalmon;
+}
+
+#card2 {
+    background-color: lightblue;
+}
+
+#card3 {
+    background-color: lightpink;
+}
+
+.container {
+    padding-top: 40px;
+    margin: auto;
+    text-align: center;
+}

@@ -17,7 +17,7 @@
     </div>
     <div class="card">
         <div class="card-body">
-            <form action="" method="post" onsubmit="checkLogin()">
+            <form method="post" >
                 <div class="row form-group">
                     <div class="col-sm-12">
                         <input type="email" class="form-control" id="txtEmail" placeholder="Email" required>
@@ -32,7 +32,7 @@
                 </div>
                 <div class="row form-group">
                     <div class="col-sm-12">
-                        <button type="submit" class="form-cotrol" id="btnLogin">Login</button>
+                        <button type="button" class="form-cotrol" id="btnLogin" onclick="return checkLogin()">Login</button>
                     </div>
                 </div>
                 <p class="pText">OR</p> 

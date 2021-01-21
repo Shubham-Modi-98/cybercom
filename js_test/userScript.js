@@ -9,7 +9,7 @@ for(var i=0; i<localStorage.length; i++) {
     var pas = JSON.parse(user).password;
     var d = JSON.parse(user).dob;
     var date = new Date(d)
-    age = new Date().getFullYear() - date.getFullYear();
+    var age = JSON.parse(user).age;
     if(k == 'adminData') {
         continue;
     }
@@ -69,7 +69,9 @@ function addUser()
             key = localStorage.key(i);
         }
         console.log(i);
-        userData = {'name':name, 'email':email, 'password':pass, 'dob':dob};
+        var age = new Date().getFullYear() - dob.getFullYear();
+        console.log(age)
+        userData = {'name':name, 'email':email, 'password':pass, 'dob':dob, 'age':age};
         localStorage.setItem(i, JSON.stringify(userData));
         return true;
         // for(var i=0; i<localStorage.length; i++) {
