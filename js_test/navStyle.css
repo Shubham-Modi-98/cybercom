@@ -1,0 +1,28 @@
+.sidenav {
+    height: 100%; 
+    width: 180px; 
+    position: fixed;
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: darkorange;
+    overflow-x: hidden;
+    padding-top: 0px;
+  }
+  
+  .sidenav a, .bname {
+    padding: 8px 8px 16px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+  }
+
+  .sidenav a:hover {
+    color: violet;
+  }
+
+  .main {
+    margin-left: 200px;
+    padding: 30px 20px;
+  }

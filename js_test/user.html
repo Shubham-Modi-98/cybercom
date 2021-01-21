@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>User</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- navigation sidebar stylesheet added -->
+    <link rel="stylesheet" href="navStyle.css">
+    <!-- user page stylesheet -->
+    <link rel="stylesheet" href="userStyle.css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="sidenav">
+        <b class="bname">Hello, [name]</b> <br/><br/>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="user.html">Users</a>
+        <a href="#">Login Session</a>
+        <a href="#">Logout</a>
+    </div>
+    <div class="main">
+        <h3 class="h3style">Add User</h3>
+        <form method="POST" onsubmit="return addUser()">
+            <div class="row form-group">
+                <div class="col-sm-3">
+                    <input type="text" class="form-control" id="txtName" placeholder="Name" >
+                </div>
+                <div class="col-sm-3">
+                    <input type="email" class="form-control" id="txtEmail" placeholder="Email" >
+                </div>
+                <div class="col-sm-3">
+                    <input type="password" class="form-control" id="txtPassword" placeholder="Password" >
+                </div>
+                <div class="col-sm-3">
+                    <input type="date" class="form-control" id="txtDob" placeholder="Birthdate" >
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col-sm-12">
+                    <button type="submit" class="form-cotrol" id="btnAddUser">Add User</button>
+                </div>
+            </div>
+        </form>
+        <h3 style="padding-top: 20px;">User List</h3>
+        <div class="tableContiner">
+            <table border="1">
+                <thead>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Birthdate</th>
+                    <th>Age</th>
+                    <th>Action</th>
+                </thead>
+                <tr>
+                    <td id="tdName"></td>
+                    <td id="tdEmail"></td>
+                    <td id="tdPass"></td>
+                    <td id="tdDob"></td>
+                    <td id="tdAge"></td>
+                    <td id="tdAction"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!-- Add user JavaScript -->
+    <script src="userScript.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,11 +1,12 @@
 if(localStorage.getItem('adminData') != null) {
     alert("Admin is already Created!");
     document.getElementById("btnRegi").disabled = true;
+    document.getElementById("btnRegi").style.visibility = 'hidden';
 }
-console.log('call');
+// console.log('call');
 function storedAdmin() 
 {
-    console.log('function');
+    // console.log('function');
     var name = document.getElementById("txtName").value;
     console.log(name);
     var email = document.getElementById("txtEmail").value;
