@@ -17,7 +17,7 @@
     </div>
     <div class="card">
         <div class="card-body">
-            <form action="#" method="post">
+            <form action="#" method="post" onsubmit="">
                 <div class="row form-group">
                     <div class="col-sm-12">
                         <input type="email" class="form-control" id="txtEmail" placeholder="Email" required>
@@ -32,19 +32,20 @@
                 </div>
                 <div class="row form-group">
                     <div class="col-sm-12">
-                        <button style="width: 100%;" type="submit" class="form-cotrol" id="btnLogin">Login</button>
+                        <button type="submit" class="form-cotrol" id="btnLogin">Login</button>
                     </div>
                 </div>
                 <p class="pText">OR</p> 
                 <div class="row form-group">
                     <div class="col-sm-12">
-                        <button style="width: 100%;" type="submit" class="form-cotrol" id="btnRegister">Register Now</button>
+                        <button type="submit" class="form-cotrol" id="btnRegister"><a id="aLink" href="registration.html">Register Now</a></button>
                     </div>
                 </div>
             </form>
         </div>
     </div>
-    <!-- Optional JavaScript -->
+    <!-- externl created JavaScript -->
+    <script src="loginScript.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
