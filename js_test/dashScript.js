@@ -1,6 +1,13 @@
 var count = 0;
 var count18 = 0;
 var count50 = 0;
+var birthday = false;
+var curDay = new Date().getDate();
+var curMonth = new Date().getMonth();
+
+console.log(curDay);
+console.log(curMonth);
+
 for(var i=0; i<localStorage.length; i++) {
     var k = localStorage.key(i);
     var user = localStorage.getItem(k);
@@ -9,13 +16,9 @@ for(var i=0; i<localStorage.length; i++) {
     var x = new Date(dob);
     var day = x.getDate();
     var month = x.getMonth();
-    var curDay = new Date().getDate();
-    var curMonth = new Date().getMonth();
     
     console.log(day);
     console.log(month);
-    console.log(curDay);
-    console.log(curMonth);
     
     var age = JSON.parse(user).age;
     if(k == 'adminData') {
@@ -32,9 +35,13 @@ for(var i=0; i<localStorage.length; i++) {
             count50 =  (parseInt(count50) + 1);
         }
         if(day == curDay && month == curMonth) {
-            document.getElementById("birthdayText").innerHTML = "Today's is " + name + "'s Birthday<br/>";
+            birthday = true;
+            document.getElementById("birthdayText").innerHTML += "Today's is '" + name + "' Birthday!<br/>";
         }
     }
+}
+if(!birthday) {
+    document.getElementById("birthdayText").innerHTML = "No birthday Today!!!<br/>";
 }
 document.getElementById("countAge").innerHTML = count + ' Users';
 document.getElementById("countAge18").innerHTML = count18 + ' Users';

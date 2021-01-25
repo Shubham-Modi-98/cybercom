@@ -1,12 +1,4 @@
-// var keyArray = new Array();
-// var userData = new Array();
-// for(var i=0; i<localStorage.length; i++) {
-//     // keyArray.push(localStorage.key(i));
-//     userData.push(localStorage.getItem(localStorage.key(i)));
-// }
-// console.log(userData);
- 
-var userTableData = `<table class="table table-bordered table-light" id="tableData">
+var allUserData = `<table class="table table-bordered table-light" id="tableData">
               <thead>
                 <tr>
                   <th scope="col">Name</th>
@@ -14,7 +6,7 @@ var userTableData = `<table class="table table-bordered table-light" id="tableDa
                   <th scope="col">Password</th>
                   <th scope="col">Birthdate</th>
                   <th scope="col">Age</th>
-                  <th scope="col">Actions</th>
+                  <th scope="col" colspan="2">Actions</th>
                 </tr>
               </thead>
               <tbody>`
@@ -32,54 +24,47 @@ var userTableData = `<table class="table table-bordered table-light" id="tableDa
                     continue;
                 }
                 else {
-                 userTableData+= `<tr>
+                    allUserData += `<tr>
                                 <th scope="row">${nm}</th>
                                 <td>${em}</td>
                                 <td>${pas}</td>
                                 <td>${date}</td>
                                 <td>${age}</td>
-                                
                                 <td>
-                                <a href=''>Edit</a> /<button type="button" onclick="deleteData('${em}')" class="btn btn-link"> Delete </button>
+                                <button type="button" onclick="editData('${nm}','${em}','${pas}','${date}')" class="btn btn-link"> Edit </button>
                                 </td>
-                                
+                                <td>
+                                <button type="button" onclick="deleteData('${em}')" class="btn btn-link"> Delete </button>
+                                </td>
                             </tr>`   
                }
             }
-userTableData += `</tbody></table>`;
-document.getElementById('resultUser').innerHTML += userTableData ;
+    allUserData += `</tbody></table>`;
+    document.getElementById('allUser').innerHTML += allUserData ;
 
 function deleteData(key)
 {
     alert(key + ' User Deleted');
     localStorage.removeItem(key);
 }
-// for(var i=0; i<localStorage.length; i++) {
-//     var k = localStorage.key(i);
-//     console.log(localStorage.key(i));
-//     console.log(localStorage.getItem(k));
-//     var user = localStorage.getItem(k);
-//     console.log(JSON.parse(user).name);
-//     var nm = JSON.parse(user).name;
-//     var em = JSON.parse(user).email;
-//     var pas = JSON.parse(user).password;
-//     var d = JSON.parse(user).dob;
-//     var date = new Date(d)
-//     var age = JSON.parse(user).age;
-//     if(k == 'adminData') {
-//         continue;
-//     }
-//     else {
-        
+
+function editData(nm,em,pas,date) 
+{
+    document.getElementById("txtName").value = nm;
+    document.getElementById("txtName").focus();
+    document.getElementById("txtEmail").value = em;
+    document.getElementById("txtEmail").disabled = true;
+    document.getElementById("txtPassword").value = pas;
+    document.getElementById("txtDob").value = new Date(date).toISOString().substring(0,10);
+}
+
+
 //         document.getElementById("tdName").innerHTML += nm+ '<br/></td><td>';
 //         document.getElementById("tdEmail").innerHTML += em + '<br/></td><td>';
 //         document.getElementById("tdPass").innerHTML += pas + '<br/></td><td>';
 //         document.getElementById("tdAge").innerHTML += age + '<br/></td><td>';
 //         document.getElementById("tdDob").innerHTML += date.getDate() + '/' + (parseInt(date.getMonth())+1) + '/' + date.getFullYear() + '<br/></td><td>';
 //         document.getElementById("tdAction").innerHTML += "<a href=''>Edit</a>/<a href='javascript:deleteData(i)'>Delete</a><br/></td>";
-//     }
-// }
-
 
 function addUser() 
 {
