@@ -20,14 +20,16 @@ function checkLogin()
         console.log(JSON.parse(user).name);
         
         if(email == adEmail && passwod == adPass) {
-            loginData = {'email':email, 'password':passwod, 'time': new Date()};
+            loginData = {'name':adName, 'email':email, 'password':passwod, 'time': new Date()};
             sessionStorage.setItem('loginData',JSON.stringify(loginData));
+            // localStorage.setItem(adName,JSON.stringify(loginData));
             window.location.replace("dashboard.html");
             return true;
         }
         else if(email == em && passwod == pass) {
-            loginData = {'email':email, 'password':passwod, 'time': new Date()};
+            loginData = {'name':nm, 'email':email, 'password':passwod, 'time': new Date()};
             sessionStorage.setItem('loginData',JSON.stringify(loginData));
+            // localStorage.setItem(nm,JSON.stringify(loginData));
             window.location.replace("sabUser.html");
             return true;
         }
