@@ -1,0 +1,20 @@
+Work Report on Introduction to C# [29/01/2021]
+
+• Today, I watch the itroduction to C# videos given by Vipul sir.
+• Also learn concepts of object orient work in C#.
+	• Class - Object
+	• Inheritance
+	• Interface
+	• Data hiding
+	• Property in C# [get-set method]
+
+• Also learn abstract class and show the diffrence between abstract class and iterface
+	• In abstract class we can implement method or only declared also declared variables in absract class 
+	• But in interface we can not impement method inside interface only we can declared method inside interface and we can't declared variables.
+	• In abstract class we can inherit from another interface or another abstract class.
+	• but in interface we can't inherit abstract class only we can inherit another interface.
+	• Abstract class members have access modifiers but Interface members have not access modifiers.
+
+• Also watch the videos of Exception Handling, Custom Exception and Inner Exception.
+• I practiced and implement all oop concept as well as exception handling in Console application.
+• Also implement practically.
