@@ -1,0 +1,18 @@
+Work Report on Introduction to C# [30/01/2021]
+
+• Today, I watch the introduction to C# exception handling videos given by Vipul sir.
+• Also revised all object oriented concepts in C#.
+	• Reference Variable
+	• Inheritance
+	• Interface
+	• Abstract Class
+	• Overriding
+
+• Also learn asked qeries to sir and solved it and implement that queries in VS 2019.
+
+• Also learn Exception Handling in more detailed, 
+	• Custom Exception
+	• Inner Exception.
+	• Exceptions types
+• I practiced and implement all inheritance, interface, optional parameter, method overload, method overriding as well as exception handling in Console application.
+• Also implement practically.
