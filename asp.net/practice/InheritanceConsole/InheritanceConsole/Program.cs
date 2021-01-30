@@ -177,6 +177,9 @@ class Program
         //c1.fn = "C1FN";
         //c1.ln = "C1LN";
         c1.display();
+
+        Methodsover.main(10, 20);
+        Methodsover.main();
         
     }
 }
