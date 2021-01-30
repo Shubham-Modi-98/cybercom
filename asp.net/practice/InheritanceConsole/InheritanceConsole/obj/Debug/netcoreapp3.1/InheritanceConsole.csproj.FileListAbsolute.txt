@@ -1,0 +1,13 @@
+F:\Cybercom Creation Training Documents\.Net Project Material\C-Sharp Practice\InheritanceConsole\InheritanceConsole\obj\Debug\netcoreapp3.1\InheritanceConsole.csprojAssemblyReference.cache
+F:\Cybercom Creation Training Documents\.Net Project Material\C-Sharp Practice\InheritanceConsole\InheritanceConsole\obj\Debug\netcoreapp3.1\InheritanceConsole.AssemblyInfoInputs.cache
+F:\Cybercom Creation Training Documents\.Net Project Material\C-Sharp Practice\InheritanceConsole\InheritanceConsole\obj\Debug\netcoreapp3.1\InheritanceConsole.AssemblyInfo.cs
+F:\Cybercom Creation Training Documents\.Net Project Material\C-Sharp Practice\InheritanceConsole\InheritanceConsole\obj\Debug\netcoreapp3.1\InheritanceConsole.csproj.CoreCompileInputs.cache
+F:\Cybercom Creation Training Documents\.Net Project Material\C-Sharp Practice\InheritanceConsole\InheritanceConsole\bin\Debug\netcoreapp3.1\InheritanceConsole.exe
+F:\Cybercom Creation Training Documents\.Net Project Material\C-Sharp Practice\InheritanceConsole\InheritanceConsole\bin\Debug\netcoreapp3.1\InheritanceConsole.deps.json
+F:\Cybercom Creation Training Documents\.Net Project Material\C-Sharp Practice\InheritanceConsole\InheritanceConsole\bin\Debug\netcoreapp3.1\InheritanceConsole.runtimeconfig.json
+F:\Cybercom Creation Training Documents\.Net Project Material\C-Sharp Practice\InheritanceConsole\InheritanceConsole\bin\Debug\netcoreapp3.1\InheritanceConsole.runtimeconfig.dev.json
+F:\Cybercom Creation Training Documents\.Net Project Material\C-Sharp Practice\InheritanceConsole\InheritanceConsole\bin\Debug\netcoreapp3.1\InheritanceConsole.dll
+F:\Cybercom Creation Training Documents\.Net Project Material\C-Sharp Practice\InheritanceConsole\InheritanceConsole\bin\Debug\netcoreapp3.1\InheritanceConsole.pdb
+F:\Cybercom Creation Training Documents\.Net Project Material\C-Sharp Practice\InheritanceConsole\InheritanceConsole\obj\Debug\netcoreapp3.1\InheritanceConsole.dll
+F:\Cybercom Creation Training Documents\.Net Project Material\C-Sharp Practice\InheritanceConsole\InheritanceConsole\obj\Debug\netcoreapp3.1\InheritanceConsole.pdb
+F:\Cybercom Creation Training Documents\.Net Project Material\C-Sharp Practice\InheritanceConsole\InheritanceConsole\obj\Debug\netcoreapp3.1\InheritanceConsole.genruntimeconfig.cache
