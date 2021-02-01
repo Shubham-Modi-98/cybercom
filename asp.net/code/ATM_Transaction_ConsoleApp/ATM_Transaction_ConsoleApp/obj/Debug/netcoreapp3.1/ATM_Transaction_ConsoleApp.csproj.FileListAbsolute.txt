@@ -1,0 +1,13 @@
+F:\Cybercom Asp Git\asp.net\code\ATM_Transaction_ConsoleApp\ATM_Transaction_ConsoleApp\obj\Debug\netcoreapp3.1\ATM_Transaction_ConsoleApp.csprojAssemblyReference.cache
+F:\Cybercom Asp Git\asp.net\code\ATM_Transaction_ConsoleApp\ATM_Transaction_ConsoleApp\obj\Debug\netcoreapp3.1\ATM_Transaction_ConsoleApp.AssemblyInfoInputs.cache
+F:\Cybercom Asp Git\asp.net\code\ATM_Transaction_ConsoleApp\ATM_Transaction_ConsoleApp\obj\Debug\netcoreapp3.1\ATM_Transaction_ConsoleApp.AssemblyInfo.cs
+F:\Cybercom Asp Git\asp.net\code\ATM_Transaction_ConsoleApp\ATM_Transaction_ConsoleApp\obj\Debug\netcoreapp3.1\ATM_Transaction_ConsoleApp.csproj.CoreCompileInputs.cache
+F:\Cybercom Asp Git\asp.net\code\ATM_Transaction_ConsoleApp\ATM_Transaction_ConsoleApp\bin\Debug\netcoreapp3.1\ATM_Transaction_ConsoleApp.exe
+F:\Cybercom Asp Git\asp.net\code\ATM_Transaction_ConsoleApp\ATM_Transaction_ConsoleApp\bin\Debug\netcoreapp3.1\ATM_Transaction_ConsoleApp.deps.json
+F:\Cybercom Asp Git\asp.net\code\ATM_Transaction_ConsoleApp\ATM_Transaction_ConsoleApp\bin\Debug\netcoreapp3.1\ATM_Transaction_ConsoleApp.runtimeconfig.json
+F:\Cybercom Asp Git\asp.net\code\ATM_Transaction_ConsoleApp\ATM_Transaction_ConsoleApp\bin\Debug\netcoreapp3.1\ATM_Transaction_ConsoleApp.runtimeconfig.dev.json
+F:\Cybercom Asp Git\asp.net\code\ATM_Transaction_ConsoleApp\ATM_Transaction_ConsoleApp\bin\Debug\netcoreapp3.1\ATM_Transaction_ConsoleApp.dll
+F:\Cybercom Asp Git\asp.net\code\ATM_Transaction_ConsoleApp\ATM_Transaction_ConsoleApp\bin\Debug\netcoreapp3.1\ATM_Transaction_ConsoleApp.pdb
+F:\Cybercom Asp Git\asp.net\code\ATM_Transaction_ConsoleApp\ATM_Transaction_ConsoleApp\obj\Debug\netcoreapp3.1\ATM_Transaction_ConsoleApp.dll
+F:\Cybercom Asp Git\asp.net\code\ATM_Transaction_ConsoleApp\ATM_Transaction_ConsoleApp\obj\Debug\netcoreapp3.1\ATM_Transaction_ConsoleApp.pdb
+F:\Cybercom Asp Git\asp.net\code\ATM_Transaction_ConsoleApp\ATM_Transaction_ConsoleApp\obj\Debug\netcoreapp3.1\ATM_Transaction_ConsoleApp.genruntimeconfig.cache
