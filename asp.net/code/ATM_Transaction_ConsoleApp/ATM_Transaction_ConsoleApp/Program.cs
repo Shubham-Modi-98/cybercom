@@ -14,11 +14,11 @@ abstract class AbstractAccount
 class CreateAccount : AbstractAccount
 {
     public Dictionary<int, ArrayList> account_data = new Dictionary<int, ArrayList>();
-    private string name;
-    private string mobile_no;
-    private int pin;
-    private double balance;
-    private double withdrawl_amount;
+    private static string name;
+    private static string mobile_no;
+    private static int pin;
+    private static double balance;
+    private static double withdrawl_amount;
 
     public override void accountForm()
     {
@@ -138,17 +138,7 @@ class CreateAccount : AbstractAccount
                                 Console.WriteLine("SMS sent on no: {0} \nRemaining Amount: {1}", mobile, balanceAmount);
                                 Console.WriteLine();
 
-                                CreateAccount account = new CreateAccount();
-                                ArrayList userData = new ArrayList();
-                                userData.Add(name);
-                                userData.Add(mobile);
-                                userData.Add(getPin);
-                                userData.Add(balanceAmount);
-                                userData.Add(limitAmount);
-
-                                account_data.Remove(pin);
-                                account_data.Add(getPin, userData);
-                                account.storeData();
+                                getBalance.Value[3] = balanceAmount;
 
                                 break;
                                 //System.Environment.Exit(0);
@@ -194,19 +184,8 @@ class CreateAccount : AbstractAccount
                             balanceAmount = balanceAmount + depositeAmount;
                             Console.WriteLine("SMS sent on no: {0} \n Current Balance: {1}", mobile, balanceAmount);
                             Console.WriteLine();
-                            
-                            CreateAccount account = new CreateAccount();
-                            
-                            ArrayList userData = new ArrayList();
-                            userData.Add(name);
-                            userData.Add(mobile);
-                            userData.Add(getPin);
-                            userData.Add(balanceAmount);
-                            userData.Add(limitAmount);
 
-                            account_data.Remove(pin);
-                            account_data.Add(getPin, userData);
-                            account.storeData();
+                            getBalance.Value[3] = balanceAmount;
 
                             break;
                             //System.Environment.Exit(0);
@@ -275,6 +254,11 @@ class Program
                                     break;
                             }
                         }
+                    }
+                    else
+                    {
+                        Console.WriteLine("Account is not created!!!");
+                        break;
                     }
                     break;
                 case 103:
