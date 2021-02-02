@@ -1,0 +1,20 @@
+Work Report on Introduction to C# [02/02/2021]
+
+• Today, I watch the introduction to C# videos given by Vipul sir.
+• In that learn more C# concepts like
+	• Enum
+	• List
+	• Types and Types Members
+	• Access Modifiers
+	• Reflection
+	• Generics and Override methods
+
+• Also learn difference between Types and Types members 
+	-> Types are Class, Struct, Enum, Interfaces.
+	-> Where Types Members are fields, methods, constructors, properties.
+
+• Used of #region and #endregion
+• In access modifiers internal and public are used in both class,
+  where private, protected, public, internal and internal protected are only used by methods and fields. 
+• Asked one query related to enum to sir and solved it and also implement it in practical. 
+• Also implement some concepts practically.
