@@ -1,0 +1,20 @@
+Work Report on Introduction to C# [03/02/2021]
+
+• Today, I watch the introduction to C# videos given by Vipul sir.
+• In that learn more C# concepts like
+	• toString() and Convert.toString()
+	• string() and stringBuilder()
+	• Partial Class, Partial methods
+	• Indexers
+
+• Also learn difference between toString() and Convert.toString() 
+	-> In, toString() if string contains null,It throws and null value exception,It can't handle null exception.
+	-> Where In, Convert.toString() handles null exception and it doesn't throw and exception. 
+
+• Also learn difference between string and stringBuilder()
+	-> In string if we modified string it create object every time and call garbage collector to desteoy previous object.
+	-> Where In, stringBuilder() it doesn't create new object everytime it modified one time.
+	-> string is mutable
+	-> Where It is Immutable
+
+• Implement all concepts practical. 
