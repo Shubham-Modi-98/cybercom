@@ -1,0 +1,11 @@
+Work Report on Introduction to C# [04/02/2021]
+
+• Today, I watch the introduction to C# videos given by Vipul sir.
+• In that learn more C# concepts like
+	• List
+	• Collection
+	• Dictionary
+	• Generic Class
+
+• Implement all concepts practical.
+• Generic Stack collection and Generic queue collection are remains.
