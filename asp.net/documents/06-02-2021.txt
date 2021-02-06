@@ -1,0 +1,19 @@
+Work Report on Introduction to C# [06/02/2021]
+
+• Today, I revised all the videos of the introduction to C# videos.
+• In that reviseds all concepts like
+	• Object-Oriented Concepts
+	• Enum
+	• Access modifiers
+	• Parameters
+	• List, Collection
+	• ArrayList
+	• Dictionary
+	• Thread
+	• Deadlock
+	• Lamda Expression
+
+• Also read some other resources on W3School, C# corner.
+• Asked query related to retrive data from thread using delegates.
+• Implement some concepts in practical.
+• Create queue real time exanple.
