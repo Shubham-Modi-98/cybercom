@@ -1,0 +1,13 @@
+F:\Cybercom Asp Git\asp.net\practice\ATMPracticeConsole\ATMPracticeConsole\bin\Debug\netcoreapp3.1\ATMPracticeConsole.exe
+F:\Cybercom Asp Git\asp.net\practice\ATMPracticeConsole\ATMPracticeConsole\bin\Debug\netcoreapp3.1\ATMPracticeConsole.deps.json
+F:\Cybercom Asp Git\asp.net\practice\ATMPracticeConsole\ATMPracticeConsole\bin\Debug\netcoreapp3.1\ATMPracticeConsole.runtimeconfig.json
+F:\Cybercom Asp Git\asp.net\practice\ATMPracticeConsole\ATMPracticeConsole\bin\Debug\netcoreapp3.1\ATMPracticeConsole.runtimeconfig.dev.json
+F:\Cybercom Asp Git\asp.net\practice\ATMPracticeConsole\ATMPracticeConsole\bin\Debug\netcoreapp3.1\ATMPracticeConsole.dll
+F:\Cybercom Asp Git\asp.net\practice\ATMPracticeConsole\ATMPracticeConsole\bin\Debug\netcoreapp3.1\ATMPracticeConsole.pdb
+F:\Cybercom Asp Git\asp.net\practice\ATMPracticeConsole\ATMPracticeConsole\obj\Debug\netcoreapp3.1\ATMPracticeConsole.csprojAssemblyReference.cache
+F:\Cybercom Asp Git\asp.net\practice\ATMPracticeConsole\ATMPracticeConsole\obj\Debug\netcoreapp3.1\ATMPracticeConsole.AssemblyInfoInputs.cache
+F:\Cybercom Asp Git\asp.net\practice\ATMPracticeConsole\ATMPracticeConsole\obj\Debug\netcoreapp3.1\ATMPracticeConsole.AssemblyInfo.cs
+F:\Cybercom Asp Git\asp.net\practice\ATMPracticeConsole\ATMPracticeConsole\obj\Debug\netcoreapp3.1\ATMPracticeConsole.csproj.CoreCompileInputs.cache
+F:\Cybercom Asp Git\asp.net\practice\ATMPracticeConsole\ATMPracticeConsole\obj\Debug\netcoreapp3.1\ATMPracticeConsole.dll
+F:\Cybercom Asp Git\asp.net\practice\ATMPracticeConsole\ATMPracticeConsole\obj\Debug\netcoreapp3.1\ATMPracticeConsole.pdb
+F:\Cybercom Asp Git\asp.net\practice\ATMPracticeConsole\ATMPracticeConsole\obj\Debug\netcoreapp3.1\ATMPracticeConsole.genruntimeconfig.cache
