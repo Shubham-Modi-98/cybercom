@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConstructorOverloadWithCustomException", "ConstructorOverloadWithCustomException\ConstructorOverloadWithCustomException.csproj", "{F9007D25-A80F-4A19-A1A2-93BCC5AA0945}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F9007D25-A80F-4A19-A1A2-93BCC5AA0945}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F9007D25-A80F-4A19-A1A2-93BCC5AA0945}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F9007D25-A80F-4A19-A1A2-93BCC5AA0945}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F9007D25-A80F-4A19-A1A2-93BCC5AA0945}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A50BA17-A1E4-4B3C-857F-19DE88BEC2FF}
+	EndGlobalSection
+EndGlobal

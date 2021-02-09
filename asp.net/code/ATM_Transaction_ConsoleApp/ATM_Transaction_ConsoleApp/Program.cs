@@ -6,38 +6,46 @@ abstract class AbstractAccount
     public abstract void accountForm();
     public abstract void storeData();
     public abstract int verifyUser(int pin);
-    public abstract void checkBalance();
-    public abstract void withDrawBalance();
-    public abstract void depositeBalance();
+    public abstract void checkBalance(int pin);
+    public abstract void withDrawBalance(int pin);
+    public abstract void depositeBalance(int pin);
 }
 
 class CreateAccount : AbstractAccount
 {
     public Dictionary<int, ArrayList> account_data = new Dictionary<int, ArrayList>();
-    private static string name;
-    private static string mobile_no;
-    private static int pin;
-    private static double balance;
-    private static double withdrawl_amount;
+    private string name;
+    private string mobile_no;
+    private int pin;
+    private double balance;
+    private double withdrawl_amount;
 
     public override void accountForm()
     {
-        Console.WriteLine("Enter Name: ");
-        name = Console.ReadLine();
-        Console.WriteLine("Enter Mobile No: ");
-        mobile_no = Console.ReadLine();
-        Labelpin:
-        Console.WriteLine("Enter Pin No: ");
-        pin = Convert.ToInt32(Console.ReadLine());
-        if(pin.ToString().Length != 4)
+        try
         {
-            Console.WriteLine("Pin Length must be 4");
-            goto Labelpin;
+            Console.WriteLine("Enter Name: ");
+            name = Console.ReadLine();
+            Console.WriteLine("Enter Mobile No: ");
+            mobile_no = Console.ReadLine();
+            Labelpin:
+            Console.WriteLine("Enter Pin No: ");
+            pin = Convert.ToInt32(Console.ReadLine());
+            if (pin.ToString().Length != 4)
+            {
+                Console.WriteLine("Pin Length must be 4");
+                goto Labelpin;
+            }
+            Console.WriteLine("Enter Balance Amount: ");
+            balance = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Set withdrawl limit: ");
+            withdrawl_amount = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine();
         }
-        Console.WriteLine("Enter Balance Amount: ");
-        balance = Convert.ToDouble(Console.ReadLine());
-        Console.WriteLine("Set withdrawl limit: ");
-        withdrawl_amount = Convert.ToDouble(Console.ReadLine());
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
+        }
     }
 
     public override void storeData()
@@ -52,6 +60,8 @@ class CreateAccount : AbstractAccount
             userData.Add(withdrawl_amount);
 
             account_data.Add(pin, userData);
+            Console.WriteLine("Account Created Successfully!!");
+            Console.WriteLine();
         }
         catch (Exception ex)
         {
@@ -69,6 +79,8 @@ class CreateAccount : AbstractAccount
                 int getPin = Convert.ToInt32(getData.Value[2]);
                 if (pin == getPin)
                 {
+                    Console.WriteLine("User Verified, Welcome to ATM!!!");
+                    Console.WriteLine();
                     return 1;
                 }
             }
@@ -81,7 +93,7 @@ class CreateAccount : AbstractAccount
         return 0;
     }
     
-    public override void checkBalance()
+    public override void checkBalance(int pin)
     {
         int verify = verifyUser(pin);
         if (verify == 1)
@@ -111,7 +123,7 @@ class CreateAccount : AbstractAccount
 
     }
 
-    public override void withDrawBalance()
+    public override void withDrawBalance(int pin)
     {
         int verify = verifyUser(pin);
         if (verify == 1)
@@ -160,7 +172,7 @@ class CreateAccount : AbstractAccount
 
     }
 
-    public override void depositeBalance()
+    public override void depositeBalance(int pin)
     {
         int verify = verifyUser(pin);
         if (verify == 1)
@@ -182,7 +194,7 @@ class CreateAccount : AbstractAccount
                             Console.WriteLine("Enter Deposite Amount: ");
                             double depositeAmount = Convert.ToDouble(Console.ReadLine());
                             balanceAmount = balanceAmount + depositeAmount;
-                            Console.WriteLine("SMS sent on no: {0} \n Current Balance: {1}", mobile, balanceAmount);
+                            Console.WriteLine("SMS sent on no: {0} \nCurrent Balance: {1}", mobile, balanceAmount);
                             Console.WriteLine();
 
                             getBalance.Value[3] = balanceAmount;
@@ -215,6 +227,7 @@ class Program
             Console.WriteLine("103. Exit ");
             Console.WriteLine("Enter Choice: ");
             int ch = Convert.ToInt32(Console.ReadLine());
+            bool innerQuit = true;
             switch (ch)
             {
                 case 101:
@@ -227,7 +240,7 @@ class Program
                     int verify = createAccount.verifyUser(pin);
                     if (verify == 1)
                     {
-                        while (true)
+                        while (innerQuit)
                         {
                             Console.WriteLine("1. Check Balance: ");
                             Console.WriteLine("2. Cash Withdrawl ");
@@ -238,16 +251,16 @@ class Program
                             switch (c)
                             {
                                 case 1:
-                                    createAccount.checkBalance();
+                                    createAccount.checkBalance(pin);
                                     break;
                                 case 2:
-                                    createAccount.withDrawBalance();
+                                    createAccount.withDrawBalance(pin);
                                     break;
                                 case 3:
-                                    createAccount.depositeBalance();
+                                    createAccount.depositeBalance(pin);
                                     break;
                                 case 4:
-                                    System.Environment.Exit(0);
+                                    innerQuit = false;
                                     break;
                                 default:
                                     Console.WriteLine("Enter Valid Choice!!");

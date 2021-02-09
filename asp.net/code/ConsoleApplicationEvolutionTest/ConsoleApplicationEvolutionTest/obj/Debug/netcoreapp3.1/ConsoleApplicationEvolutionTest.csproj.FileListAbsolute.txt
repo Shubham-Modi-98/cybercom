@@ -1,0 +1,13 @@
+F:\Cybercom Asp Git\asp.net\code\ConsoleApplicationEvolutionTest\ConsoleApplicationEvolutionTest\bin\Debug\netcoreapp3.1\ConsoleApplicationEvolutionTest.exe
+F:\Cybercom Asp Git\asp.net\code\ConsoleApplicationEvolutionTest\ConsoleApplicationEvolutionTest\bin\Debug\netcoreapp3.1\ConsoleApplicationEvolutionTest.deps.json
+F:\Cybercom Asp Git\asp.net\code\ConsoleApplicationEvolutionTest\ConsoleApplicationEvolutionTest\bin\Debug\netcoreapp3.1\ConsoleApplicationEvolutionTest.runtimeconfig.json
+F:\Cybercom Asp Git\asp.net\code\ConsoleApplicationEvolutionTest\ConsoleApplicationEvolutionTest\bin\Debug\netcoreapp3.1\ConsoleApplicationEvolutionTest.runtimeconfig.dev.json
+F:\Cybercom Asp Git\asp.net\code\ConsoleApplicationEvolutionTest\ConsoleApplicationEvolutionTest\bin\Debug\netcoreapp3.1\ConsoleApplicationEvolutionTest.dll
+F:\Cybercom Asp Git\asp.net\code\ConsoleApplicationEvolutionTest\ConsoleApplicationEvolutionTest\bin\Debug\netcoreapp3.1\ConsoleApplicationEvolutionTest.pdb
+F:\Cybercom Asp Git\asp.net\code\ConsoleApplicationEvolutionTest\ConsoleApplicationEvolutionTest\obj\Debug\netcoreapp3.1\ConsoleApplicationEvolutionTest.csprojAssemblyReference.cache
+F:\Cybercom Asp Git\asp.net\code\ConsoleApplicationEvolutionTest\ConsoleApplicationEvolutionTest\obj\Debug\netcoreapp3.1\ConsoleApplicationEvolutionTest.AssemblyInfoInputs.cache
+F:\Cybercom Asp Git\asp.net\code\ConsoleApplicationEvolutionTest\ConsoleApplicationEvolutionTest\obj\Debug\netcoreapp3.1\ConsoleApplicationEvolutionTest.AssemblyInfo.cs
+F:\Cybercom Asp Git\asp.net\code\ConsoleApplicationEvolutionTest\ConsoleApplicationEvolutionTest\obj\Debug\netcoreapp3.1\ConsoleApplicationEvolutionTest.csproj.CoreCompileInputs.cache
+F:\Cybercom Asp Git\asp.net\code\ConsoleApplicationEvolutionTest\ConsoleApplicationEvolutionTest\obj\Debug\netcoreapp3.1\ConsoleApplicationEvolutionTest.dll
+F:\Cybercom Asp Git\asp.net\code\ConsoleApplicationEvolutionTest\ConsoleApplicationEvolutionTest\obj\Debug\netcoreapp3.1\ConsoleApplicationEvolutionTest.pdb
+F:\Cybercom Asp Git\asp.net\code\ConsoleApplicationEvolutionTest\ConsoleApplicationEvolutionTest\obj\Debug\netcoreapp3.1\ConsoleApplicationEvolutionTest.genruntimeconfig.cache

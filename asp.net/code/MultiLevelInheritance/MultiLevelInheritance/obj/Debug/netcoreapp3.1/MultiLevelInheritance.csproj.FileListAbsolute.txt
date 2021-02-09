@@ -1,0 +1,13 @@
+F:\Cybercom Asp Git\asp.net\code\MultiLevelInheritance\MultiLevelInheritance\bin\Debug\netcoreapp3.1\MultiLevelInheritance.exe
+F:\Cybercom Asp Git\asp.net\code\MultiLevelInheritance\MultiLevelInheritance\bin\Debug\netcoreapp3.1\MultiLevelInheritance.deps.json
+F:\Cybercom Asp Git\asp.net\code\MultiLevelInheritance\MultiLevelInheritance\bin\Debug\netcoreapp3.1\MultiLevelInheritance.runtimeconfig.json
+F:\Cybercom Asp Git\asp.net\code\MultiLevelInheritance\MultiLevelInheritance\bin\Debug\netcoreapp3.1\MultiLevelInheritance.runtimeconfig.dev.json
+F:\Cybercom Asp Git\asp.net\code\MultiLevelInheritance\MultiLevelInheritance\bin\Debug\netcoreapp3.1\MultiLevelInheritance.dll
+F:\Cybercom Asp Git\asp.net\code\MultiLevelInheritance\MultiLevelInheritance\bin\Debug\netcoreapp3.1\MultiLevelInheritance.pdb
+F:\Cybercom Asp Git\asp.net\code\MultiLevelInheritance\MultiLevelInheritance\obj\Debug\netcoreapp3.1\MultiLevelInheritance.csprojAssemblyReference.cache
+F:\Cybercom Asp Git\asp.net\code\MultiLevelInheritance\MultiLevelInheritance\obj\Debug\netcoreapp3.1\MultiLevelInheritance.AssemblyInfoInputs.cache
+F:\Cybercom Asp Git\asp.net\code\MultiLevelInheritance\MultiLevelInheritance\obj\Debug\netcoreapp3.1\MultiLevelInheritance.AssemblyInfo.cs
+F:\Cybercom Asp Git\asp.net\code\MultiLevelInheritance\MultiLevelInheritance\obj\Debug\netcoreapp3.1\MultiLevelInheritance.csproj.CoreCompileInputs.cache
+F:\Cybercom Asp Git\asp.net\code\MultiLevelInheritance\MultiLevelInheritance\obj\Debug\netcoreapp3.1\MultiLevelInheritance.dll
+F:\Cybercom Asp Git\asp.net\code\MultiLevelInheritance\MultiLevelInheritance\obj\Debug\netcoreapp3.1\MultiLevelInheritance.pdb
+F:\Cybercom Asp Git\asp.net\code\MultiLevelInheritance\MultiLevelInheritance\obj\Debug\netcoreapp3.1\MultiLevelInheritance.genruntimeconfig.cache
