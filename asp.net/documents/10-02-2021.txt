@@ -1,0 +1,17 @@
+Work Report on SQLServer [10/02/2021]
+
+• Today, I watched all videos as per schedule given by Vipul sir.
+• Learn, the some SQL basics like
+ 	• Create, Rename, Drop Database using GUI and Query
+	• Create, Alter, Drop table help of GUI as well Query
+	• Insert, Retrive Query
+	• Primary key, Foreign key, Uniquue key
+	• Add Constraint using Alter Query and Delete constraint using Query
+	• Also learn Identity column property
+	• Group by and where clause and all related Operators like 
+	  (<,>,<=,>=,=,!=,<>,LIKE,AND,OR,IN,NOT IN,_,%,[],[^])
+	• SQL Joins
+• Perform and Fire Queries in MS-SQL server 2017 from above learned concepts.
+
+• Also learn basics of jQuery and refered some videos on youtube.
+• And Implement practically.
