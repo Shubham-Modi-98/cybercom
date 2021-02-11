@@ -1,0 +1,45 @@
+Work Report on SQLServer [11/02/2021]
+
+• Today, I watched all videos as per schedule given by Vipul sir.
+• Learn, the some SQL basics like
+	• Joins in that Inner Join, Outer Join, Cross Join
+	  In Outer Join there are 3 category
+		1. Left Join or Left Outer Join
+		2. Right Join or Right Outer Join
+		3. Full Join or Full Outer Join
+	  In Join we have to used On compoulsory to perform join on tables
+	• In cross join we don't need to used On or any clause, It multiply 2 tables data and give result
+	• Ex.) If tblPerson contains 10 records and tblState contains 5 records then it gives 50 records as result 
+	
+	• Self Join :- Self join's main advantage is it we can join the table with it-self other wise it is same as other join's
+	  It also support Left Self Join, Right Self Join, Full self Join.
+
+	• Union and UnionAll :- In that Union it removes duplicate records from tables where UnionAll fetch all records.
+				Both are perform on from more than one table 
+	• Procedure :- In that learn what is procedure, procedure with parameters,and returns value.
+	  But if we try to return in procedure it only allows to return integer value we can't return string and any other value.
+	  If we want to store result we can used output keyword in parameter and when we call procedure we have to give parameter out/output keyword must required.
+	• There are 3 ways to call procedure
+		1. procedure_name
+		2. Exec procedure_name
+		3. Execute procedure_name
+	• There are so many advantages of using procedure instead of adhoc query.
+		-> Execution retention and re-usability
+		-> better maintainability
+		-> better security and prevent SQL injection
+	• Aggregate Functions :- Count(), Max(), Min(), AVG(), Group By are some examples of Aggregate function
+	
+	• String Functions :- ASCII(), CHAR(), LTRIM(), RTRIM(), SUBSTRING(), CHARINDEX() are some string functions.
+
+• Also, learn 3 different ways to replace NULL values from table data
+	->IsNULL() :- In this pass 2 parameters 1st is table value or 2nd is message you want to print in replacement of NULL
+	  IsNULL() is give message when NULL value pass in 1st parameter
+	  Ex.) IsNULL(NULL,"No Value found")
+	->Case statement :- It is same as Switch case statement 
+	  Ex.) CASE WHEN condition1 THEN result1 ELSE RESULT END;
+ 	->COALESCE() :- COALESCE() function returns the first non-null value in a list.
+	  Ex.)COALESCE(val1, val2, val3);
+
+• Perform and Fire Queries in MS-SQL server 2017 from above learned concepts.
+• Also learn more in jQuery and refered some videos on youtube.
+• And Implement practically.
