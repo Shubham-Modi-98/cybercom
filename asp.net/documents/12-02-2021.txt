@@ -1,0 +1,22 @@
+Work Report on SQLServer [11/02/2021]
+
+• Today, I watched all videos as per schedule given by Vipul sir.
+• Learn, the some topics on SQL 
+	• Cast and Convert function it is used to contvert data into different datatype
+	• Mathemetical function in SQL :- abs(), sqrt(), square(), ceiling(), floor(), round(), rand() are somes mathemetical functions.
+	• Function and Stored Procedure  
+		=> Function can return value while procedure may not return or return zero or nvalues.
+		=> Function can only have input param while procedure can have input or output parameters.
+		=> Functions can be called from procedure while procedures can't called from function. 
+	• Different types of User Defined Functions like
+	  1. Scalar value
+	  2. Inline table function value
+	  3. Multi table value function
+	• Scaler Function Return only Single value and not Return text and time stamp
+        • Inline table function is treated as View 
+	• Multi table value Function treated as Stored Procedure
+	• Indexing :- In that Clustered, Non Clustered and Unique, non Unique.
+
+• Perform and Fire Queries in MS-SQL server 2017 from above learned concepts.
+• Also learn more in jQuery and refered some videos on youtube channel 'code step by step'.
+• And Implement practically.
