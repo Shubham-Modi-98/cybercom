@@ -1,4 +1,4 @@
-Work Report on SQLServer [11/02/2021]
+Work Report on SQLServer [12/02/2021]
 
 • Today, I watched all videos as per schedule given by Vipul sir.
 • Learn, the some topics on SQL 
