@@ -1,0 +1,26 @@
+Work Report on SQLServer [16/02/2021]
+
+• Today, I watched all videos as per schedule given by Vipul sir and learn and which covers topics like...
+• Learn, the some more topics in SQL 
+	• Error Handling :- @@Error and Try.. Catch 2 ways to handle error but @@Erro is out dated now days only used Try..Catch0
+	• Transactions :- In that learn ACID properties. 
+	• Usage of Subqueries
+	• Cursor in Sql :- But cursor taking too much execution time comoare to Joins so mostly used Joins instead of cursor
+	• Re-runnable Scrips
+	• Optional Parameters
+	• Merge in Sql
+	• Sql server Operators :- except, Inersect, Union
+		=> except :- It filters duplicates and return only DISTINCT rows
+		=> NOT IN :- It does not filter the duplicates
+		=> Intersect :- It retrives the common records from both the left and the right query of the Intersect opearator
+		=> Note :- The number and the order of the column must be same in both queries on all operators.
+	• Trigger :- In that there are 3 more types
+		1.) DML Triggers
+		2.) DDL Triggers
+		3.) Logon Triggers
+	• Differance CROSS APPLY and OUTER APPLY that and Join as CROSS and OUTER apply is helpful in table value function.
+	• Cross apply returns only matching row while Outer apply returns matching and non-matching rows.
+	• The table valued function on the right hand side of the apply operator gets called for each row from the left.
+	
+• Also start installation and basics of Angular-10 tutorials for begginers on YouTube.
+• And Implement practically.
