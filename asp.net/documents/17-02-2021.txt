@@ -1,0 +1,34 @@
+Work Report on SQLServer [17/02/2021]
+
+• Today, I watched all videos as per schedule given by Vipul sir and learn and which covers topics like...
+• Learn, the some more topics in SQL 
+	• DDL Trigger:- It fires in response to DDL events like Create, Alter, Drop, Function, Index, Procedure.
+	• Triggers are basically 2 types
+		1.) On Database
+		2.) On All Server 
+	• Triggers created on server it's on top priority by default. You can change Priority using sp_settriggerorder.
+	• Syntax :- 
+		exec sp_settriggerorder
+		@triggername , @order, @stmttype, @namespace 
+	• You can Enable and Disable trigger using 
+		-> Enable Trigger triggerName
+		-> Disable Trigger triggerName
+	• Loggon Trigger :- It creates when DBA wants to Restricted number off user to used Databse Server.
+		-> sys.d_exec_sessions used to check login details mainly is_user_process, original_login_name is used
+		-> Original_Login() method is used to fetch current session user login name.
+	• Select Into, Insert Into:- It copy all rows and columns from an existing table into a new table. This is extremely useful when you want to make a backup copy of existing table.
+		-> It has one rule that table must not already created or exist in databse.
+		-> If you want to do that you have to used Insert Into statement.
+	• Where and Having clause :- Where clause cannot be used with aggregates while Having can.
+
+	• Groupping(col):- Checking whether the column in a Group by list is aggregated or not. It returns 1 for aggregated and 0 for not. 
+	• Groupping_ID(Col1,Col2,Col3,..) :- It perform the binary to decimal conversion and returs the equivalent integer.
+	
+	• Over Clause:- Combined with Partition By is used to break up data into Partitions.
+	• Row_Number:- It is used to give Row Number to Data
+	• Choose function:- Return the item at the specified index from the list  of available values. Index starts at 1 not from 0.
+	• IIF function:- It is same as If condition of c
+		->Sytax:- IIF(gender = 1,"Male","Female")
+	• EOMONTH(), DATEFROMPARTS() are learns
+	• DATETIME(), SMALLDATETIME() and DATETIME2() function is learn and understand the difference between them.
+• Implement all above concepts practically.
