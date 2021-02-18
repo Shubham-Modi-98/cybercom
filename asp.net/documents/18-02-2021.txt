@@ -1,0 +1,17 @@
+Work Report on SQLServer [18/02/2021]
+
+• Today, I watched all videos as per schedule given by Vipul sir and learn and which covers topics like...
+• Learn, the some more topics in SQL and Revised some topics 
+	• Sequence :- Generates sequence of numeric values in an ascending or descending order.
+		-> It has property likes DataType, START WITH, INCREMENT BY, MINVALUE, MAXVALUE, CYCLE, CACHE
+	• Sequence has property NEXT VALUE which gives you next value of Current sequence value.
+	• Learn Difference between Identity and Sequence
+	• GUID :- GUID is unique across tables, databases and servers. It only us a GUID when you really need a globlly unique identifier otherwise use an INT data type.
+	• SQL server query plan cache :- sys.dm_exec-cached_plans, sys.dm_exec_sql_text, sys.dm_exec_query_plan properties are used
+	• Dynamic SQL and How to create better procedure
+	• Exec vs sp-executeSQL difference :- 
+		-> exe() or execute() function is used to execute dynamic sql and has only one parameter. It uses dynamic sql statement you want to execute.
+	• SQL Injection, how to prevent SQL Injection
+		-> Never used concatenating in Query always used Parameterized Query. Concate query invites Sql injection
+	• QUOTENAME function can prevent SQL Injection
+• Implement all the Practicals and getting idea of using dynamic sql which is very helpful.
