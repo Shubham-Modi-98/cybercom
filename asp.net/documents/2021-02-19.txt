@@ -1,0 +1,7 @@
+Work Report on SQLServer [19/02/2021]
+
+• Today, I revised videos which need to Revision.
+• Implement Practical on SQL Queries
+• Asked doubts to sir in meeting and solved query and clear concept.
+• Learn and Understand difference between Delete and Truncate in terms of Used Identity Column in Table
+	-> You can Reset Identity column using DBCC.
