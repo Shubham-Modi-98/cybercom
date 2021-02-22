@@ -1,0 +1,31 @@
+Work Report on ADO.Net [22/02/2021]
+
+• Today, I watched all videos as per schedule given by Vipul sir and covers topics like...
+• What is ADO.Net
+• SqlConncetion and it's Method :- Open() , Close()
+• How to established ConnectionString and establihed ConnectionString using web.config.
+• SqlComand and It's properties and methods :-
+	-> Properties:- 
+		CommandType
+		CommandText
+		Connection
+	->Methods:-
+		ExecuteReader()
+		ExecuteNonQuery()
+		ExecuteScalar()
+	• Learn the difference between above 3 methods and when to used which method.
+
+• Sql Injection , Why it happen and How to prevent Sql Injection 
+	->Note:- Never used concate query, It opens door for Injection. 
+	  So,always refer parameterized query it prevents the Injection.
+• How to get and Stored data using StoredProcedure
+• Learn Out parameter in StoreProcedure and fetch data and used out parameter in Code
+• What is Connected and DissConnected Architecture.
+• SqlReader:- 
+	-> It is used to retrive read only data and it is forward only.
+	-> It increased performance because at the time only one row stored in memory.
+	-> ExecuteReader() method is used.
+	-> NextResult is used in loop throughout the data.It returns bool value.
+
+• SqlDataAdapter and DataSet and see the difference between them.
+• Implement all the above topics in practical and create CRUD using ADO.Net.
