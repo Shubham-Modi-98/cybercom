@@ -1,0 +1,7 @@
+F:\MCA\ASPNET DB Programs\DataReaderDemoDB\DataReaderDemoDB\bin\DataReaderDemoDB.dll.config
+F:\MCA\ASPNET DB Programs\DataReaderDemoDB\DataReaderDemoDB\bin\DataReaderDemoDB.dll
+F:\MCA\ASPNET DB Programs\DataReaderDemoDB\DataReaderDemoDB\bin\DataReaderDemoDB.pdb
+F:\MCA\ASPNET DB Programs\DataReaderDemoDB\DataReaderDemoDB\obj\Debug\DataReaderDemoDB.csprojAssemblyReference.cache
+F:\MCA\ASPNET DB Programs\DataReaderDemoDB\DataReaderDemoDB\obj\Debug\DataReaderDemoDB.csproj.CoreCompileInputs.cache
+F:\MCA\ASPNET DB Programs\DataReaderDemoDB\DataReaderDemoDB\obj\Debug\DataReaderDemoDB.dll
+F:\MCA\ASPNET DB Programs\DataReaderDemoDB\DataReaderDemoDB\obj\Debug\DataReaderDemoDB.pdb
