@@ -1,0 +1,17 @@
+Work Report on ADO.Net [23/02/2021]
+
+• Today, I watched all videos as per schedule given by Vipul sir and covers topics like...
+• Chache Dataset and benefits of store dataset object and table in cache.
+	-> It is faster too access data and If sometime we lost connection at that time it will be helpful
+	-> It has expire property which we can set
+• What is SqlCommandBuilder and It's usage
+	-> If we don't want to write Query for Insert,Update and Delete then used SqlCommandBuilder methods.
+• Disadvantages of SqlCommandBuilder
+	-> If table doesn't containt any primary key or unique key then it is not useful. It throws an error.
+• Disconnected Data Access Model
+	-> It doesn't require to Open and Close connection manually.
+	-> DataAdapter and DataSet are follows disconnected architecture.
+• RowState and It's values
+• DataSet methods RejectChanges and AcceptChanges
+• Strongly Typed Datasets LINQ
+• Work on Optimized Code.
