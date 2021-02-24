@@ -1,0 +1,18 @@
+Work Report on ADO.Net [24/02/2021]
+
+• Practice the Task to Create Web Application of ATM Transaction given by Vipul Sir.
+
+• In that I used Bootstrap and Css to Create Responsive and Attractive Web Forms.
+• Application contains functions like:
+	-> Registration Page:- User must to register with Name,Pin,Mobile,Balance and Set Limit of Withdraw.
+	-> Login Page:- After Creating Account user Login with Name and Pin If correct then redirect to Home Page.
+	-> Home Page:- In that there are 4 buttons.
+		1.) Check Balance
+		2.) Deposite Balance
+		3.) Withdraw Balance
+		4.) Logout
+• For creating this web app I used 
+	-> Css, Bootstrap, Session, SqlCommand, SqlDataReader, Parameterized Store Procedure
+• Perfectly Work.
+• GitHub Link for Web App:- 
+	https://github.com/Shubham-Modi-98/cybercom/tree/asp/asp.net/practice/ATM_Transaction_WebApp
