@@ -36,6 +36,11 @@
                         <asp:Button ID="btnLogOut" class="form-cotrol" runat="server" Text="Log Out" OnClick="btnVisible_Click" />
                     </div>
                 </div>
+                <div class="row form-group">
+                    <div class="col-sm-6" style="margin-left:auto;margin-right:auto;">
+                        <asp:Button ID="btnLogin" class="form-cotrol" runat="server" Text="Cancel" OnClick="btnVisible_Click"/>
+                    </div>
+                </div>
             </div>
         </div>
         <br />       
@@ -68,7 +73,7 @@
                     </div>
                 </div>
                 <div class="row form-group">
-                    <div class="col-sm-12">
+                    <div class="col-sm-6" style="margin-left:auto;margin-right:auto;">
                         <asp:Button ID="btnDepositeAmount" class="form-cotrol" runat="server" Text="Deposite Balance" OnClick="btnTransaction_Click" />
                     </div>
                 </div>
@@ -91,7 +96,7 @@
                     </div>
                 </div>
                 <div class="row form-group">
-                    <div class="col-sm-12">
+                    <div class="col-sm-6" style="margin-left:auto;margin-right:auto;">
                         <asp:Button ID="btnWithDrawAmout" class="form-cotrol" runat="server" Text="WithDraw Balance" OnClick="btnTransaction_Click"/>
                     </div>
                 </div>

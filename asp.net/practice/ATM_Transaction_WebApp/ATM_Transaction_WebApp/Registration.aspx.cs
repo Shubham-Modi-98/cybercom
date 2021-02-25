@@ -20,42 +20,50 @@ namespace ATM_Transaction_WebApp
 
         protected void btnRegister_Click(object sender, EventArgs e)
         {
-            string name = txtName.Text.ToString();
-            string mobie = txtMobile.Text.ToString();
-            float balance = float.Parse(txtBalance.Text);
-            float limit = float.Parse(txtLimit.Text);
-            int pin = int.Parse(txtPin.Text);
-            if (pin.ToString().Length == '4')
+            try
             {
-                using (SqlConnection con = new SqlConnection(connectionString))
+                string name = txtName.Text.ToString();
+                string mobie = txtMobile.Text.ToString();
+                float balance = float.Parse(txtBalance.Text);
+                float limit = float.Parse(txtLimit.Text);
+                int pin = int.Parse(txtPin.Text);
+                if (pin.ToString().Length == '4')
                 {
-                    SqlCommand cmd = new SqlCommand("spAddCustomer",con);
-                    cmd.Parameters.AddWithValue("@name", name);
-                    cmd.Parameters.AddWithValue("@mobile", mobie);
-                    cmd.Parameters.AddWithValue("@pin", pin);
-                    cmd.Parameters.AddWithValue("@balance", balance);
-                    cmd.Parameters.AddWithValue("@limit", limit);
-                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                    con.Open();
-                    int res = cmd.ExecuteNonQuery();
-                    if(res > 0)
+                    using (SqlConnection con = new SqlConnection(connectionString))
                     {
-                        lblMessage.Text = "Account Created Successfully...";
-                        lblMessage.ForeColor = Color.DarkGreen;
-                        clearFields();
-                    }
-                    else
-                    {
-                        lblMessage.Text = "Something went Wrong, TryAgain!!";
-                        lblMessage.ForeColor = Color.Red;
+                        SqlCommand cmd = new SqlCommand("spAddCustomer", con);
+                        cmd.Parameters.AddWithValue("@name", name);
+                        cmd.Parameters.AddWithValue("@mobile", mobie);
+                        cmd.Parameters.AddWithValue("@pin", pin);
+                        cmd.Parameters.AddWithValue("@balance", balance);
+                        cmd.Parameters.AddWithValue("@limit", limit);
+                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        con.Open();
+                        int res = cmd.ExecuteNonQuery();
+                        if (res > 0)
+                        {
+                            lblMessage.Text = "Account Created Successfully...";
+                            lblMessage.ForeColor = Color.DarkGreen;
+                            clearFields();
+                        }
+                        else
+                        {
+                            lblMessage.Text = "Something went Wrong, TryAgain!!";
+                            lblMessage.ForeColor = Color.Red;
+                        }
                     }
                 }
+                else
+                {
+                    lblMessage.Text = "Pin Length must be 4 digit";
+                    lblMessage.ForeColor = Color.DarkGoldenrod;
+                    SetFocus(txtPin);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                lblMessage.Text = "Pin Length must be 4 digit";
-                lblMessage.ForeColor = Color.DarkGoldenrod;
-                SetFocus(txtPin);
+                Response.Write(ex.Message);
+                Response.Write(ex.StackTrace);
             }
         }
         private void clearFields()

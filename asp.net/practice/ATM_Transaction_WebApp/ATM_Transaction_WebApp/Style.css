@@ -25,15 +25,15 @@
     color: white;
 }
 
-/*button {
+#btnCancel {
     height: 0.4in;
     width: 100%;
     font-size: large;
     color: white;
     background-color: darkorange;
-}*/
+}
 
-#btnLogin, #btnRegister, #btnCheckBalance, #btnDeposite,
+#btnLogin, #btnRegister, #btnCheckBalance, #btnDeposite, 
 #btnWithDrawl, #btnLogOut, #btnDepositeAmount, #btnWithDrawAmout {
     height: 0.4in;
     width: 100%;

@@ -39,117 +39,146 @@ namespace ATM_Transaction_WebApp
 
         protected void btnVisible_Click(object sender, EventArgs e)
         {
-            Button btnCheckId = (Button)sender;
-            if (btnCheckId.ID == "btnCheckBalance")
+            try
             {
-                divBalance.Visible = true;
-                contBalance.Visible = true;
-                divDeposite.Visible = false;
-                contDepo.Visible = false;
-                divWith.Visible = false;
-                contWith.Visible = false;
-                lblName.Text = "Customer Name: " + name;
-                lblBalance.Text = "Current Balance: " + balance;
+                Button btnCheckId = (Button)sender;
+                if (btnCheckId.ID == "btnCheckBalance")
+                {
+                    divBalance.Visible = true;
+                    contBalance.Visible = true;
+                    divDeposite.Visible = false;
+                    contDepo.Visible = false;
+                    divWith.Visible = false;
+                    contWith.Visible = false;
+                    lblName.Text = "Customer Name: " + name;
+                    lblBalance.Text = "Current Balance: " + balance;
+                }
+                else if (btnCheckId.ID == "btnDeposite")
+                {
+                    divDeposite.Visible = true;
+                    contDepo.Visible = true;
+                    divBalance.Visible = false;
+                    contBalance.Visible = false;
+                    divWith.Visible = false;
+                    contWith.Visible = false;
+                }
+                else if (btnCheckId.ID == "btnWithDrawl")
+                {
+                    divWith.Visible = true;
+                    contWith.Visible = true;
+                    divDeposite.Visible = false;
+                    contDepo.Visible = false;
+                    divBalance.Visible = false;
+                    contBalance.Visible = false;
+                }
+                else if (btnCheckId.ID == "btnLogOut")
+                {
+                    Session.Clear();
+                    Session.Abandon();
+                    Response.Redirect("~/Default.aspx");
+                }
+                else
+                {
+                    divBalance.Visible = false;
+                    contBalance.Visible = false;
+                    divDeposite.Visible = false;
+                    contDepo.Visible = false;
+                    divWith.Visible = false;
+                    contWith.Visible = false;
+                }
             }
-            else if (btnCheckId.ID == "btnDeposite")
+            catch (Exception ex)
             {
-                divDeposite.Visible = true;
-                contDepo.Visible = true;
-                divBalance.Visible = false;
-                contBalance.Visible = false;
-                divWith.Visible = false;
-                contWith.Visible = false;
-            }
-            else if (btnCheckId.ID == "btnWithDrawl")
-            {
-                divWith.Visible = true;
-                contWith.Visible = true;
-                divDeposite.Visible = false;
-                contDepo.Visible = false;
-                divBalance.Visible = false;
-                contBalance.Visible = false;
-            }
-            else if (btnCheckId.ID == "btnLogOut")
-            {
-                Session.Clear();
-                Session.Abandon();
-                Response.Redirect("~/Default.aspx");
+                Response.Write(ex.Message);
+                Response.Write(ex.StackTrace);
             }
         }
 
         protected void btnTransaction_Click(object sender, EventArgs e)
         {
-            Button bId = (Button)sender;
-            if (bId.ID == "btnDepositeAmount")
+            try
             {
-                double depoAmount = Convert.ToDouble(txtDeposite.Text);
-                if (depoAmount == null || depoAmount < 0)
+                Button bId = (Button)sender;
+                if (bId.ID == "btnDepositeAmount")
                 {
-                    lblDeposite.Text = "Please Enter Valid Amount";
-                    lblDeposite.ForeColor = Color.Red;
-                }
-                else
-                {
-                    balance = balance + depoAmount;
-                    using (SqlConnection con = new SqlConnection(connectionString))
+                    double depoAmount = Convert.ToDouble(txtDeposite.Text);
+                    if (depoAmount == null || depoAmount < 0)
                     {
-                        SqlCommand cmd = new SqlCommand("spUpdateBalance", con);
-                        cmd.Parameters.AddWithValue("@Id", id);
-                        cmd.Parameters.AddWithValue("@Balance", balance);
-                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        con.Open();
-                        int res = cmd.ExecuteNonQuery();
-                        if (res > 0)
+                        lblDeposite.Text = "Please Enter Valid Amount";
+                        lblDeposite.ForeColor = Color.Red;
+                        SetFocus(txtDeposite.Text);
+                    }
+                    else
+                    {
+                        balance = balance + depoAmount;
+                        using (SqlConnection con = new SqlConnection(connectionString))
                         {
-                            Session["Balance"] = balance;
-                            lblDeposite.Text = depoAmount.ToString() + " Rs. Deposited to Account";
-                            lblDeposite.ForeColor = Color.Green;
+                            SqlCommand cmd = new SqlCommand("spUpdateBalance", con);
+                            cmd.Parameters.AddWithValue("@Id", id);
+                            cmd.Parameters.AddWithValue("@Balance", balance);
+                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            con.Open();
+                            int res = cmd.ExecuteNonQuery();
+                            if (res > 0)
+                            {
+                                Session["Balance"] = balance;
+                                lblDeposite.Text = depoAmount.ToString() + " Rs. Deposited to Account";
+                                lblDeposite.ForeColor = Color.Green;
+                                txtDeposite.Text = "";
+                            }
+                            else
+                            {
+                                lblDeposite.Text = "Error to Deposite Amount";
+                                lblDeposite.ForeColor = Color.Red;
+                            }
                         }
-                        else
+                    }
+                }
+                else if (bId.ID == "btnWithDrawAmout")
+                {
+                    double withAmount = Convert.ToDouble(txtWithDraw.Text);
+                    if (withAmount == null || withAmount < 0)
+                    {
+                        lblWithDraw.Text = "Please Enter Valid Amount";
+                        lblWithDraw.ForeColor = Color.Red;
+                        SetFocus(txtWithDraw.Text);
+                    }
+                    else if (withAmount > limit)
+                    {
+                        lblWithDraw.Text = "You can't withdraw more than Limit";
+                        lblWithDraw.ForeColor = Color.Red;
+                    }
+                    else
+                    {
+                        balance = balance - withAmount;
+                        using (SqlConnection con = new SqlConnection(connectionString))
                         {
-                            lblDeposite.Text = "Error to Deposite Amount";
-                            lblDeposite.ForeColor = Color.Red;
+                            SqlCommand cmd = new SqlCommand("spUpdateBalance", con);
+                            cmd.Parameters.AddWithValue("@Id", id);
+                            cmd.Parameters.AddWithValue("@Balance", balance);
+                            cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                            con.Open();
+                            int res = cmd.ExecuteNonQuery();
+                            if (res > 0)
+                            {
+                                Session["Balance"] = balance;
+                                lblWithDraw.Text = withAmount.ToString() + " Rs. WithDraw to Account";
+                                lblWithDraw.ForeColor = Color.Green;
+                                txtWithDraw.Text = "";
+                            }
+                            else
+                            {
+                                lblWithDraw.Text = "Error to Deposite Amount";
+                                lblWithDraw.ForeColor = Color.Green;
+                            }
                         }
                     }
                 }
             }
-            else if (bId.ID == "btnWithDrawAmout")
+            catch (Exception ex)
             {
-                double withAmount = Convert.ToDouble(txtWithDraw.Text);
-                if (withAmount == null || withAmount < 0)
-                {
-                    lblWithDraw.Text = "Please Enter Valid Amount";
-                    lblWithDraw.ForeColor = Color.Red;
-                }
-                else if (withAmount > limit)
-                {
-                    lblWithDraw.Text = "You can't withdraw more than Limit";
-                    lblWithDraw.ForeColor = Color.Red;
-                }
-                else
-                {
-                    balance = balance - withAmount;
-                    using (SqlConnection con = new SqlConnection(connectionString))
-                    {
-                        SqlCommand cmd = new SqlCommand("spUpdateBalance", con);
-                        cmd.Parameters.AddWithValue("@Id", id);
-                        cmd.Parameters.AddWithValue("@Balance", balance);
-                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        con.Open();
-                        int res = cmd.ExecuteNonQuery();
-                        if (res > 0)
-                        {
-                            Session["Balance"] = balance;
-                            lblWithDraw.Text = withAmount.ToString() + " Rs. WithDraw to Account";
-                            lblWithDraw.ForeColor = Color.Green;
-                        }
-                        else
-                        {
-                            lblWithDraw.Text = "Error to Deposite Amount";
-                            lblWithDraw.ForeColor = Color.Green;
-                        }
-                    }
-                }
+                Response.Write(ex.Message);
+                Response.Write(ex.StackTrace);
             }
         }
 
