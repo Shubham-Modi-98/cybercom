@@ -1,0 +1,27 @@
+Work Report on ASP.Net [25/02/2021]
+
+• Today, I watched all Asp.net tutorial videos which is in schedule and given by Vipul Sir.
+• Learn, and Understand the basics concepts of Asp.Net in more detail. Which covers topics,
+• What is Asp.Net
+• ViewState and It's Disadvantages
+• Global.asax file and It's events
+• Differnce between ViewState, Session and ApplicationState
+• Web Application Life Cycle Events and Asp.Net Page Lifecycle and Events
+• Server Controls
+• Use of IsPostBack and Why it's used.
+• AutoPostBack property of Server Control and Importance of that.
+• IIS[Internet Information Services] and How to Configure IIS.
+
+• Diffrent Controls and It's Properties and Events Like:
+	1.) Textbox:- 
+		-> TextMode, Text, ReadOnly, ToolTip, MaxLength, Required, etc..
+		-> Text_Changed
+	2.) RadioButton:-
+		-> Text, GroupName, Checked, TextAlign, etc..
+		-> OnCheckedChanged
+	3.) CheckBox:-
+		-> Text, GroupName, Checked, TextAlign, etc..
+		-> OnCheckedChanged
+	• Diff:- Radio is used when you want to select only one choice 
+		 while Checkbox is used when you want to select more than one choice.
+• Implement all learned concept Practically.
