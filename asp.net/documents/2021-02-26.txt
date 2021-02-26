@@ -1,14 +1,21 @@
 Work Report on ASP.Net [26/02/2021]
 
-• Today, I watched all Asp.net tutorial videos which is in schedule and given by Vipul Sir.
-• Learn, and Understand the basics concepts of Asp.Net in more detail. Which covers topics,
-• 
-• Global.asax file and It's events
-• Differnce between ViewState, Session and ApplicationState
-• Web Application Life Cycle Events and Asp.Net Page Lifecycle and Events
-• Server Controls
-• Use of IsPostBack and Why it's used.
-• AutoPostBack property of Server Control and Importance of that.
-• IIS[Internet Information Services] and How to Configure IIS.
+• Today, I watched all Asp.net tutorial videos which is given in Schedule.
+• Learn, and Understand the basics concepts of Asp.Net in more detail. Which cover topics like, 
+• DropDownList :- DataBind using Database, using XML file, Cascading DropDownList
+• Map Virtual Path to Physical Path using Server.MapPath().
+	-> "." :- Is used to get parent directory path
+	-> ".." :- Is used to get parent's parent directory path [2-level]
+	-> "../.." or "~" :- get Root directory.
+• Learn more Controls and It's methods, properties and events like :-
+	-> DropDownList
+	-> CheckboxList
+	-> RadioButtonList
+	-> ListBox
+	-> BulletedList
+	-> FileUplod Control
+	-> HiddenField
+• Wizard Control Template
 
-• Implement all learned concept Practically.
+• After watched all videos some concepts are refreshed and also learn some new things from that like
+	-> Server.MapPath(), IIS configuration in that how to create virtual url, BulletedList.
