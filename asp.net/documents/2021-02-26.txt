@@ -1,0 +1,14 @@
+Work Report on ASP.Net [26/02/2021]
+
+• Today, I watched all Asp.net tutorial videos which is in schedule and given by Vipul Sir.
+• Learn, and Understand the basics concepts of Asp.Net in more detail. Which covers topics,
+• 
+• Global.asax file and It's events
+• Differnce between ViewState, Session and ApplicationState
+• Web Application Life Cycle Events and Asp.Net Page Lifecycle and Events
+• Server Controls
+• Use of IsPostBack and Why it's used.
+• AutoPostBack property of Server Control and Importance of that.
+• IIS[Internet Information Services] and How to Configure IIS.
+
+• Implement all learned concept Practically.
