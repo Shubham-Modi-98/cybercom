@@ -42,36 +42,28 @@ namespace ATM_Transaction_WebApp
             try
             {
                 Button btnCheckId = (Button)sender;
-                if (btnCheckId.ID == "btnCheckBalance")
+                if (btnCheckId.CommandName == "CheckBalance")
                 {
-                    divBalance.Visible = true;
-                    contBalance.Visible = true;
-                    divDeposite.Visible = false;
-                    contDepo.Visible = false;
-                    divWith.Visible = false;
-                    contWith.Visible = false;
+                    panelBalance.Visible = true;
+                    panelDeposite.Visible = false;
+                    panelWithDraw.Visible = false;
+
                     lblName.Text = "Customer Name: " + name;
                     lblBalance.Text = "Current Balance: " + balance;
                 }
-                else if (btnCheckId.ID == "btnDeposite")
+                else if (btnCheckId.CommandName == "Deposite")
                 {
-                    divDeposite.Visible = true;
-                    contDepo.Visible = true;
-                    divBalance.Visible = false;
-                    contBalance.Visible = false;
-                    divWith.Visible = false;
-                    contWith.Visible = false;
+                    panelDeposite.Visible = true;
+                    panelBalance.Visible = false;
+                    panelWithDraw.Visible = false;
                 }
-                else if (btnCheckId.ID == "btnWithDrawl")
+                else if (btnCheckId.CommandName == "WithDraw")
                 {
-                    divWith.Visible = true;
-                    contWith.Visible = true;
-                    divDeposite.Visible = false;
-                    contDepo.Visible = false;
-                    divBalance.Visible = false;
-                    contBalance.Visible = false;
+                    panelWithDraw.Visible = true;
+                    panelBalance.Visible = false;
+                    panelDeposite.Visible = false;
                 }
-                else if (btnCheckId.ID == "btnLogOut")
+                else if (btnCheckId.CommandName == "LogOut")
                 {
                     Session.Clear();
                     Session.Abandon();
@@ -79,12 +71,9 @@ namespace ATM_Transaction_WebApp
                 }
                 else
                 {
-                    divBalance.Visible = false;
-                    contBalance.Visible = false;
-                    divDeposite.Visible = false;
-                    contDepo.Visible = false;
-                    divWith.Visible = false;
-                    contWith.Visible = false;
+                    panelBalance.Visible = false;
+                    panelDeposite.Visible = false;
+                    panelWithDraw.Visible = false;
                 }
             }
             catch (Exception ex)
@@ -99,7 +88,7 @@ namespace ATM_Transaction_WebApp
             try
             {
                 Button bId = (Button)sender;
-                if (bId.ID == "btnDepositeAmount")
+                if (bId.CommandName == "DepositeAmount")
                 {
                     double depoAmount = Convert.ToDouble(txtDeposite.Text);
                     if (depoAmount == null || depoAmount < 0)
@@ -134,7 +123,7 @@ namespace ATM_Transaction_WebApp
                         }
                     }
                 }
-                else if (bId.ID == "btnWithDrawAmout")
+                else if (bId.CommandName == "WithDrawAmout")
                 {
                     double withAmount = Convert.ToDouble(txtWithDraw.Text);
                     if (withAmount == null || withAmount < 0)

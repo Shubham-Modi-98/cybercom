@@ -69,6 +69,15 @@ namespace ATM_Transaction_WebApp
         protected global::System.Web.UI.WebControls.Button btnLogin;
 
         /// <summary>
+        /// panelBalance control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelBalance;
+
+        /// <summary>
         /// contBalance control.
         /// </summary>
         /// <remarks>
@@ -103,6 +112,15 @@ namespace ATM_Transaction_WebApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblBalance;
+
+        /// <summary>
+        /// panelDeposite control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelDeposite;
 
         /// <summary>
         /// contDepo control.
@@ -148,6 +166,15 @@ namespace ATM_Transaction_WebApp
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblDeposite;
+
+        /// <summary>
+        /// panelWithDraw control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelWithDraw;
 
         /// <summary>
         /// contWith control.

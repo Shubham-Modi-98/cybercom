@@ -22,32 +22,33 @@
             <div class="card-body">
                 <div class="row form-group">
                     <div class="col-sm-6">
-                        <asp:Button ID="btnCheckBalance" class="form-cotrol" runat="server" Text="Check Balance" OnClick="btnVisible_Click"/>
+                        <asp:Button ID="btnCheckBalance" class="form-cotrol" runat="server" CommandName="CheckBalance" Text="Check Balance" OnClick="btnVisible_Click"/>
                     </div>
                     <div class="col-sm-6">
-                        <asp:Button ID="btnDeposite" class="form-cotrol" runat="server" Text="Deposite Amount" OnClick="btnVisible_Click" />
+                        <asp:Button ID="btnDeposite" class="form-cotrol" runat="server" CommandName="Deposite" Text="Deposite Amount" OnClick="btnVisible_Click" />
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-sm-6">
-                        <asp:Button ID="btnWithDrawl" class="form-cotrol" runat="server" Text="Withdraw Balance" OnClick="btnVisible_Click"/>
+                        <asp:Button ID="btnWithDrawl" class="form-cotrol" runat="server" CommandName="WithDraw" Text="Withdraw Balance" OnClick="btnVisible_Click"/>
                     </div>
                     <div class="col-sm-6">
-                        <asp:Button ID="btnLogOut" class="form-cotrol" runat="server" Text="Log Out" OnClick="btnVisible_Click" />
+                        <asp:Button ID="btnLogOut" class="form-cotrol" runat="server" CommandName="LogOut" Text="Log Out" OnClick="btnVisible_Click" />
                     </div>
                 </div>
                 <div class="row form-group">
                     <div class="col-sm-6" style="margin-left:auto;margin-right:auto;">
-                        <asp:Button ID="btnLogin" class="form-cotrol" runat="server" Text="Cancel" OnClick="btnVisible_Click"/>
+                        <asp:Button ID="btnLogin" class="form-cotrol" runat="server" CommandName="Cancel" Text="Cancel" OnClick="btnVisible_Click"/>
                     </div>
                 </div>
             </div>
         </div>
-        <br />       
-        <div class="container" id="contBalance" runat="server" visible="false">
+        <br />
+        <asp:Panel ID="panelBalance" runat="server" Visible="false">
+            <div class="container" id="contBalance" runat="server">
             <h3 class="h1login">Current Balance</h3>
         </div>
-        <div class="card" ID="divBalance" visible="false" runat="server">
+            <div class="card" ID="divBalance" runat="server">
             <div class="card-body">
                 <div class="row form-group">
                     <div class="col-sm-12">
@@ -61,11 +62,13 @@
                 </div>
             </div>
         </div>
+        </asp:Panel>
         <br />
-        <div class="container" id="contDepo" runat="server" visible="false">
+        <asp:Panel ID="panelDeposite" runat="server" Visible="false">
+            <div class="container" id="contDepo" runat="server">
             <h3 class="h1login">Deposite Amount to Account</h3>
         </div>
-        <div class="card" ID="divDeposite" visible="false" runat="server">
+            <div class="card" ID="divDeposite" runat="server">
             <div class="card-body">
                 <div class="row form-group">
                     <div class="col-sm-12">
@@ -74,7 +77,7 @@
                 </div>
                 <div class="row form-group">
                     <div class="col-sm-6" style="margin-left:auto;margin-right:auto;">
-                        <asp:Button ID="btnDepositeAmount" class="form-cotrol" runat="server" Text="Deposite Balance" OnClick="btnTransaction_Click" />
+                        <asp:Button ID="btnDepositeAmount" class="form-cotrol" runat="server" CommandName="DepositeAmount" Text="Deposite Balance" OnClick="btnTransaction_Click" />
                     </div>
                 </div>
                 <div class="row form-group">
@@ -84,11 +87,13 @@
                 </div>
             </div>
         </div>
+        </asp:Panel>
         <br />
-        <div class="container" id="contWith" runat="server" visible="false">
+        <asp:Panel ID="panelWithDraw" runat="server" Visible="false">
+            <div class="container" id="contWith" runat="server">
             <h3 class="h1login">WithDraw Amount to Account</h3>
         </div>
-        <div class="card" ID="divWith" visible="false" runat="server">
+            <div class="card" ID="divWith" runat="server">
             <div class="card-body">
                 <div class="row form-group">
                     <div class="col-sm-12">
@@ -97,7 +102,7 @@
                 </div>
                 <div class="row form-group">
                     <div class="col-sm-6" style="margin-left:auto;margin-right:auto;">
-                        <asp:Button ID="btnWithDrawAmout" class="form-cotrol" runat="server" Text="WithDraw Balance" OnClick="btnTransaction_Click"/>
+                        <asp:Button ID="btnWithDrawAmout" class="form-cotrol" runat="server" CommandName="WithDrawAmount" Text="WithDraw Balance" OnClick="btnTransaction_Click"/>
                     </div>
                 </div>
                 <div class="row form-group">
@@ -107,6 +112,7 @@
                 </div>
             </div>
         </div>
+        </asp:Panel>
     </form>
 </body>
 </html>
