@@ -1,0 +1,26 @@
+Work Report on ASP.Net [02/03/2021]
+
+• Today, I watched all Asp.net tutorial videos which is given in Schedule.
+• Learn, and Understand the basics concepts of Asp.Net in more detail. Which cover topics like, 
+• Literal Control vs Label Control :- Literal control is light weight and it is not used any span tag where label used span tag
+• Panel Control :- Using panel control we are show and hide controls in group
+• Validation Controls :-
+	-> RequiredField Validator and It's properties
+	-> RangeValidator 
+	-> CompareValidator
+	-> RegularExpressionValidator
+	-> CustomValidator
+	-> ValidationSummary
+• Validation Group :- It is used when one aspx page have Login and Register or check validation on different clicks.
+• Page Navigation Techniques:-
+	-> Hyperlink
+	-> Response.Redirect()
+	-> Server.Transfer()
+	-> Server.Execute()
+	-> Windows.Open()
+• Learn difference between Response.Redirect() vs Server.Transfer() vs Server.Execute()
+• After watched all videos clear concept more in details and learn some new concepts like
+	-> Server.Transfer()
+	-> Server.Execute()
+	-> Get previous form data using Page.FindControl()
+	-> Form.Request from NameValueCollection and Context.Handler() 
