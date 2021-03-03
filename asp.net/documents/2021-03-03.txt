@@ -1,0 +1,12 @@
+Work Report on ASP.Net [03/03/2021]
+
+• Today, I watched all Asp.net tutorial videos which is given in Schedule.
+• Learn, and Understand the basics concepts of Asp.Net in more detail. Which cover topics like, 
+• User Control and Add user control in web form and Loading controls Dynamically
+• Server Control:- It is new cocept for me in asp.net
+	-> Learn how to create server control, how to add properties and adding custom events
+	-> How to add Server control in Application ToolBox
+	-> Assigning Image to control using TooxBoxBitMap
+• Difference Between User Control and Server Control
+• AutoEventWireup
+• Learn New concept of Server Control which is not known and Faced some issue to learn and solved that from Intenet
