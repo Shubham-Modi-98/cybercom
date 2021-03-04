@@ -1,0 +1,22 @@
+Work Report on ASP.Net [04/03/2021]
+
+• Today, I watched all Asp.net tutorial videos which is given in Schedule.
+• Learn, and Understand the basics concepts of Asp.Net in more detail. Which cover topics like, 
+• How to upload and download files using asp net and c#
+• Creating an image gallery using asp net and c# 
+• Contact us page using asp net and c# 
+• Implementing autocomplete textbox in asp net web forms
+• Master pages in asp.net
+• Passing data from content page to master page in asp.net
+• Passing data from master page to content page in asp.net
+• Default content in contentplaceholder of a master page in asp net
+• Assigning a master page dynamically in asp net
+• Master page content page user control life cycle in asp.net
+• How to display an icon for website on browser tab
+• Captcha control in asp net
+• Using ASP NET validation controls with recaptcha
+• Customizing recaptcha control
+• Save image to database using asp.net
+• Load image from database in asp.net
+• How to show images from database in gridview
+• Implement Image SlideShow using XMl and Databse.
