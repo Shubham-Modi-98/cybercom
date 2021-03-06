@@ -1,0 +1,10 @@
+Work Report on ASP.Net [06/03/2021]
+
+• Today, I revised videos of Asp.net Tutorial..
+• Watch other videos of Asp.Net on Youtube
+• Learn, and Understand the topics which i faced difficulty
+• Implement Web Service for AutoComplete Textbox with Ajax.
+• Solved some errors occured while Implement of Web Service
+
+• Implement CRUD GridView with Validation and Store Procedure and Solved Errors.
+• Also Learn concepts of store image in Database
