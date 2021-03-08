@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Images>
+  <image name="angry-bird.jpg" order="1"></image>
+  <image name="asplogo.jpg" order="2"></image>
+  <image name="assassins.jpg" order="3"></image>
+  <image name="greenq.jpg" order="4"></image>
+  <image name="gtavs.jpg" order="5"></image>
+  <image name="h2.jpg" order="6"></image>
+  <image name="h3.jpg" order="7"></image>
+  <image name="h4.jpg" order="8"></image>
+  <image name="h5.jpg" order="9"></image>
+  <image name="manquiz.jpg" order="10"></image>
+  <image name="quiz-icon.jpg" order="11"></image>
+  <image name="quiz-icon1.jpg" order="12"></image>
+  <image name="QuizSplash.jpg" order="13"></image>
+</Images>
