@@ -1,0 +1,23 @@
+Work Report on [08/03/2021]
+
+• Today, I have created 2 web applcation and perform tasks
+• Referred some online videos and websites
+• First Application :-
+	-> In that create Tables name tblStudent and tblStudCourse which contains field like
+		tblStudent:- Id(PK,Identity),RollNo(UK),Name,Php,Asp,Js,CourseId(FK)
+		tblStudCourse:- Id(PK),Course
+	-> Create One form which covers all validation and add Gridview
+	-> In GridView give permission to edit/delete with help of gridview
+	-> Also on click Edit in GridView display dropdown with select value of Db and fill other data to change course
+	-> Delete Record from GridView on Single Clikc
+• Second Application:-
+	-> Create xml file of ImageData in that contains Image name and Order No.
+	-> Create WebPage which Populate xml file as display images according to their name
+	-> Used scriptManager and UpdatePanel Ajax Contaols and Handle onTick() event to change Images
+	-> Also give feature to stop and start image slideshow
+
+• In that Store Image in Database Table also and Retrive
+• Solved errors while Implements of Web Applications, also Learn so many new things.
+
+• Implement CRUD GridView with Validation and Store Procedure and Solved Errors.
+• Also Learn concepts of store image in Database
