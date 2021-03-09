@@ -36,6 +36,10 @@ namespace GridViewCRUD_Demo
                         command.Parameters.AddWithValue("@email", txtEmail.Text);
                         command.Parameters.AddWithValue("@salary", Convert.ToDecimal(txtSalary.Text));
                         command.Parameters.AddWithValue("@id", -1);
+                        //Or you can use Add
+                        
+                        //command.Parameters.Add("@id", SqlDbType.Int);
+                        
                         command.Parameters["@id"].Direction = ParameterDirection.Output;
                         con.Open();
                         int res = command.ExecuteNonQuery();
@@ -43,7 +47,7 @@ namespace GridViewCRUD_Demo
                         con.Close();
                         if (res > 0)
                         {
-                            lblMessage.Text = "Record added Successfully, Id is- " + id;
+                            lblMessage.Text = "Record added Successfully, Id is: " + id;
                             lblMessage.ForeColor = Color.Green;
                             getData();
                         }
