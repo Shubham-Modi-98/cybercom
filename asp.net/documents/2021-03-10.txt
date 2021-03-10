@@ -1,0 +1,9 @@
+Work Report on ASP.Net [10/03/2021]
+
+• Learn, and Understand the topics which I faced difficulty
+• Implement Web Service for AutoComplete Textbox with Ajax.
+• Solved some errors occured while Implement of Web Service
+• Implement CRUD in GridView with Password Encryption and OnRowCommand
+• Work on Code Optimization 
+• Implement CRUD GridView with Validation and Store Procedure and Solved Errors.
+• Also Learn concepts of store image in Database
