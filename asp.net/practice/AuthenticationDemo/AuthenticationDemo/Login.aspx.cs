@@ -30,6 +30,7 @@ namespace AuthenticationDemo
         protected void btnLoginUser_Click(object sender, EventArgs e)
         {
             string encPassword = FormsAuthentication.HashPasswordForStoringInConfigFile(txtPassword.Text, "SHA1");
+            Session.Clear();
             userAuthenticate(txtEmail.Text, encPassword);
         }
 
@@ -54,6 +55,7 @@ namespace AuthenticationDemo
                         {
                             string userName = Convert.ToString(reader["UserName"].ToString());
                             Session["UserName"] = userName;
+                            Session["Email"] = txtEmail.Text;
                             FormsAuthentication.RedirectFromLoginPage(txtEmail.Text, false);
                         }
                         else if(locked)

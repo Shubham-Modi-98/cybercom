@@ -52,8 +52,8 @@ F:\Cybercom Asp Git\asp.net\practice\AuthenticationDemo\AuthenticationDemo\bin\r
 F:\Cybercom Asp Git\asp.net\practice\AuthenticationDemo\AuthenticationDemo\bin\roslyn\VBCSCompiler.exe.config
 F:\Cybercom Asp Git\asp.net\practice\AuthenticationDemo\AuthenticationDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 F:\Cybercom Asp Git\asp.net\practice\AuthenticationDemo\AuthenticationDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-F:\Cybercom Asp Git\asp.net\practice\AuthenticationDemo\AuthenticationDemo\obj\Debug\AuthenticationDemo.csprojAssemblyReference.cache
 F:\Cybercom Asp Git\asp.net\practice\AuthenticationDemo\AuthenticationDemo\obj\Debug\AuthenticationDemo.csproj.CoreCompileInputs.cache
 F:\Cybercom Asp Git\asp.net\practice\AuthenticationDemo\AuthenticationDemo\obj\Debug\AuthenticationDemo.csproj.CopyComplete
 F:\Cybercom Asp Git\asp.net\practice\AuthenticationDemo\AuthenticationDemo\obj\Debug\AuthenticationDemo.dll
 F:\Cybercom Asp Git\asp.net\practice\AuthenticationDemo\AuthenticationDemo\obj\Debug\AuthenticationDemo.pdb
+F:\Cybercom Asp Git\asp.net\practice\AuthenticationDemo\AuthenticationDemo\obj\Debug\AuthenticationDemo.csprojAssemblyReference.cache

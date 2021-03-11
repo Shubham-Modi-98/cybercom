@@ -29,7 +29,6 @@ Begin
 	else
 	begin
 		select @count = COUNT(NAME) from tblUser where Email = @email and Password = @password	
-		
 		if(@count = 1)
 		begin
 			update tblUser set RetryAttempt = NULL where Email = @email
@@ -39,7 +38,7 @@ Begin
 		end
 		else
 		begin
-			select @chkEmail = Email from tblUser where Email = @email and Password = @password	
+			select @chkEmail = Email from tblUser where Email = @email
 			if(@chkEmail = @email)
 			begin
 				select @attempt = IsNULL(RetryAttempt,0) from tblUser where Email = @email
@@ -74,7 +73,33 @@ where DATEDIFF(MINUTE,LockedDateTime,GETDATE()) >= 20
 select IsNULL(IsLocked,0), IsNULL(RetryAttempt,0) from tblUser 
 where Email = 'admin@gmail.com' and Password = 'BA75BE5A3634E6828643A3772F05D4654EAE3C1B'
 
+create proc spGetAllData
+as
+Begin
+	select Name,Email,RegiDateTime from tblUser
+End
 
+Alter proc spGetUserData
+@email nvarchar(50)
+as
+Begin
+	select Name,Email,RegiDateTime from tblUser where Email = @email
+End
+
+create proc spUpdateUser
+@name nvarchar(50),
+@email nvarchar(50)
+as
+Begin
+	Update tblUser set Name = @name where Email = @email
+End
+
+create proc spDeleteUser
+@email nvarchar(50)
+as
+Begin
+	Delete from tblUser where Email = @email
+End
 
 select * from tblUser
 
