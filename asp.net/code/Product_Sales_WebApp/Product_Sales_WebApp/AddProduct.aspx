@@ -55,7 +55,7 @@
                             Text="*" ForeColor="Red" ControlToValidate="txtProdQty" Display="Dynamic" Font-Bold="true" ValidationGroup="FormValidation"></asp:RequiredFieldValidator>
 
                         <asp:RangeValidator ID="rgProdQty" runat="server" ErrorMessage="Quatity must be greater than 0"
-                            MinimumValue="0" MaximumValue="100000" Type="Integer" Text="*" ForeColor="Red" ControlToValidate="txtProdQty" Display="Dynamic" Font-Bold="true" ValidationGroup="FormValidation"></asp:RangeValidator>
+                            MinimumValue="1" MaximumValue="100000" Type="Integer" Text="*" ForeColor="Red" ControlToValidate="txtProdQty" Display="Dynamic" Font-Bold="true" ValidationGroup="FormValidation"></asp:RangeValidator>
                     </td>
                 </tr>
                 <tr>
@@ -69,7 +69,7 @@
                             Text="*" ForeColor="Red" ControlToValidate="txtProdPrice" Display="Dynamic" Font-Bold="true" ValidationGroup="FormValidation"></asp:RequiredFieldValidator>
 
                         <asp:RangeValidator ID="rgProdPrice" runat="server" ErrorMessage="Price must be greater than 0"
-                            MinimumValue="0" MaximumValue="2500000" Type="Double" Text="*" ForeColor="Red" ControlToValidate="txtProdPrice" Display="Dynamic" Font-Bold="true" ValidationGroup="FormValidation"></asp:RangeValidator>
+                            MinimumValue="1" MaximumValue="2500000" Type="Double" Text="*" ForeColor="Red" ControlToValidate="txtProdPrice" Display="Dynamic" Font-Bold="true" ValidationGroup="FormValidation"></asp:RangeValidator>
                     </td>
                 </tr>
                 <tr>
@@ -110,6 +110,11 @@
                 <tr>
                     <td style="text-align: center; font-style: normal; font-weight: 600">
                         <asp:LinkButton ID="linkSaleProduct" runat="server" PostBackUrl="~/SaleProducts.aspx">Sales Product</asp:LinkButton>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="text-align: center; font-style: normal; font-weight: 600">
+                        <asp:LinkButton ID="linkViewSales" runat="server" PostBackUrl="~/DisplaySales.aspx">View Sales Records</asp:LinkButton>
                     </td>
                 </tr>
             </table>

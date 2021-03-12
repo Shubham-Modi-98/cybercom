@@ -50,7 +50,7 @@ namespace Product_Sales_WebApp
                     {
                         using (connection = new SqlConnection(conString))
                         {
-                            using (command = new SqlCommand("spAddProduct", connection))
+                            using (command = new SqlCommand("spInsertProduct", connection))
                             {
                                 HttpPostedFile postedFile = fileProdImage.PostedFile;
                                 string imgName = Path.GetFileName(postedFile.FileName);
@@ -69,12 +69,16 @@ namespace Product_Sales_WebApp
                                     command.Parameters.AddWithValue("@prodQty", Convert.ToInt32(txtProdQty.Text));
                                     command.Parameters.AddWithValue("@prodPrice", Convert.ToDecimal(txtProdPrice.Text));
                                     command.Parameters.AddWithValue("@prodImage", byteArray);
+                                    //command.Parameters.AddWithValue("@pId", "-1");
+                                    command.Parameters.Add("@pId", SqlDbType.NVarChar, 50);
+                                    command.Parameters["@pId"].Direction = ParameterDirection.Output;
                                     connection.Open();
                                     int res = command.ExecuteNonQuery();
+                                    string productId = Convert.ToString(command.Parameters["@pId"].Value);
                                     connection.Close();
-                                    if (res > 0)
+                                    if (res > 0 )
                                     {
-                                        lblMessage.Text = "Product with ProductId: " + txtProdId.Text + " Added Successfully.";
+                                        lblMessage.Text = "Product with ProductId: " + productId + " Added Successfully.";
                                         lblMessage.ForeColor = Color.Green;
                                         clearFields();
                                     }

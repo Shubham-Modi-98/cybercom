@@ -1,14 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
-using System.Web.UI.WebControls;
-using System.Windows.Forms;
 
 namespace Product_Sales_WebApp
 {
@@ -18,6 +12,7 @@ namespace Product_Sales_WebApp
         SqlCommand command = null;
         SqlConnection connection = null;
         SqlDataAdapter adapter = null;
+        static string dbQty = string.Empty;
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!IsPostBack)
@@ -32,12 +27,15 @@ namespace Product_Sales_WebApp
             {
                 if (drpProducts.SelectedIndex == 0)
                 {
+                    panelBill.Visible = false;
                     Response.Write("<script>alert('Select Product First')</script>");
                 }
                 else
                 {
                     btnBill.Enabled = false;
                     int id = Convert.ToInt32(drpProducts.SelectedValue);
+                    txtProdQty.Text = "";
+                    txtTotalPrice.Text = "";
 
                     using (connection = new SqlConnection(conString))
                     {
@@ -53,7 +51,9 @@ namespace Product_Sales_WebApp
                                 txtProdId.Text = Convert.ToString(reader["ProdId"]);
                                 txtProdName.Text = Convert.ToString(reader["ProdName"]);
                                 txtProdPrice.Text = Convert.ToString(reader["ProdPrice"]);
-                                lblDbQty.Text = Convert.ToString(reader["ProdQty"]);
+                                dbQty = Convert.ToString(reader["ProdQty"]);
+                                lblDbQty.Text = "Available Stock is " + dbQty;
+                                lblDbQty.ForeColor = Color.Green;
                             }
                         }    
                     }
@@ -94,21 +94,23 @@ namespace Product_Sales_WebApp
         {
             try
             {
-                int dbQty = Convert.ToInt32(lblDbQty.Text);
+                int availableQty = Convert.ToInt32(dbQty);
                 int txtQty = Convert.ToInt32(txtProdQty.Text);
-                if (dbQty <= 0)
+                if (availableQty <= 0)
                 {
                     panelBill.Visible = false;
                     lblMessage.Text = "Product is Out of Stock";
                     lblMessage.ForeColor = Color.Red;
+                    lblDbQty.ForeColor = Color.Red;
                 }
-                else if (txtQty <= dbQty)
+                else if (txtQty <= availableQty)
                 {
                     btnBill.Enabled = true;
                     decimal prodPrice = Convert.ToDecimal(txtProdPrice.Text);
                     decimal totalPrice = prodPrice * txtQty;
                     txtTotalPrice.Text = Convert.ToString(totalPrice);
                     lblMessage.Text = "";
+                    lblDbQty.ForeColor = Color.Green;
                 }
                 else
                 {

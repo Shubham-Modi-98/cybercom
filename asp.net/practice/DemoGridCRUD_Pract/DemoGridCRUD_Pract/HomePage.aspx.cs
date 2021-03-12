@@ -267,21 +267,21 @@ namespace DemoGridCRUD_Pract
             //    using (SqlConnection con = new SqlConnection(connString))
             //    {
             //        //Fill DropDown using DataSet
-            //        if (e.Row.RowType == DataControlRowType.DataRow)
-            //        {
-            //            DropDownList drpEdit = e.Row.FindControl("drpCourseItem") as DropDownList;
-            //            adapter = new SqlDataAdapter("select RollNo, Course, CourseId from tblStudCourse as sc, tblStudent as s where CourseId = sc.Id", con);
-            //            DataSet dataSet = new DataSet();
-            //            adapter.Fill(dataSet);
-            //            drpEdit.DataSource = dataSet;
-            //            drpEdit.DataTextField = "Course";
-            //            drpEdit.DataValueField = "CourseId";
-            //            drpEdit.DataBind();
-            //            drpEdit.Items.Insert(0, "Select Course");
+            //if (e.Row.RowType == DataControlRowType.DataRow)
+            //{
+            //    DropDownList drpEdit = e.Row.FindControl("drpCourseItem") as DropDownList;
+            //    adapter = new SqlDataAdapter("select RollNo, Course, CourseId from tblStudCourse as sc, tblStudent as s where CourseId = sc.Id", con);
+            //    DataSet dataSet = new DataSet();
+            //    adapter.Fill(dataSet);
+            //    drpEdit.DataSource = dataSet;
+            //    drpEdit.DataTextField = "Course";
+            //    drpEdit.DataValueField = "CourseId";
+            //    drpEdit.DataBind();
+            //    drpEdit.Items.Insert(0, "Select Course");
 
-            //            string course = (e.Row.FindControl("lblCourseItem") as Label).Text;
-            //            drpCourse.Items.FindByText(course).Selected = true;
-            //        }
+            //    string course = (e.Row.FindControl("lblCourseItem") as Label).Text;
+            //    drpCourse.Items.FindByText(course).Selected = true;
+            //}
             //    }
             //}
             //catch (Exception ex)

@@ -18,7 +18,7 @@
     <div style="margin-left: auto; margin-right: auto; padding-top: 20px;">
         <h1 style="text-align: center; color: darkgoldenrod">Sale Products</h1>
         <form id="form1" runat="server">
-            <asp:Label ID="lblDbQty" runat="server" Visible="false"></asp:Label>
+            <%--<asp:Label ID="lblDbQty" runat="server" Visible="false"></asp:Label>--%>
             <table style="margin-left: auto; margin-right: auto; padding-top: 10px; border: dashed; width: 40%">
                 <tr>
                     <td colspan="2">
@@ -57,13 +57,22 @@
                         </td>
                         <td style="text-align: left">
                             <asp:TextBox ID="txtProdQty" runat="server" Width="150px" AutoPostBack="True" OnTextChanged="txtProdQty_TextChanged"></asp:TextBox>
+                            
+                            
 
                             <asp:RequiredFieldValidator ID="rfvProdQty" runat="server" ErrorMessage="Quantity is Required"
                                 Text="*" ForeColor="Red" ControlToValidate="txtProdQty" Display="Dynamic" Font-Bold="true" ValidationGroup="FormValidation"></asp:RequiredFieldValidator>
 
                             <asp:RangeValidator ID="rgProdQty" runat="server" ErrorMessage="Quatity must be greater than 0"
-                                MinimumValue="0" MaximumValue="100000" Type="Integer" Text="*" ForeColor="Red" ControlToValidate="txtProdQty" Display="Dynamic" Font-Bold="true" ValidationGroup="FormValidation"></asp:RangeValidator>
+                                MinimumValue="1" MaximumValue="100000" Type="Integer" Text="*" ForeColor="Red" ControlToValidate="txtProdQty" Display="Dynamic" Font-Bold="true" ValidationGroup="FormValidation"></asp:RangeValidator>
 
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right">
+                        </td>
+                        <td class="auto-style1" style="text-align: left">
+                            <asp:Label ID="lblDbQty" runat="server" Text =""></asp:Label>
                         </td>
                     </tr>
                     <tr>
