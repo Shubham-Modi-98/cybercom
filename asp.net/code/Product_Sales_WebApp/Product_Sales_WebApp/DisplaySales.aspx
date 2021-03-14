@@ -24,27 +24,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2" style="vertical-align:baseline;text-align:center;">
-                        <%--<table>
-                            <asp:Repeater ID="repeaterData" runat="server">
-                                <HeaderTemplate>
-                                    <tr>
-                                        <td><b>Name</b></td>
-                                        <td><b>Price</b></td>
-                                        <td><b>Total Price</b></td>
-                                        <td><b>Sales Date</b></td>
-                                    </tr>
-                                </HeaderTemplate>
-                                <ItemTemplate>
-                                    <tr>
-                                        <td><%#DataBinder.Eval(Container,"DataItem.Name") %></td>
-                                        <td><%#DataBinder.Eval(Container,"DataItem.Price") %></td>
-                                        <td><%#DataBinder.Eval(Container,"DataItem.TotalPrice") %></td>
-                                        <td><%#DataBinder.Eval(Container,"DataItem.SalesDate") %></td>
-                                    </tr>
-                                </ItemTemplate>
-                            </asp:Repeater>
-                        </table>--%>
+                    <td colspan="2" style="vertical-align:baseline;text-align:left;">
                         <asp:GridView ID="grData" runat="server" AutoGenerateColumns="False" OnRowDataBound="grData_RowDataBound" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2">
                             <Columns>
                                 <%--<asp:BoundField HeaderText="Product Name" DataField="ProdName" />--%>
@@ -60,19 +40,9 @@
                                     </ItemTemplate>
                                 </asp:TemplateField>
                                 <asp:BoundField HeaderText="Product Price" DataField="ProdPrice" />
-                                <asp:TemplateField HeaderText="Sales Qty" Visible="true">
+                                <asp:TemplateField HeaderText="Sale Qty" Visible="true">
                                     <ItemTemplate>
-                                        <asp:Label ID="lblSalesQty" runat="server" Text=""></asp:Label>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Sales Total" Visible="true">
-                                    <ItemTemplate>
-                                        <asp:Label ID="lblTotal" runat="server" Text=""></asp:Label>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Sales Date" Visible="true">
-                                    <ItemTemplate>
-                                        <asp:Label ID="lblSalesDate" runat="server" Text=""></asp:Label>
+                                        <asp:Label ID="lblSalesData" runat="server" Text=""></asp:Label>
                                         <%--<asp:Label ID="lblTotal" runat="server" Text=""></asp:Label>--%>
                                     </ItemTemplate>
                                 </asp:TemplateField>

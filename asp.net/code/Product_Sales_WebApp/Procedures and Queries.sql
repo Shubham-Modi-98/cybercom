@@ -134,16 +134,20 @@ Begin
 	Group By P.ProdName)
 End
 
-Create Proc spGetSalesDataByName 
+Alter Proc spGetSalesDataByName --'cbv'
 @name nvarchar(50)
 As
 Begin
-	Select SalesDate,TotalPrice from tblSales S,tblProduct P
+	Select Qty,TotalPrice,SalesDate from tblSales S,tblProduct P
 	where P.Id = S.Id and P.ProdName = @name
 End
 
-Select SalesDate,TotalPrice from tblSales S,tblProduct P
-where P.Id = S.Id and P.ProdName = 'cbv'
+--If told to fetch total data from date as group by
+Select SUM(Qty) as [Qty],SUM(TotalPrice) as [TotalPrice]
+,CONVERT(date,SalesDate) as [SalesDate]
+from tblSales S,tblProduct P
+where P.Id = S.Id and P.ProdName = 'Oppo A3'
+Group By CONVERT(date,SalesDate)
 
 	Select ProdName,ProdPrice from tblProduct
 	where ProdName In

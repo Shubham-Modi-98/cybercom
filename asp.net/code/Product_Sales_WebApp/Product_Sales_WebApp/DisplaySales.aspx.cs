@@ -57,9 +57,10 @@ namespace Product_Sales_WebApp
                 if (e.Row.RowType == DataControlRowType.DataRow)
                 {
                     Label lblPname = e.Row.FindControl("lblProdName") as Label;
-                    Label lblSdate = e.Row.FindControl("lblSalesDate") as Label;
-                    Label lblTprice = e.Row.FindControl("lblTotal") as Label;
-                    Label lblSqty = e.Row.FindControl("lblSalesQty") as Label;
+                    Label lblSalesData = e.Row.FindControl("lblSalesData") as Label;
+                    //Label lblSdate = e.Row.FindControl("lblSalesDate") as Label;
+                    //Label lblTprice = e.Row.FindControl("lblTotal") as Label;
+                    //Label lblSqty = e.Row.FindControl("lblSalesQty") as Label;
                     using (connection = new SqlConnection(conString))
                     {
                         using (command = new SqlCommand("spGetSalesDataByName", connection))
@@ -71,24 +72,13 @@ namespace Product_Sales_WebApp
                             {
                                 while (reader.Read())
                                 {
-                                    //if (txtSdate.Text != "")
-                                    //{
-                                    //    txtSdate.Text = Convert.ToString(reader["SalesDate"]);
-                                    //    txtTprice.Text = Convert.ToString(reader["TotalPrice"]);
-                                    //}
-                                    //else
-                                    //{
-                                    lblSqty.Text += Convert.ToString(reader["Qty"]);
-                                    lblSqty.Text += "<br/>";
-                                    lblSdate.Text += Convert.ToString(reader["SalesDate"]);
-                                    lblSdate.Text += "<br/>";
-                                    lblTprice.Text += Convert.ToString(reader["TotalPrice"]);
-                                    lblTprice.Text += "<br/>";
-                                    //lblSdate.Text += "<br/>";
-                                    //lblSdate.Text += Environment.NewLine;
-                                    //lblTprice.Text += "<br/>";
-                                    //lblTprice.Text += Environment.NewLine;
-                                    //}
+                                    //lblSalesData.Text += "x&nbsp;" + Convert.ToString(reader["Qty"]) + "&nbsp; = &nbsp;" + Convert.ToString(reader["TotalPrice"]) +
+                                    //    "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + Convert.ToString(reader["SalesDate"]) + "<br/>";
+
+                                    DateTime sDate = DateTime.Parse(reader["SalesDate"].ToString());  
+                                    
+                                    lblSalesData.Text += sDate.ToShortDateString() +
+                                        "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + Convert.ToString(reader["TotalPrice"]) + "<br/>";
                                 }
                             }
                             connection.Close();
