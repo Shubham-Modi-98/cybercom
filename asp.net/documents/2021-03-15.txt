@@ -1,0 +1,16 @@
+Work Report on ASP.Net MVC [15/03/2021]
+
+• Today, I watched Asp.net MVC tutorial videos which is given in Schedule.
+• Learn, and Understand the topics likes
+	-> What is Asp.Net MVC / how to set up MVC environment
+	-> Understand MVC 5 architechture file and Folder structure
+	-> Controller in MVC 5
+	-> Views
+	-> Models
+	-> Razor view Pages
+	-> Loop in Razor view engine
+	-> Inline HTML helpers in MVC 5
+
+• Fixed some issues in Evolution Test task.
+• Learn new MVC patterns in deeply.
+• Implement MVC demo projects and practical on it.
