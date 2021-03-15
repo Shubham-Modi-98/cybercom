@@ -26,8 +26,10 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="2" style="text-align: center; margin-left: auto; margin-right: autop; padding-bottom: 30px; padding-top: 20px;">
-                        <asp:DropDownList ID="drpProducts" runat="server" AutoPostBack="true" OnSelectedIndexChanged="drpProducts_SelectedIndexChanged"></asp:DropDownList>
+                    <td colspan="2" style="text-align: center; margin-left: auto; margin-right: auto; padding-bottom: 30px; padding-top: 20px;">
+                        <asp:DropDownList ID="drpProducts" runat="server" AutoPostBack="true" OnSelectedIndexChanged="drpProducts_SelectedIndexChanged">
+                            
+                        </asp:DropDownList>
                     </td>
                 </tr>
 
@@ -58,8 +60,6 @@
                         <td style="text-align: left">
                             <asp:TextBox ID="txtProdQty" runat="server" Width="150px" AutoPostBack="True" OnTextChanged="txtProdQty_TextChanged"></asp:TextBox>
                             
-                            
-
                             <asp:RequiredFieldValidator ID="rfvProdQty" runat="server" ErrorMessage="Quantity is Required"
                                 Text="*" ForeColor="Red" ControlToValidate="txtProdQty" Display="Dynamic" Font-Bold="true" ValidationGroup="FormValidation"></asp:RequiredFieldValidator>
 

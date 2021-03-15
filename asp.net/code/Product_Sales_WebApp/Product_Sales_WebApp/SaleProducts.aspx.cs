@@ -70,6 +70,7 @@ namespace Product_Sales_WebApp
         {
             try
             {
+                drpProducts.ClearSelection();
                 using (connection = new SqlConnection(conString))
                 {
                     adapter = new SqlDataAdapter("spAllGetIdName", connection);
@@ -94,29 +95,48 @@ namespace Product_Sales_WebApp
         {
             try
             {
-                int availableQty = Convert.ToInt32(dbQty);
-                int txtQty = Convert.ToInt32(txtProdQty.Text);
-                if (availableQty <= 0)
+                lblMessage.Text = "";
+                
+                if (string.IsNullOrEmpty(txtProdQty.Text) || txtProdQty.Text == "")
                 {
-                    panelBill.Visible = false;
-                    lblMessage.Text = "Product is Out of Stock";
-                    lblMessage.ForeColor = Color.Red;
-                    lblDbQty.ForeColor = Color.Red;
+                    btnBill.Enabled = false;
+                    txtTotalPrice.Text = "";
+
                 }
-                else if (txtQty <= availableQty)
+                else if(txtProdQty.Text == "0")
                 {
-                    btnBill.Enabled = true;
-                    decimal prodPrice = Convert.ToDecimal(txtProdPrice.Text);
-                    decimal totalPrice = prodPrice * txtQty;
-                    txtTotalPrice.Text = Convert.ToString(totalPrice);
-                    lblMessage.Text = "";
-                    lblDbQty.ForeColor = Color.Green;
+                    btnBill.Enabled = false;
+                    txtTotalPrice.Text = "0.00";
+                    lblMessage.Text = "You cannot enter Qualty as 0";
+                    lblMessage.ForeColor = Color.Red;
                 }
                 else
                 {
-                    lblMessage.Text = "You cann't enter Quantity more than Stocks";
-                    lblMessage.ForeColor = Color.Red;
-                    SetFocus(txtProdQty);
+                    int availableQty = Convert.ToInt32(dbQty);
+                    int txtQty = Convert.ToInt32(txtProdQty.Text);
+                    if (availableQty <= 0)
+                    {
+                        panelBill.Visible = false;
+                        lblMessage.Text = "Product is Out of Stock";
+                        lblMessage.ForeColor = Color.Red;
+                        lblDbQty.ForeColor = Color.Red;
+                        txtTotalPrice.Text = "";
+                    }
+                    else if (txtQty <= availableQty)
+                    {
+                        btnBill.Enabled = true;
+                        decimal prodPrice = Convert.ToDecimal(txtProdPrice.Text);
+                        decimal totalPrice = prodPrice * txtQty;
+                        txtTotalPrice.Text = Convert.ToString(totalPrice);
+                        lblDbQty.ForeColor = Color.Green;
+                    }
+                    else
+                    {
+                        lblMessage.Text = "You cann't enter Quantity more than Stocks";
+                        lblMessage.ForeColor = Color.Red;
+                        txtTotalPrice.Text = "";
+                        SetFocus(txtProdQty);
+                    }
                 }
             }
             catch (Exception exception)

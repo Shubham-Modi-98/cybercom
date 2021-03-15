@@ -126,7 +126,14 @@ End
 Alter Proc spFetchProdData
 As
 Begin
-	Select ProdId,ProdName,ProdPrice,ProdImage from tblProduct
+	/* Select ProdId,ProdName,ProdPrice,ProdImage from tblProduct
+	where ProdName In
+	(Select P.ProdName
+	from tblProduct P, tblSales S
+	where S.Id = P.Id
+	Group By P.ProdName) */
+
+	Select ROW_NUMBER() Over (ORDER BY ProdImage) as [RowNo],ProdId,ProdName,ProdPrice,ProdImage from tblProduct
 	where ProdName In
 	(Select P.ProdName
 	from tblProduct P, tblSales S
@@ -156,12 +163,13 @@ Group By CONVERT(date,SalesDate)
 	where S.Id = P.Id
 	Group By P.ProdName)
 
-	Select Id,TotalPrice, SalesDate from tblSales
-	where Id In 
-	(Select P.Id
+	Select ROW_NUMBER() Over (ORDER BY ProdImage) as [RowNo],ProdId,ProdName,ProdPrice,ProdImage from tblProduct
+	where ProdName In
+	(Select P.ProdName
 	from tblProduct P, tblSales S
 	where S.Id = P.Id
-	Group By P.Id)
+	Group By P.ProdName)
+	
 
 	Select * from tblProduct
 	Select * from tblSales

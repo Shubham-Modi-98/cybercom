@@ -27,20 +27,20 @@
                     <td colspan="2" style="vertical-align:baseline;text-align:left;">
                         <asp:GridView ID="grData" runat="server" AutoGenerateColumns="False" OnRowDataBound="grData_RowDataBound" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2">
                             <Columns>
-                                <%--<asp:BoundField HeaderText="Product Name" DataField="ProdName" />--%>
+                                <asp:BoundField HeaderText="#" DataField="RowNo" ItemStyle-Width="10%" />
                                 <asp:TemplateField HeaderText="Product Image">
                                     <ItemTemplate>
                                         <asp:Image ID="imgProduct" Height="150px" Width="150px" runat="server"
                                             ImageUrl='<%#"ProductImageHandler.ashx?ImgId="+Eval("ProdId") %>' />
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:TemplateField HeaderText="Product Name">
+                                <asp:TemplateField HeaderText="Product Name" ItemStyle-Width="20%">
                                     <ItemTemplate>
-                                        <asp:Label ID="lblProdName" runat="server" Text='<%#Eval("ProdName") %>' ReadOnly="true"></asp:Label>
+                                        <asp:Label ID="lblProdName" runat="server" Text='<%#Eval("ProdName") %>'></asp:Label>
                                     </ItemTemplate>
                                 </asp:TemplateField>
-                                <asp:BoundField HeaderText="Product Price" DataField="ProdPrice" />
-                                <asp:TemplateField HeaderText="Sale Qty" Visible="true">
+                                <asp:BoundField HeaderText="Product Price" DataField="ProdPrice" ItemStyle-Width="20%"/>
+                                <asp:TemplateField HeaderText="Sale Qty" ItemStyle-Width="50%">
                                     <ItemTemplate>
                                         <asp:Label ID="lblSalesData" runat="server" Text=""></asp:Label>
                                         <%--<asp:Label ID="lblTotal" runat="server" Text=""></asp:Label>--%>

@@ -18,6 +18,7 @@ namespace Product_Sales_WebApp
         SqlCommand command = null;
         SqlConnection connection = null;
         SqlDataAdapter adapter = null;
+        static int rowCount = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -38,6 +39,7 @@ namespace Product_Sales_WebApp
                     adapter.SelectCommand.CommandType = CommandType.StoredProcedure;
                     DataSet dataSet = new DataSet();
                     adapter.Fill(dataSet);
+                    rowCount = dataSet.Tables[0].Rows.Count;
                     grData.DataSource = dataSet;
                     grData.DataBind();
 
@@ -56,11 +58,13 @@ namespace Product_Sales_WebApp
             {
                 if (e.Row.RowType == DataControlRowType.DataRow)
                 {
+                    Label lblno = e.Row.FindControl("lblNo") as Label;
                     Label lblPname = e.Row.FindControl("lblProdName") as Label;
                     Label lblSalesData = e.Row.FindControl("lblSalesData") as Label;
                     //Label lblSdate = e.Row.FindControl("lblSalesDate") as Label;
                     //Label lblTprice = e.Row.FindControl("lblTotal") as Label;
                     //Label lblSqty = e.Row.FindControl("lblSalesQty") as Label;
+                    rowCount = rowCount + 1;
                     using (connection = new SqlConnection(conString))
                     {
                         using (command = new SqlCommand("spGetSalesDataByName", connection))
