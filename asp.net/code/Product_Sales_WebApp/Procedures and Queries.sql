@@ -147,6 +147,12 @@ As
 Begin
 	Select Qty,TotalPrice,SalesDate from tblSales S,tblProduct P
 	where P.Id = S.Id and P.ProdName = @name
+
+	/* Select SUM(Qty) as [Qty],SUM(TotalPrice) as [TotalPrice],
+	CONVERT(date,SalesDate) as [SalesDate]
+	from tblSales S,tblProduct P
+	where P.Id = S.Id and P.ProdName = @name
+	Group By CONVERT(date,SalesDate) */
 End
 
 --If told to fetch total data from date as group by
