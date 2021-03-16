@@ -1,0 +1,17 @@
+Work Report on ASP.Net MVC [16/03/2021]
+
+• Today, I watched Asp.net MVC tutorial videos which is given in Schedule.
+• Remain 2 vidoes.
+• Learn, and Understand the topics likes
+	-> Standard Html Helpers
+	-> Strongly typed html helpers
+	-> Templated Html helpers
+	-> Create Custom helper
+	-> ViewBag
+	-> ViewData
+	-> TempData
+	-> Html Verbs
+	-> Routing
+• Implement Standard Html Helper and Strongly typed helpers
+• Also practice on Custom helper create and used
+• Create Project and Implement practically model, view and controller and pass data,List between them and Display in View Page.
