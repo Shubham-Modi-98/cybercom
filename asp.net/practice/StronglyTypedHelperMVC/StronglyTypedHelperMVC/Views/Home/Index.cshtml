@@ -1,0 +1,74 @@
+﻿
+@using StronglyTypedHelperMVC.Models
+@model Student
+    
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @using(Html.BeginForm("studentForm"))
+        {
+        <table>
+            <tr>
+                <td>
+                    @Html.LabelFor(stud => stud.Id)
+                </td>
+                <td>
+                    @Html.TextBoxFor(stud => stud.Id, new {ReadOnly = "true"})
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(stud => stud.Name)
+                </td>
+                <td>
+                    @Html.TextBoxFor(stud => stud.Name)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(stud => stud.City)
+                </td>
+                <td>
+                    @Html.TextBoxFor(stud => stud.City)
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.LabelFor(stud => stud.isTeacher)
+                </td>
+                <td>
+                    @Html.CheckBoxFor(stud => stud.isTeacher)
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="submit" id="btnSubmit" value="Submit"/>
+                </td>
+            </tr>
+        </table>
+        }
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td>Id</td>
+                <td>Name</td>
+                <td>City</td>
+                <td>isTeacher</td>
+            </tr>
+            <tr>
+                <td>@Model.Id</td>
+                <td>@Model.Name</td>
+                <td>@Model.City</td>
+                <td>@Model.isTeacher</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
