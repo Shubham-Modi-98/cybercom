@@ -1,0 +1,20 @@
+Work Report on ASP.Net MVC [17/03/2021]
+
+• Today, I watched Asp.net MVC tutorial videos which is given in Schedule.
+• Learn, and Understand the topics likes
+	-> Pass Data from View to Controller :-In that learn 5 diff methods 
+		1.)Pass Using Parameters
+		2.)Pass Using Rquest
+		3.)Pass using Form Collections
+		4.)Pass using Strongly Binding
+	-> Validations :-
+		1.)Lossely Binding
+		2.)Strongly Binding
+		3.)Validation Summary
+	-> Layout in MVC
+	-> Multiple Layout
+	-> Section in Layout
+	-> @RenderPage
+	
+• Implement Validations Practically.
+• Also create MVC web application in that perform Insert,View,Delete,Update using Model and List.
