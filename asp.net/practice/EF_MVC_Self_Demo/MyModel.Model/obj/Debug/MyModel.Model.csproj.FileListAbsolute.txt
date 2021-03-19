@@ -1,0 +1,6 @@
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyModel.Model\bin\Debug\MyModel.Model.dll
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyModel.Model\bin\Debug\MyModel.Model.pdb
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyModel.Model\obj\Debug\MyModel.Model.csproj.CoreCompileInputs.cache
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyModel.Model\obj\Debug\MyModel.Model.dll
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyModel.Model\obj\Debug\MyModel.Model.pdb
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyModel.Model\obj\Debug\MyModel.Model.csprojAssemblyReference.cache

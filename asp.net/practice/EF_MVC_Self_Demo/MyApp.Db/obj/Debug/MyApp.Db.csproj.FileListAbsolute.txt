@@ -1,0 +1,14 @@
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyApp.Db\bin\Debug\MyApp.Db.dll.config
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyApp.Db\bin\Debug\MyApp.Db.dll
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyApp.Db\bin\Debug\MyApp.Db.pdb
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyApp.Db\bin\Debug\EntityFramework.dll
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyApp.Db\bin\Debug\EntityFramework.SqlServer.dll
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyApp.Db\bin\Debug\EntityFramework.xml
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyApp.Db\bin\Debug\EntityFramework.SqlServer.xml
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyApp.Db\obj\Debug\MyApp.Db.csprojAssemblyReference.cache
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyApp.Db\obj\Debug\MyApp.Db.csproj.CoreCompileInputs.cache
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyApp.Db\obj\Debug\MyApp.Db.csproj.CopyComplete
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyApp.Db\obj\Debug\MyApp.Db.dll
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyApp.Db\obj\Debug\MyApp.Db.pdb
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyApp.Db\bin\Debug\MyModel.Model.dll
+F:\Cybercom Asp Git\asp.net\practice\EF_MVC_Self_Demo\MyApp.Db\bin\Debug\MyModel.Model.pdb
