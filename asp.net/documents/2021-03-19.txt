@@ -1,0 +1,21 @@
+Work Report on ASP.Net MVC and Entity Framework [19/03/2021]
+
+• Today, I watched Asp.net MVC tutorial videos which is given in Schedule.
+• Learn, and Understand the topics likes
+	-> CRUD Operations using EF and MVC
+	-> Pass, Get and Stored Data using Ajax, jQuery and JSON
+	-> Ajax Helpers
+		-> @Ajax.BeginForm()
+		-> @Ajax.ActionLink()
+	-> Loaders in Ajax Helper
+	-> Partial Views
+	-> Filters in MVC
+	-> Error Handling
+	-> Used of OutputCache and It's Location, Duration
+	-> @Html.Raw() and It's Usage
+	-> What is XSS attack
+		-> How MVC prevent AllowHtml and ValidateInput usage and methods
+	-> Authentication and Authorization in MVC
+
+• Implement CRUD Operations using MVC 
+• Also create MVC web application in that perform CRUD using JSON, jQuery and Ajax with EF.
