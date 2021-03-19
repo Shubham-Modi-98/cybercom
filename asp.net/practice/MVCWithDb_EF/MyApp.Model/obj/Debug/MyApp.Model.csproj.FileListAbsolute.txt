@@ -1,0 +1,9 @@
+F:\Cybercom Asp Git\asp.net\practice\MVCWithDb_EF\MyApp.Model\bin\Debug\MyApp.Model.dll
+F:\Cybercom Asp Git\asp.net\practice\MVCWithDb_EF\MyApp.Model\bin\Debug\MyApp.Model.pdb
+F:\Cybercom Asp Git\asp.net\practice\MVCWithDb_EF\MyApp.Model\obj\Debug\MyApp.Model.csproj.CoreCompileInputs.cache
+F:\Cybercom Asp Git\asp.net\practice\MVCWithDb_EF\MyApp.Model\obj\Debug\MyApp.Model.dll
+F:\Cybercom Asp Git\asp.net\practice\MVCWithDb_EF\MyApp.Model\obj\Debug\MyApp.Model.pdb
+F:\Cybercom Asp Git\asp.net\practice\MVCWithDb_EF\MyApp.Model\bin\Debug\Newtonsoft.Json.dll
+F:\Cybercom Asp Git\asp.net\practice\MVCWithDb_EF\MyApp.Model\bin\Debug\Newtonsoft.Json.xml
+F:\Cybercom Asp Git\asp.net\practice\MVCWithDb_EF\MyApp.Model\obj\Debug\MyApp.Model.csprojAssemblyReference.cache
+F:\Cybercom Asp Git\asp.net\practice\MVCWithDb_EF\MyApp.Model\obj\Debug\MyApp.Model.csproj.CopyComplete
