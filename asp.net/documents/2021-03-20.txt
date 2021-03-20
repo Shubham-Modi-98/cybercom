@@ -1,0 +1,15 @@
+Work Report on ASP.Net MVC and Entity Framework [20/03/2021]
+
+• Today, I watched Asp.net MVC tutorial videos which is given in Schedule.
+• Learn, and Understand the topics likes
+	-> Custom Authentication Filter
+	-> Custom Action Filter and Implementation
+	-> Custom Exception Filter
+	-> Using and Implementation of HandleException using Attributes
+	-> Areas in MVC
+	-> Routing in Area
+	-> Bundling
+	-> Custom Model
+	-> MVC Life Cycle
+	-> MVC unit testing remaining
+• Implement Exception Handling Demo
