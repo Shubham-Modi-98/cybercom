@@ -9,7 +9,6 @@ using System.Web.Mvc;
 namespace DependancyInjection_CRUD.Controllers
 {
     [HandleError]
-    [RoutePrefix("{Home}")]
     public class HomeController : Controller
     {
         IProduct _product = null; 
@@ -30,7 +29,7 @@ namespace DependancyInjection_CRUD.Controllers
         [Route("Add")]
         public ActionResult Create()
         {
-            return View();
+            return View("Create");
         }
 
         [HttpPost]
@@ -79,7 +78,7 @@ namespace DependancyInjection_CRUD.Controllers
             return View("Error");
 
         }
-
+        [Route("Remove/{id}")]
         public ActionResult Delete(int id, Product product)
         {
             if (_product.DeleteProduct(id))
