@@ -29,10 +29,11 @@ namespace DependancyInjection_CRUD.Controllers
         [Route("Add")]
         public ActionResult Create()
         {
-            return View("Create");
+            return View();
         }
 
         [HttpPost]
+        [Route("Add")]
         public ActionResult Create(Product product)
         {
             int id = _product.AddProduct(product);
@@ -68,6 +69,7 @@ namespace DependancyInjection_CRUD.Controllers
         }
 
         [HttpPost]
+        [Route("Change/{id}")]
         public ActionResult Edit(int id, Product product)
         {
             if (_product.UpdateProduct(id,product))
