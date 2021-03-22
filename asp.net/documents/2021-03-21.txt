@@ -1,0 +1,14 @@
+Work Report on ASP.Net MVC and Entity Framework and Web API [21/03/2021]
+
+• Today, I watched Asp.net MVC tutorial videos which is given in Schedule.
+• Learn and Understand Web API in mVC and How to create API
+• Learn, and Understand the topics likes
+	-> Unit Testing Framework provide by .Net
+	-> Dependecy Injection and its benefits and How to create loosely coupled
+	-> Web API and how to call Web API using Postman
+	-> Async Controlle
+	-> Deploy MVC web application on IIS server
+	
+• Implement Dependency Injection demo with CRUD and create bussiness logic layer and Interfaces
+• Also done practice on Routing, Error Handling and Entity Framework.
+• Clear doubts on dependency injection.
