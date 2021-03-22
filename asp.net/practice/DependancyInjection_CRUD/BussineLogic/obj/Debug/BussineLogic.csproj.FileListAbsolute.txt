@@ -1,0 +1,12 @@
+F:\Cybercom Asp Git\asp.net\practice\DependancyInjection_CRUD\BussineLogic\bin\Debug\BussineLogic.dll.config
+F:\Cybercom Asp Git\asp.net\practice\DependancyInjection_CRUD\BussineLogic\bin\Debug\BussineLogic.dll
+F:\Cybercom Asp Git\asp.net\practice\DependancyInjection_CRUD\BussineLogic\bin\Debug\BussineLogic.pdb
+F:\Cybercom Asp Git\asp.net\practice\DependancyInjection_CRUD\BussineLogic\bin\Debug\EntityFramework.dll
+F:\Cybercom Asp Git\asp.net\practice\DependancyInjection_CRUD\BussineLogic\bin\Debug\EntityFramework.SqlServer.dll
+F:\Cybercom Asp Git\asp.net\practice\DependancyInjection_CRUD\BussineLogic\bin\Debug\EntityFramework.xml
+F:\Cybercom Asp Git\asp.net\practice\DependancyInjection_CRUD\BussineLogic\bin\Debug\EntityFramework.SqlServer.xml
+F:\Cybercom Asp Git\asp.net\practice\DependancyInjection_CRUD\BussineLogic\obj\Debug\BussineLogic.csprojAssemblyReference.cache
+F:\Cybercom Asp Git\asp.net\practice\DependancyInjection_CRUD\BussineLogic\obj\Debug\BussineLogic.csproj.CoreCompileInputs.cache
+F:\Cybercom Asp Git\asp.net\practice\DependancyInjection_CRUD\BussineLogic\obj\Debug\BussineLogic.csproj.CopyComplete
+F:\Cybercom Asp Git\asp.net\practice\DependancyInjection_CRUD\BussineLogic\obj\Debug\BussineLogic.dll
+F:\Cybercom Asp Git\asp.net\practice\DependancyInjection_CRUD\BussineLogic\obj\Debug\BussineLogic.pdb

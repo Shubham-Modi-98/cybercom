@@ -1,0 +1,50 @@
+﻿@model BussineLogic.Product
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdQty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ProdPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProdPrice)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
