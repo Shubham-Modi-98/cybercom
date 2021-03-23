@@ -1,0 +1,12 @@
+F:\Cybercom Asp Git\asp.net\practice\DropDownDemo_MVC_EF\BusinesLayer\bin\Debug\BusinesLayer.dll.config
+F:\Cybercom Asp Git\asp.net\practice\DropDownDemo_MVC_EF\BusinesLayer\bin\Debug\BusinesLayer.dll
+F:\Cybercom Asp Git\asp.net\practice\DropDownDemo_MVC_EF\BusinesLayer\bin\Debug\BusinesLayer.pdb
+F:\Cybercom Asp Git\asp.net\practice\DropDownDemo_MVC_EF\BusinesLayer\bin\Debug\EntityFramework.dll
+F:\Cybercom Asp Git\asp.net\practice\DropDownDemo_MVC_EF\BusinesLayer\bin\Debug\EntityFramework.SqlServer.dll
+F:\Cybercom Asp Git\asp.net\practice\DropDownDemo_MVC_EF\BusinesLayer\bin\Debug\EntityFramework.xml
+F:\Cybercom Asp Git\asp.net\practice\DropDownDemo_MVC_EF\BusinesLayer\bin\Debug\EntityFramework.SqlServer.xml
+F:\Cybercom Asp Git\asp.net\practice\DropDownDemo_MVC_EF\BusinesLayer\obj\Debug\BusinesLayer.csprojAssemblyReference.cache
+F:\Cybercom Asp Git\asp.net\practice\DropDownDemo_MVC_EF\BusinesLayer\obj\Debug\BusinesLayer.csproj.CoreCompileInputs.cache
+F:\Cybercom Asp Git\asp.net\practice\DropDownDemo_MVC_EF\BusinesLayer\obj\Debug\BusinesLayer.csproj.CopyComplete
+F:\Cybercom Asp Git\asp.net\practice\DropDownDemo_MVC_EF\BusinesLayer\obj\Debug\BusinesLayer.dll
+F:\Cybercom Asp Git\asp.net\practice\DropDownDemo_MVC_EF\BusinesLayer\obj\Debug\BusinesLayer.pdb

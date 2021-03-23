@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DbDemoEFModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblCollege">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="CollegeName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="tblStudent" Relationship="Self.FK_tblStudent_tblCollege" FromRole="tblCollege" ToRole="tblStudent" />
+  </EntityType>
+  <EntityType Name="tblStudent">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CollegeId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblCollege" Relationship="Self.FK_tblStudent_tblCollege" FromRole="tblStudent" ToRole="tblCollege" />
+  </EntityType>
+  <Association Name="FK_tblStudent_tblCollege">
+    <End Role="tblCollege" Type="Self.tblCollege" Multiplicity="1" />
+    <End Role="tblStudent" Type="Self.tblStudent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblCollege">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="tblStudent">
+        <PropertyRef Name="CollegeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DbDemoEFEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblCollege" EntityType="Self.tblCollege" />
+    <EntitySet Name="tblStudent" EntityType="Self.tblStudent" />
+    <AssociationSet Name="FK_tblStudent_tblCollege" Association="Self.FK_tblStudent_tblCollege">
+      <End Role="tblCollege" EntitySet="tblCollege" />
+      <End Role="tblStudent" EntitySet="tblStudent" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
