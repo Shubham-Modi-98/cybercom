@@ -32,6 +32,7 @@ namespace DropDownDemo_MVC_EF.Controllers
             var result = repo.AddStudent(student);
             if (result > 0)
             {
+                ModelState.Clear();
                 ViewBag.IsSuccess = "Record Added Successfully";
                 var resultList = repo.GetAllCollegeData();
                 if (resultList != null)
@@ -65,7 +66,7 @@ namespace DropDownDemo_MVC_EF.Controllers
             var result = repo.GetAllStudents().Where(x => x.Id == id).FirstOrDefault();
             if (result != null)
             {
-                ViewBag.SelectedItem = result.College.Id;
+                //ViewBag.SelectedItem = result.College.Id;
                 return View(result);
             }
             return View("Error");
@@ -78,6 +79,7 @@ namespace DropDownDemo_MVC_EF.Controllers
             {
                 if (repo.UpdateStudent(id, student))
                 {
+                    ModelState.Clear();
                     return RedirectToAction("Display");
                 }
             }
@@ -91,6 +93,36 @@ namespace DropDownDemo_MVC_EF.Controllers
                 return RedirectToAction("Display");
             }
             return View("Error");
+        }
+
+        public ActionResult SearchDetails()
+        {
+            var resultList = repo.GetAllCollegeData();
+            if (resultList != null)
+                ViewBag.List = resultList;
+            //var resultData = repo.GetStudentsByClg(5);
+            //if (resultData != null)
+            //    return View("SearchDetails", resultData);
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult SearchDetails(Student student, int drpId = 0)
+        {
+            var resultList = repo.GetAllCollegeData();
+            if (resultList != null)
+                ViewBag.List = resultList;
+            if (drpId != 0)
+            {
+                var resultData = repo.GetStudentsByClg(drpId);
+                if (resultData.Count != 0)
+                    return View(resultData);
+                else
+                    ViewBag.IsWarning = "No data found";
+            }
+            else
+                ViewBag.IsWarning = "Please Select College Name First";
+            return View();
         }
     }
 }

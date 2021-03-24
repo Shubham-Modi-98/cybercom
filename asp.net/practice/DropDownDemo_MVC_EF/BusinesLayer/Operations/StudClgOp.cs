@@ -95,5 +95,24 @@ namespace BusinesLayer.Operations
                 return false;
             }
         }
+
+        public List<Student> GetStudentsByClg(int id)
+        {
+            using (var context = new DbDemoEFEntities())
+            {
+                var result = context.tblStudent.Where(x => x.tblCollege.Id == id).Select(x => new Student()
+                {
+                    Id = x.Id,
+                    Name = x.Name,
+                    Address = x.Address,
+                    College = new College()
+                    {
+                        Id = x.tblCollege.Id,
+                        CollegeName = x.tblCollege.CollegeName
+                    }
+                }).ToList();
+                return result;
+            }
+        }
     }
 }
