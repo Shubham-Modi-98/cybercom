@@ -35,9 +35,40 @@ namespace EF_MVC_Self_Demo.Controllers
             return View();
         }
 
-        public ActionResult Index()
+        [ValidateInput(false)]
+        public ActionResult Index(string Sort="EmpId", string IconClass="fa-sort-asc")
         {
             var result = repo.GetAllEmployees();
+            ViewBag.Sort = Sort;
+            ViewBag.IconClass = IconClass;
+            if(ViewBag.Sort == "EmpId")
+            {
+                if (ViewBag.IconClass == "fa-sort-asc")
+                    result = result.OrderBy(x => x.EmpId).ToList();
+                else
+                    result = result.OrderByDescending(x => x.EmpId).ToList();
+            }
+            else if (ViewBag.Sort == "Name")
+            {
+                if (ViewBag.IconClass == "fa-sort-asc")
+                    result = result.OrderBy(x => x.Name).ToList();
+                else
+                    result = result.OrderByDescending(x => x.Name).ToList();
+            }
+            else if (ViewBag.Sort == "Address")
+            {
+                if (ViewBag.IconClass == "fa-sort-asc")
+                    result = result.OrderBy(x => x.Address).ToList();
+                else
+                    result = result.OrderByDescending(x => x.Address).ToList();
+            }
+            else if (ViewBag.Sort == "City")
+            {
+                if (ViewBag.IconClass == "fa-sort-asc")
+                    result = result.OrderBy(x => x.City).ToList();
+                else
+                    result = result.OrderByDescending(x => x.City).ToList();
+            }
             return View(result);
         }
 

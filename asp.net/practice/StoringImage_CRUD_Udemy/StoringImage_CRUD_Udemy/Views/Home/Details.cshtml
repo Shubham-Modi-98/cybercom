@@ -1,0 +1,77 @@
+﻿@model StoringImage_CRUD_Udemy.Models.DataBaseModel.tblProd_Img
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>tblProd_Img</h4>
+    <hr />
+    @if (Model != null)
+    {
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.ProdId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ProdId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ProdName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ProdName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ProdQty)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ProdQty)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ProdPrice)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ProdPrice)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Image)
+            </dt>
+
+            <dd>
+                <img src="data:img;base64,@Model.Image" alt="ProdImage" width="150" height="150" />
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+
+            <dd>
+                @if (Model.Date.HasValue)
+                {
+                    @Html.DisplayFor(model => model.Date)
+                }
+                else
+                {
+                    <p>No Date found</p>
+                }
+            </dd>
+        </dl>
+    }
+</div>
+<hr />
+<h4>@ViewBag.Error</h4>
+<br />
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
