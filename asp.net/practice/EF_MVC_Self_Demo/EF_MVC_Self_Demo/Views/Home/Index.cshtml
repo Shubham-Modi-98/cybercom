@@ -5,7 +5,7 @@
 }
 
 <h2>Index</h2>
-<hr/>
+<hr />
 <h4>@ViewBag.IsError</h4>
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -13,41 +13,102 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.EmpId)
+            @*<a href="@Html.ActionLink(Html.DisplayName("Emp Id"),"Index?Sort=EmpId&IconClass=fa-sort-asc"></a>*@
+            @if (ViewBag.IconClass == "fa-sort-desc")
+            {
+                <a href="Index?Sort=EmpId&IconClass=fa-sort-asc">
+                    Emp Id
+                </a>
+            }
+            else
+            {
+                <a href="Index?Sort=EmpId&IconClass=fa-sort-desc">
+                    Emp Id
+                </a>
+            }
+            @if (ViewBag.Sort == "EmpId")
+            {
+                <i class="fa @ViewBag.IconClass"></i>
+            }
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Name)
+            @if (ViewBag.IconClass == "fa-sort-desc")
+            {
+                <a href="Index?Sort=Name&IconClass=fa-sort-asc">
+                    Emp Name
+                </a>
+            }
+            else
+            {
+                <a href="Index?Sort=Name&IconClass=fa-sort-desc">
+                    Emp Name
+                </a>
+            }
+            @if (ViewBag.Sort == "Name")
+            {
+                <i class="fa @ViewBag.IconClass"></i>
+            }
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Address)
+            @if (ViewBag.IconClass == "fa-sort-desc")
+            {
+                <a href="Index?Sort=Address&IconClass=fa-sort-asc">
+                    Address
+                </a>
+            }
+            else
+            {
+                <a href="Index?Sort=Address&IconClass=fa-sort-desc">
+                    Address
+                </a>
+            }
+            @if (ViewBag.Sort == "Address")
+            {
+                <i class="fa @ViewBag.IconClass"></i>
+            }
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.City)
+            @if (ViewBag.IconClass == "fa-sort-desc")
+            {
+                <a href="Index?Sort=City&IconClass=fa-sort-asc">
+                    City
+                </a>
+            }
+            else
+            {
+                <a href="Index?Sort=City&IconClass=fa-sort-desc">
+                    City
+                </a>
+            }
+            @if (ViewBag.Sort == "City")
+            {
+                <i class="fa @ViewBag.IconClass"></i>
+            }
         </th>
         <th>
             @Html.DisplayName("Actions")
         </th>
     </tr>
     @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.EmpId)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Name)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Address)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.City)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
-                    @Html.ActionLink("Details", "Details", new { id = item.Id }) |
-                    @Html.ActionLink("Delete", "Delete", new { id = item.Id })
-                </td>
-            </tr>
-        }
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.City)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Id }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
 </table>
