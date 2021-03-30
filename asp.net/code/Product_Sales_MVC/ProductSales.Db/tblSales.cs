@@ -22,6 +22,5 @@ namespace ProductSales.Db
         public int Id { get; set; }
     
         public virtual tblProduct tblProduct { get; set; }
-        public virtual tblProduct tblProduct1 { get; set; }
     }
 }

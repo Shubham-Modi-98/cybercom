@@ -17,7 +17,7 @@ namespace ProductSales.Db
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public tblProduct()
         {
-            this.tblSales1 = new HashSet<tblSales>();
+            this.tblSales = new HashSet<tblSales>();
         }
     
         public int Id { get; set; }
@@ -27,8 +27,7 @@ namespace ProductSales.Db
         public decimal Price { get; set; }
         public string Image { get; set; }
     
-        public virtual tblSales tblSales { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<tblSales> tblSales1 { get; set; }
+        public virtual ICollection<tblSales> tblSales { get; set; }
     }
 }

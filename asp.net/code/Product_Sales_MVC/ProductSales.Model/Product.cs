@@ -31,5 +31,7 @@ namespace ProductSales.Model
         public string Image { get; set; }
 
         public virtual Sales Sales { get; set; }
+
+
     }
 }
