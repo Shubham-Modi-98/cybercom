@@ -36,10 +36,15 @@ namespace ProductSales.Db.DbOperations
                     Qty = x.Qty,
                     Price = x.Price,
                     TotalPrice = x.TotalPrice,
+                    SalesDate = x.SalesDate,
                     Product = new Product()
                     {
+                        Id = x.tblProduct.Id,
                         ProdId = x.tblProduct.ProdId,
                         ProdName = x.tblProduct.ProdName,
+                        Price = x.tblProduct.Price,
+                        Qty = x.tblProduct.Qty,
+                        Image = x.tblProduct.Image,
                     }
                 }).FirstOrDefault();
                 return result;

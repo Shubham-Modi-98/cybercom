@@ -84,6 +84,23 @@ namespace ProductSales.Db.DbOperations
             }
         }
 
-        //public bool UpdateSalesData(int salesId)
+        public bool UpdateSalesData(Product product)
+        {
+            using (var context = new ProdSalesEntities())
+            {
+                var result = context.tblProduct.FirstOrDefault(x => x.Id == product.Id);
+                if (result != null)
+                {
+                    result.ProdId = product.ProdId;
+                    result.ProdName = product.ProdName;
+                    result.Price = product.Price;
+                    result.Qty = product.Qty;
+                    result.Image = product.Image;
+                    context.SaveChanges();
+                    return true;
+                }
+                return false;
+            }
+        }
     }
 }

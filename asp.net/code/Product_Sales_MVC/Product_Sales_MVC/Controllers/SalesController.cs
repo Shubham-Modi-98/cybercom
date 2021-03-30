@@ -43,7 +43,13 @@ namespace Product_Sales_MVC.Controllers
                     if (salesId > 0)
                     {
                         var salesRes = salesOp.GetSalesById(salesId);
-                        return View("FinalBill", salesRes);
+
+                        salesRes.Product.Qty = salesRes.Product.Qty - txtQty;
+                        if(operations.UpdateSalesData(salesRes.Product))
+                        {
+                            return View("FinalBill", salesRes);
+                        }
+                        return View("Error");
                     }
                     else
                     {
