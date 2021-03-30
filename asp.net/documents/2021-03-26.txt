@@ -1,0 +1,6 @@
+Work Report on ASP.Net MVC and Entity Framework and Web API [22,23,24,25,26/03/2021]
+
+• More Practice on MVC and Entity framework
+• Also done practice on Routing, Error Handling and Entity Framework.
+• Clear doubts on dependency injection.
+• Create more project and practice on it
