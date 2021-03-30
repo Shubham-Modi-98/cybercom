@@ -1,0 +1,5 @@
+Work Report on ASP.Net MVC and Entity Framework and Web API [30/03/2021]
+
+-> Give evolution Test on MVC, Entity Framework and Linq
+-> Give my best affort to complete task given by sir
+-> 90% work is done, only Display Sales Data functionality is remaining
