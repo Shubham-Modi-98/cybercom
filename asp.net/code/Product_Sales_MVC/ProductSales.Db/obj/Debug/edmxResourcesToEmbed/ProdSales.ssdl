@@ -24,13 +24,13 @@
   </EntityType>
   <Association Name="FK_tblSales_tblProduct">
     <End Role="tblProduct" Type="Self.tblProduct" Multiplicity="1" />
-    <End Role="tblSales" Type="Self.tblSales" Multiplicity="0..1" />
+    <End Role="tblSales" Type="Self.tblSales" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblProduct">
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="tblSales">
-        <PropertyRef Name="SalesId" />
+        <PropertyRef Name="Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

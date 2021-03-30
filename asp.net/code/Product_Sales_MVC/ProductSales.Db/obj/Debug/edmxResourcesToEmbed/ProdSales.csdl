@@ -1,16 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="ProdSalesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="ProdSalesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblProduct" EntityType="ProdSalesModel.tblProduct" />
+    <EntitySet Name="tblSales" EntityType="ProdSalesModel.tblSales" />
+    <AssociationSet Name="FK_tblSales_tblProduct" Association="ProdSalesModel.FK_tblSales_tblProduct">
+      <End Role="tblProduct" EntitySet="tblProduct" />
+      <End Role="tblSales" EntitySet="tblSales" />
+    </AssociationSet>
+  </EntityContainer>
   <EntityType Name="tblProduct">
     <Key>
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ProdId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="ProdName" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ProdId" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ProdName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="Qty" Type="Int32" Nullable="false" />
-    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
-    <NavigationProperty Name="tblSales" Relationship="Self.FK_tblSales_tblProduct" FromRole="tblProduct" ToRole="tblSales" />
+    <NavigationProperty Name="tblSales" Relationship="ProdSalesModel.FK_tblSales_tblProduct" FromRole="tblProduct" ToRole="tblSales" />
   </EntityType>
   <EntityType Name="tblSales">
     <Key>
@@ -18,30 +26,22 @@
     </Key>
     <Property Name="SalesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Qty" Type="Int32" Nullable="false" />
-    <Property Name="Price" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
-    <Property Name="TotalPrice" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+    <Property Name="Price" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="TotalPrice" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
     <Property Name="SalesDate" Type="DateTime" Nullable="false" Precision="7" />
     <Property Name="Id" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="tblProduct" Relationship="Self.FK_tblSales_tblProduct" FromRole="tblSales" ToRole="tblProduct" />
+    <NavigationProperty Name="tblProduct" Relationship="ProdSalesModel.FK_tblSales_tblProduct" FromRole="tblSales" ToRole="tblProduct" />
   </EntityType>
   <Association Name="FK_tblSales_tblProduct">
-    <End Role="tblProduct" Type="Self.tblProduct" Multiplicity="1" />
-    <End Role="tblSales" Type="Self.tblSales" Multiplicity="0..1" />
+    <End Type="ProdSalesModel.tblProduct" Role="tblProduct" Multiplicity="1" />
+    <End Type="ProdSalesModel.tblSales" Role="tblSales" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="tblProduct">
         <PropertyRef Name="Id" />
       </Principal>
       <Dependent Role="tblSales">
-        <PropertyRef Name="SalesId" />
+        <PropertyRef Name="Id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="ProdSalesEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="tblProduct" EntityType="Self.tblProduct" />
-    <EntitySet Name="tblSales" EntityType="Self.tblSales" />
-    <AssociationSet Name="FK_tblSales_tblProduct" Association="Self.FK_tblSales_tblProduct">
-      <End Role="tblProduct" EntitySet="tblProduct" />
-      <End Role="tblSales" EntitySet="tblSales" />
-    </AssociationSet>
-  </EntityContainer>
 </Schema>
