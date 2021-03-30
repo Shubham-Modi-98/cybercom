@@ -1,0 +1,14 @@
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Db\bin\Debug\ProductSales.Db.dll.config
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Db\bin\Debug\ProductSales.Db.dll
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Db\bin\Debug\ProductSales.Db.pdb
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Db\bin\Debug\EntityFramework.dll
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Db\bin\Debug\EntityFramework.SqlServer.dll
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Db\bin\Debug\ProductSales.Model.dll
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Db\bin\Debug\ProductSales.Model.pdb
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Db\bin\Debug\EntityFramework.xml
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Db\bin\Debug\EntityFramework.SqlServer.xml
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Db\obj\Debug\ProductSales.Db.csprojAssemblyReference.cache
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Db\obj\Debug\ProductSales.Db.csproj.CoreCompileInputs.cache
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Db\obj\Debug\ProductSales.Db.csproj.CopyComplete
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Db\obj\Debug\ProductSales.Db.dll
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Db\obj\Debug\ProductSales.Db.pdb
