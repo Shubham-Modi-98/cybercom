@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ProductSales.Db.spGetProduct_Result>
+
+@{
+    ViewBag.Title = "Display";
+}
+
+<h2>Display Sales Data</h2>
+
+<p>
+    @Html.ActionLink("Add New Product", "Create","Product")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ProdName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Image)
+        </th>
+        <th>
+            @Html.DisplayName("Sales Details")
+        </th>
+    </tr>
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ProdName)
+                </td>
+                <td>
+                    <img src="data:img;base64,@item.Image" alt="Product Image" width="150" height="150" />
+                </td>
+                <td>
+                    @{ Html.RenderAction("DisplaySales", "Sales", new { prodName = item.ProdName });}
+                </td>
+            </tr>
+        }
+    }
+</table>

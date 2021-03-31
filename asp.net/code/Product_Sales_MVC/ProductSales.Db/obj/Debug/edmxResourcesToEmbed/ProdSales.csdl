@@ -7,6 +7,15 @@
       <End Role="tblProduct" EntitySet="tblProduct" />
       <End Role="tblSales" EntitySet="tblSales" />
     </AssociationSet>
+    <FunctionImport Name="spGetProduct" ReturnType="Collection(ProdSalesModel.spGetProduct_Result)" />
+    <FunctionImport Name="spGetSalesDataByName" ReturnType="Collection(ProdSalesModel.spGetSalesDataByName_Result)">
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="spGetProduct1" ReturnType="Collection(ProdSalesModel.spGetProduct1_Result)" />
+    <FunctionImport Name="spGetProduct2" ReturnType="Collection(ProdSalesModel.spGetProduct2_Result)" />
+    <FunctionImport Name="spGetSalesDataByName1" ReturnType="Collection(ProdSalesModel.spGetSalesDataByName1_Result)">
+      <Parameter Name="name" Mode="In" Type="String" />
+    </FunctionImport>
   </EntityContainer>
   <EntityType Name="tblProduct">
     <Key>
@@ -44,4 +53,26 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <ComplexType Name="spGetProduct_Result">
+    <Property Type="String" Name="ProdName" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Image" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetSalesDataByName_Result">
+    <Property Type="Int32" Name="Qty" Nullable="false" />
+    <Property Type="Decimal" Name="TotalPrice" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="SalesDate" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="spGetProduct1_Result">
+    <Property Type="String" Name="ProdName" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Image" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetProduct2_Result">
+    <Property Type="String" Name="ProdName" Nullable="false" MaxLength="200" />
+    <Property Type="String" Name="Image" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="spGetSalesDataByName1_Result">
+    <Property Type="Int32" Name="Qty" Nullable="false" />
+    <Property Type="Decimal" Name="TotalPrice" Nullable="false" Precision="18" Scale="2" />
+    <Property Type="DateTime" Name="SalesDate" Nullable="false" />
+  </ComplexType>
 </Schema>

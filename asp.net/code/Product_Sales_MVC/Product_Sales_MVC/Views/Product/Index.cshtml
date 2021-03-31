@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Manage Products</h2>
 
 <p>
     @Html.ActionLink("Add New Product", "Create")
@@ -54,13 +54,13 @@
             }
         </td>
         <td>
-            @if (item.Qty > 0)
+            @if (item.Qty != 0)
             {
                 @Html.DisplayFor(modelItem => item.Qty)
             }
             else
             {
-                <p>No Data Found</p>
+                <p style="color:red">Out of Stock</p>
             }
         </td>
         <td>

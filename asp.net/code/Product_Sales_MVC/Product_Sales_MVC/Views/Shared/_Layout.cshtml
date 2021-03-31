@@ -24,8 +24,9 @@
     <div class="container body-content">
         @RenderBody()
         <hr />
-        @Html.ActionLink("Sales Product", "Index", "Sales")
+        @Html.ActionLink("Display Sales Data", "Display", "Sales")
         <br/>
+        @Html.ActionLink("Sales Product", "Index", "Sales")
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>

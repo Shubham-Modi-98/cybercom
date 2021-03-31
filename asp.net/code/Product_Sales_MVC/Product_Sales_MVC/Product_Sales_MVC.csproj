@@ -287,6 +287,8 @@
     <Content Include="Views\Product\Delete.cshtml" />
     <Content Include="Views\Sales\Index.cshtml" />
     <Content Include="Views\Sales\FinalBill.cshtml" />
+    <Content Include="Views\Shared\DisplaySales.cshtml" />
+    <Content Include="Views\Sales\Display.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

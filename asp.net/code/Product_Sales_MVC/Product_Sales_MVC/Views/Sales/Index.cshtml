@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Sales Product Page</h2>
 
 <hr />
 @using (Html.BeginForm("Index","Sales",FormMethod.Post))
@@ -30,7 +30,7 @@
     <div>
         @if (Model != null)
         {
-            <h4>Fianl Bill</h4>
+            <h4>Customer Bill</h4>
             <hr />
             @Html.Hidden("Qty", Model.Qty)
             <dl class="dl-horizontal">
@@ -90,20 +90,32 @@
 <script>
     $(function () {
         $('#btnSubmit').hide();
-        $("#txtQty").change(function () {
-            var qty = this.value;
-            var current = parseFloat($("#Qty").val());
-            if (qty <= current) {
-                var total = parseFloat($("#txtQty").val()) * parseFloat($("#txtPrice").val());
-                $("#txtTotalPrice").val(parseFloat(total))
-                $('#btnSubmit').show();
-            }
-            else {
-                alert("You cannot enter more than stock");
-                $('#txtQty').focus();
-                $('#btnSubmit').hide();
-            }
-        });
+        var current = parseFloat($("#Qty").val());
+        if (current == 0) {
+            alert("Product is not in Stock, Please select diff product!!");
+            $('#drpProdId').val(0);
+            $('#btnSubmit').hide();
+        }
+        else {
+            $("#txtQty").change(function () {
+                var qty = this.value;
+                if (qty <= current && qty > 0) {
+                    var total = parseFloat($("#txtQty").val()) * parseFloat($("#txtPrice").val());
+                    $("#txtTotalPrice").val(parseFloat(total))
+                    $('#btnSubmit').show();
+                }
+                else if (qty >= current) {
+                    alert("You cannot enter more than stock");
+                    $('#txtQty').focus();
+                    $('#btnSubmit').hide();
+                }
+                else {
+                    alert("Qty cannot be less than 0");
+                    $('#txtQty').focus();
+                    $('#btnSubmit').hide();
+                }
+            });
+        }
     })
 
     //$('#txtQty').change(function () {

@@ -39,6 +39,10 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="spGetProduct" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="spGetSalesDataByName" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="name" Type="nvarchar" Mode="In" />
+        </Function>
         <EntityContainer Name="ProdSalesModelStoreContainer">
           <EntitySet Name="tblProduct" EntityType="Self.tblProduct" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="tblSales" EntityType="Self.tblSales" Schema="dbo" store:Type="Tables" />
@@ -58,6 +62,15 @@
             <End Role="tblProduct" EntitySet="tblProduct" />
             <End Role="tblSales" EntitySet="tblSales" />
           </AssociationSet>
+          <FunctionImport Name="spGetProduct" ReturnType="Collection(ProdSalesModel.spGetProduct_Result)" />
+          <FunctionImport Name="spGetSalesDataByName" ReturnType="Collection(ProdSalesModel.spGetSalesDataByName_Result)">
+          <Parameter Name="name" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spGetProduct1" ReturnType="Collection(ProdSalesModel.spGetProduct1_Result)" />
+          <FunctionImport Name="spGetProduct2" ReturnType="Collection(ProdSalesModel.spGetProduct2_Result)" />
+          <FunctionImport Name="spGetSalesDataByName1" ReturnType="Collection(ProdSalesModel.spGetSalesDataByName1_Result)">
+            <Parameter Name="name" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="tblProduct">
           <Key>
@@ -95,6 +108,28 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <ComplexType Name="spGetProduct_Result">
+          <Property Type="String" Name="ProdName" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="Image" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spGetSalesDataByName_Result">
+          <Property Type="Int32" Name="Qty" Nullable="false" />
+          <Property Type="Decimal" Name="TotalPrice" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="SalesDate" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="spGetProduct1_Result">
+          <Property Type="String" Name="ProdName" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="Image" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spGetProduct2_Result">
+          <Property Type="String" Name="ProdName" Nullable="false" MaxLength="200" />
+          <Property Type="String" Name="Image" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spGetSalesDataByName1_Result">
+          <Property Type="Int32" Name="Qty" Nullable="false" />
+          <Property Type="Decimal" Name="TotalPrice" Nullable="false" Precision="18" Scale="2" />
+          <Property Type="DateTime" Name="SalesDate" Nullable="false" />
+        </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -125,7 +160,24 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-        </EntityContainerMapping>
+          <FunctionImportMapping FunctionImportName="spGetProduct2" FunctionName="ProdSalesModel.Store.spGetProduct">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProdSalesModel.spGetProduct2_Result">
+                <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spGetSalesDataByName1" FunctionName="ProdSalesModel.Store.spGetSalesDataByName">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="ProdSalesModel.spGetSalesDataByName1_Result">
+                <ScalarProperty Name="Qty" ColumnName="Qty" />
+                <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+                <ScalarProperty Name="SalesDate" ColumnName="SalesDate" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
   </edmx:Runtime>

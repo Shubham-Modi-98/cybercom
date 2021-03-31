@@ -1,7 +1,10 @@
-﻿using ProductSales.Db.DbOperations;
+﻿using ProductSales.Db;
+using ProductSales.Db.DbOperations;
 using ProductSales.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -11,16 +14,16 @@ namespace Product_Sales_MVC.Controllers
     [HandleError]
     public class SalesController : Controller
     {
-        ProductOp operations = null;
+        ProductOp productOp = null;
         SalesOp salesOp = null;
         public SalesController()
         {
-            operations = new ProductOp();
+            productOp = new ProductOp();
             salesOp = new SalesOp();
         }
         public ActionResult Index()
         {
-            var resultList = operations.GetProducts();
+            var resultList = productOp.GetProducts();
             if (resultList != null)
                 ViewBag.List = resultList;
             return View();
@@ -29,12 +32,12 @@ namespace Product_Sales_MVC.Controllers
         [HttpPost]
         public ActionResult Index(double txtTotalPrice = 0, int drpProdId = 0, int txtQty = 0, double txtPrice = 0)
         {
-            var resultList = operations.GetProducts();
+            var resultList = productOp.GetProducts();
             if (resultList != null)
                 ViewBag.List = resultList;
             if (drpProdId != 0)
             {
-                var resultData = operations.GetProducts().FirstOrDefault(x => x.Id == drpProdId);
+                var resultData = productOp.GetProducts().FirstOrDefault(x => x.Id == drpProdId);
                 if (resultData == null)
                     ViewBag.IsWarning = "No data found";
                 if (txtTotalPrice != 0 && txtQty != 0 && drpProdId != 0)
@@ -45,7 +48,7 @@ namespace Product_Sales_MVC.Controllers
                         var salesRes = salesOp.GetSalesById(salesId);
 
                         salesRes.Product.Qty = salesRes.Product.Qty - txtQty;
-                        if(operations.UpdateSalesData(salesRes.Product))
+                        if (productOp.UpdateSalesData(salesRes.Product))
                         {
                             return View("FinalBill", salesRes);
                         }
@@ -63,16 +66,49 @@ namespace Product_Sales_MVC.Controllers
             return View();
         }
 
-        //[HttpPost]
-        //public ActionResult FinalBill(string ProdId, string ProdName, double txtPrice, double txtTotalPrice = 0, int drpProdId = 0, int txtQty = 0)
-        //{
-        //    return View();
-        //}
+        public ActionResult Display()
+        {
+            #region Connect to Db here and Call
+            //using (var contex = new ProdSalesEntities())
+            //{
+            //    var result = contex.Database.SqlQuery<spGetProduct_Result>("spGetProduct").ToList();
+            //    if (result != null)
+            //    {
+            //        return View(result);
+            //    }
+            //    return View("Error");
+            //}
+            #endregion
 
-        //public JsonResult GetTotalPrice(int Qty, int Price)
-        //{
-        //    double total = Qty * Price;
-        //    return Json(total, JsonRequestBehavior.AllowGet);
-        //}
+            //Create method in Operation Class and Call
+            var result = salesOp.GetProducts();
+            if (result != null)
+            {
+                return View(result);
+            }
+            return View("Error");
+
+        }
+
+        [ChildActionOnly]
+        public PartialViewResult DisplaySales(string prodName)
+        {
+            #region Connect to Db and Create List data
+            //using (var contex = new ProdSalesEntities())
+            //{
+            //    //var result = contex.Database.SqlQuery<spGetProduct_Result>("spGetProduct").ToList();
+            //    //List<spGetSalesDataByName_Result> resultSet = null;
+            //    SqlParameter[] param = new SqlParameter[] {
+            //        new SqlParameter("@name",prodName??(object)DBNull.Value)
+            //    };
+            //    var resultSet = contex.Database.SqlQuery<spGetSalesDataByName_Result>("spGetSalesDataByName @name", param).ToList();
+            //    return PartialView("DisplaySales", resultSet);
+            //}
+            #endregion
+
+            //Create method in Operation Class and Call
+            var resultSet = salesOp.GetSalesDataByName(prodName);
+            return PartialView("DisplaySales", resultSet);  
+        }
     }
 }

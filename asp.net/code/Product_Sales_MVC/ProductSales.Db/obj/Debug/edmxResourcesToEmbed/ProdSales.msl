@@ -25,5 +25,22 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spGetProduct2" FunctionName="ProdSalesModel.Store.spGetProduct">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdSalesModel.spGetProduct2_Result">
+          <ScalarProperty Name="ProdName" ColumnName="ProdName" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spGetSalesDataByName1" FunctionName="ProdSalesModel.Store.spGetSalesDataByName">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="ProdSalesModel.spGetSalesDataByName1_Result">
+          <ScalarProperty Name="Qty" ColumnName="Qty" />
+          <ScalarProperty Name="TotalPrice" ColumnName="TotalPrice" />
+          <ScalarProperty Name="SalesDate" ColumnName="SalesDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -12,6 +12,8 @@ namespace ProductSales.Db
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class ProdSalesEntities : DbContext
     {
@@ -27,5 +29,19 @@ namespace ProductSales.Db
     
         public virtual DbSet<tblProduct> tblProduct { get; set; }
         public virtual DbSet<tblSales> tblSales { get; set; }
+    
+        public virtual ObjectResult<spGetProduct_Result> spGetProduct()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetProduct_Result>("spGetProduct");
+        }
+    
+        public virtual ObjectResult<spGetSalesDataByName_Result> spGetSalesDataByName(string name)
+        {
+            var nameParameter = name != null ?
+                new ObjectParameter("name", name) :
+                new ObjectParameter("name", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<spGetSalesDataByName_Result>("spGetSalesDataByName", nameParameter);
+        }
     }
 }

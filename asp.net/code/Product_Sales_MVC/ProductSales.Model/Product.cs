@@ -20,11 +20,13 @@ namespace ProductSales.Model
         public string ProdName { get; set; }
 
         [Required]
+        [Range(1,int.MaxValue ,ErrorMessage = "Enter Valid Quantity")]
         [Display(Name = "Quantity")]
         public int Qty { get; set; }
 
         [Required]
         [Display(Name = "Price")]
+        //[Range(typeof(decimal),"0",")]
         public decimal Price { get; set; }
 
         [Display(Name = "Image")]
