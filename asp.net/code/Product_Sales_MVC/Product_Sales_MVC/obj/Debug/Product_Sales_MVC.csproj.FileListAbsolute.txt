@@ -68,3 +68,7 @@ F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\obj\Debug\P
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\obj\Debug\Product_Sales_MVC.dll
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\obj\Debug\Product_Sales_MVC.pdb
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\MVC.Utilities.dll
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\PagedList.dll
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\PagedList.Mvc.dll
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\PagedList.xml
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\PagedList.Mvc.xml

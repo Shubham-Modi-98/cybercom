@@ -2,11 +2,12 @@
 using ProductSales.Model;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 
 namespace Product_Sales_MVC.Controllers
 {
@@ -18,9 +19,9 @@ namespace Product_Sales_MVC.Controllers
         {
             operations = new ProductOp();
         }
-        public ActionResult Index()
+        public ActionResult Index(int? pageNo)
         {
-            var resultSet = operations.GetProducts();
+            var resultSet = operations.GetProducts().ToPagedList(pageNo ?? 1,1);
             if (resultSet != null)
             {
                 return View(resultSet);

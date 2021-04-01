@@ -1,5 +1,6 @@
-﻿@model IEnumerable<ProductSales.Model.Product>
-
+﻿@model PagedList<ProductSales.Model.Product>
+@using PagedList
+@using PagedList.Mvc
 @{
     ViewBag.Title = "Index";
 }
@@ -11,118 +12,122 @@
 </p>
 @using (Html.BeginForm())
 {
-    <table class="table">
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.First().ProdId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().ProdName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Qty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.First().Image)
+        </th>
+        <th>
+            @Html.DisplayName("Actions")
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.ProdId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ProdName)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Qty)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Price)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Image)
-            </th>
-            <th>
-                @Html.DisplayName("Actions")
-            </th>
-        </tr>
+            <td>
+                @if (item.ProdId != null)
+                {
+                    @Html.DisplayFor(modelItem => item.ProdId)
+                }
+                else
+                {
+                    <p>No Data Found</p>
+                }
+            </td>
+            <td>
+                @if (item.ProdName != null)
+                {
+                    @Html.DisplayFor(modelItem => item.ProdName)
+                }
+                else
+                {
+                    <p>No Data Found</p>
+                }
+            </td>
+            <td>
+                @if (item.Qty != 0)
+                {
+                    @Html.DisplayFor(modelItem => item.Qty)
+                }
+                else
+                {
+                    <p style="color:red">Out of Stock</p>
+                }
+            </td>
+            <td>
+                @if (item.Price > 0)
+                {
+                    @Html.DisplayFor(modelItem => item.Price)
+                }
+                else
+                {
+                    <p>No Data Found</p>
+                }
+            </td>
+            <td>
+                <img src="data:img;base64,@item.Image" alt="Product Image" width="150" height="150" />
+            </td>
+            <td>
+                <a href="@Url.Action("Edit", new { id = item.Id })">
+                    <i class="fa fa-pencil fa-2x" title="Edit"></i>
+                </a>
 
-        @foreach (var item in Model)
-        {
-            <tr>
-                <td>
-                    @if (item.ProdId != null)
-                    {
-                        @Html.DisplayFor(modelItem => item.ProdId)
-                    }
-                    else
-                    {
-                        <p>No Data Found</p>
-                    }
-                </td>
-                <td>
-                    @if (item.ProdName != null)
-                    {
-                        @Html.DisplayFor(modelItem => item.ProdName)
-                    }
-                    else
-                    {
-                        <p>No Data Found</p>
-                    }
-                </td>
-                <td>
-                    @if (item.Qty != 0)
-                    {
-                        @Html.DisplayFor(modelItem => item.Qty)
-                    }
-                    else
-                    {
-                        <p style="color:red">Out of Stock</p>
-                    }
-                </td>
-                <td>
-                    @if (item.Price > 0)
-                    {
-                        @Html.DisplayFor(modelItem => item.Price)
-                    }
-                    else
-                    {
-                        <p>No Data Found</p>
-                    }
-                </td>
-                <td>
-                    <img src="data:img;base64,@item.Image" alt="Product Image" width="150" height="150" />
-                </td>
-                <td>
-                    <a href="@Url.Action("Edit", new { id = item.Id })">
-                        <i class="fa fa-pencil fa-2x" title="Edit"></i>
-                    </a>
-                    
-                    &nbsp; &nbsp;
+                &nbsp; &nbsp;
 
-                    @*<a href="@Url.Action("Delete","Product", new {id = item.Id, onclick = "return confirm('Are you sure want to Delete?');" })">
+                @*<a href="@Url.Action("Delete","Product", new {id = item.Id, onclick = "return confirm('Are you sure want to Delete?');" })">
                         <i class="fa fa-trash fa-2x" title="Delete" style="color:red;"></i>
                     </a>*@
 
-                    @Html.ActionLink(" ", "Delete", new {id = item.Id }, new { onclick = "return confirm('Are you sure want to Delete product-" + item.ProdName + " permanently?');", @class = "fa fa-trash fa-2x", @style = "color:red;" })
-                    
-                    @*
-                        @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-                        @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-                        @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-                    *@
-                </td>
-            </tr>
-        }
-    </table>
-}
-@*<script>
-    $(document).ready(function () {
-        $('del').click(OnDeleteClick);
-    });
-    function OnDeleteClick(e) {
-        var id = e.target.id;
-        var flag = confirm('Are you sure want to delete Product permanently?');
-        if (flag) {
-            $.ajax({
-                url: '/Product/DeleteAjax',
-                type: 'POST',
-                data: { prodId: id },
-                dataType: 'json',
-                success: function (data) {
-                    alert(data);
-                },
-                error: function (error) {
-                    alert(error);
-                }
-            });
-        }
-        return false;
+                @Html.ActionLink(" ", "Delete", new { id = item.Id }, new { onclick = "return confirm('Are you sure want to Delete product-" + item.ProdName + " permanently?');", @class = "fa fa-trash fa-2x", @style = "color:red;" })
+
+            </td>
+        </tr>
     }
-</script>*@
+    <tr>
+        <td colspan="5">
+            @*<a class="page-link" href="@Html.PagedListPager(Model, pageNo => Url.Action("Index","Product", new { pageNo }) )"></a>*@
+            @Html.PagedListPager(Model, pageNo => Url.Action("Index", "Product", new { pageNo }) )
+        </td>
+    </tr>
+</table>
+}
+
+
+
+@*<script>
+        $(document).ready(function () {
+            $('del').click(OnDeleteClick);
+        });
+        function OnDeleteClick(e) {
+            var id = e.target.id;
+            var flag = confirm('Are you sure want to delete Product permanently?');
+            if (flag) {
+                $.ajax({
+                    url: '/Product/DeleteAjax',
+                    type: 'POST',
+                    data: { prodId: id },
+                    dataType: 'json',
+                    success: function (data) {
+                        alert(data);
+                    },
+                    error: function (error) {
+                        alert(error);
+                    }
+                });
+            }
+            return false;
+        }
+    </script>*@
