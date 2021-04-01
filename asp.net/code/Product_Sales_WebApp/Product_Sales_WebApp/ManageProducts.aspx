@@ -25,16 +25,17 @@
                 </tr>
                 <tr>
                     <td colspan="2">
-                        <asp:GridView ID="grData" runat="server" AutoGenerateColumns="False" BackColor="White" BorderColor="#999999" BorderStyle="Solid" BorderWidth="1px" CellPadding="3" ForeColor="Black" GridLines="Vertical" OnRowCommand="grData_RowCommand">
-                            <AlternatingRowStyle BackColor="#CCCCCC" />
-                            <FooterStyle BackColor="#CCCCCC" />
-                            <HeaderStyle BackColor="Black" Font-Bold="True" ForeColor="White" />
-                            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
-                            <SelectedRowStyle BackColor="#000099" Font-Bold="True" ForeColor="White" />
-                            <SortedAscendingCellStyle BackColor="#F1F1F1" />
-                            <SortedAscendingHeaderStyle BackColor="#808080" />
-                            <SortedDescendingCellStyle BackColor="#CAC9C9" />
-                            <SortedDescendingHeaderStyle BackColor="#383838" />
+                        <asp:GridView ID="grData" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" AllowPaging="True" OnPageIndexChanging="grData_PageIndexChanging" PageSize="2" CellSpacing="2">
+                            <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
+                            <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
+                            <PagerSettings FirstPageText="First" LastPageText="Last" Mode="NumericFirstLast" NextPageText="&gt;" PageButtonCount="5" PreviousPageText="&lt;" />
+                            <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
+                            <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
+                            <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
+                            <SortedAscendingCellStyle BackColor="#FFF1D4" />
+                            <SortedAscendingHeaderStyle BackColor="#B95C30" />
+                            <SortedDescendingCellStyle BackColor="#F1E5CE" />
+                            <SortedDescendingHeaderStyle BackColor="#93451F" />
                             <Columns>
                                 <asp:BoundField HeaderText="Product Id" DataField="ProdId" />
                                 <asp:BoundField HeaderText="Product Name" DataField="ProdName" />
@@ -49,11 +50,14 @@
                                 <asp:TemplateField HeaderText="Edit Product">
                                     <ItemTemplate>
                                         <asp:LinkButton ID="linkBtnEdit" runat="server" ToolTip="Edit Product"
+                                            OnClick ="linkBtnEditDelete_Click"
                                             CommandName="EditProduct" CommandArgument='<%#Eval("ProdId") %>'>
                                             <i class="fa fa-edit" style="padding-left:10px; font-size:30px;"></i>
                                         </asp:LinkButton>
                                         &nbsp;&nbsp;
                                         <asp:LinkButton ID="linkBtnDelete" runat="server" ToolTip="Delete Product"
+                                            OnClick ="linkBtnEditDelete_Click"
+                                            OnClientClick ="return confirm('Are you sure want to delete product permanently?')"
                                             CommandName="DeleteProduct" CommandArgument='<%#Eval("ProdId") %>'>
                                             <i class="fa fa-trash" style="font-size:30px;color:red;"></i>
                                         </asp:LinkButton>
