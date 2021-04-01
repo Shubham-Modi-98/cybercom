@@ -106,19 +106,7 @@ namespace Product_Sales_MVC.Controllers
 
         public ActionResult Delete(int id)
         {
-            var resultSet = operations.GetProducts().Where(x => x.Id == id).FirstOrDefault();
-            if (resultSet != null)
-            {
-                return View(resultSet);
-            }
-            return View("Error");
-        }
-
-        [HttpPost]
-        public ActionResult Delete(Product product)
-        {
-            //var resultSet = operations.GetProducts().Where(x => x.Id == product.Id).FirstOrDefault();
-            if (operations.DeleteProduct(product.Id))
+            if (operations.DeleteProduct(id))
             {
                 return RedirectToAction("Index");
             }

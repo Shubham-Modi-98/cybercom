@@ -69,7 +69,7 @@
           <FunctionImport Name="spGetProduct1" ReturnType="Collection(ProdSalesModel.spGetProduct1_Result)" />
           <FunctionImport Name="spGetProduct2" ReturnType="Collection(ProdSalesModel.spGetProduct2_Result)" />
           <FunctionImport Name="spGetSalesDataByName1" ReturnType="Collection(ProdSalesModel.spGetSalesDataByName1_Result)">
-            <Parameter Name="name" Mode="In" Type="String" />
+          <Parameter Name="name" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <EntityType Name="tblProduct">

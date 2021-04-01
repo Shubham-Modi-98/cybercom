@@ -13,6 +13,7 @@ namespace ProductSales.Model
         public decimal Price { get; set; }
         public decimal TotalPrice { get; set; }
         public System.DateTime SalesDate { get; set; }
+
         public int Id { get; set; }
 
         public virtual Product Product { get; set; }

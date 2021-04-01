@@ -67,3 +67,4 @@ F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\obj\Debug\P
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\obj\Debug\Product_Sales_MVC.csproj.CopyComplete
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\obj\Debug\Product_Sales_MVC.dll
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\obj\Debug\Product_Sales_MVC.pdb
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\MVC.Utilities.dll

@@ -15,17 +15,19 @@ Begin
 	Group By P.ProdName)
 End
 
-Create Proc spGetSalesDataByName --'HP Laptop'
+Alter Proc spGetSalesDataByName --'Oppo Reno'
 @name nvarchar(50)
 As
 Begin
+	/*
 	Select S.Qty,TotalPrice,SalesDate from tblSales S,tblProduct P
 	where P.Id = S.Id and P.ProdName = @name
+	*/
 
-	/* Select SUM(S.Qty) as [Qty],SUM(TotalPrice) as [TotalPrice],
+	Select SUM(S.Qty) as [Qty],SUM(TotalPrice) as [TotalPrice],
 	CONVERT(date,SalesDate) as [SalesDate]
 	from tblSales S,tblProduct P
 	where P.Id = S.Id and P.ProdName = @name
-	Group By CONVERT(date,SalesDate) */
+	Group By CONVERT(date,SalesDate)
 End
 

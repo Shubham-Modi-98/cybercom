@@ -103,7 +103,7 @@ namespace ProductSales.Db.DbOperations
                     new SqlParameter("@name",prodName??(object)DBNull.Value)
                 };
                 var result = contex.Database.SqlQuery<spGetSalesDataByName_Result>("spGetSalesDataByName @name", param).ToList();
-                if(result != null)
+                if (result != null)
                 {
                     return result;
                 }

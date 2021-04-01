@@ -1,10 +1,6 @@
-﻿using ProductSales.Db;
-using ProductSales.Db.DbOperations;
-using ProductSales.Model;
+﻿using ProductSales.Db.DbOperations;
 using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
