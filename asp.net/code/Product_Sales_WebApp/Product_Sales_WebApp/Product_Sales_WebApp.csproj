@@ -68,10 +68,48 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddProduct.aspx" />
+    <Content Include="AllProdcutFetchService.asmx" />
+    <Content Include="DataTables\DataTables-1.10.24\css\dataTables.bootstrap.css" />
+    <Content Include="DataTables\DataTables-1.10.24\css\dataTables.bootstrap.min.css" />
+    <Content Include="DataTables\DataTables-1.10.24\css\dataTables.bootstrap4.css" />
+    <Content Include="DataTables\DataTables-1.10.24\css\dataTables.bootstrap4.min.css" />
+    <Content Include="DataTables\DataTables-1.10.24\css\dataTables.foundation.css" />
+    <Content Include="DataTables\DataTables-1.10.24\css\dataTables.foundation.min.css" />
+    <Content Include="DataTables\DataTables-1.10.24\css\dataTables.jqueryui.css" />
+    <Content Include="DataTables\DataTables-1.10.24\css\dataTables.jqueryui.min.css" />
+    <Content Include="DataTables\DataTables-1.10.24\css\dataTables.semanticui.css" />
+    <Content Include="DataTables\DataTables-1.10.24\css\dataTables.semanticui.min.css" />
+    <Content Include="DataTables\DataTables-1.10.24\css\jquery.dataTables.css" />
+    <Content Include="DataTables\DataTables-1.10.24\css\jquery.dataTables.min.css" />
+    <Content Include="DataTables\DataTables-1.10.24\images\sort_asc.png" />
+    <Content Include="DataTables\DataTables-1.10.24\images\sort_asc_disabled.png" />
+    <Content Include="DataTables\DataTables-1.10.24\images\sort_both.png" />
+    <Content Include="DataTables\DataTables-1.10.24\images\sort_desc.png" />
+    <Content Include="DataTables\DataTables-1.10.24\images\sort_desc_disabled.png" />
+    <Content Include="DataTables\DataTables-1.10.24\js\dataTables.bootstrap.js" />
+    <Content Include="DataTables\DataTables-1.10.24\js\dataTables.bootstrap.min.js" />
+    <Content Include="DataTables\DataTables-1.10.24\js\dataTables.bootstrap4.js" />
+    <Content Include="DataTables\DataTables-1.10.24\js\dataTables.bootstrap4.min.js" />
+    <Content Include="DataTables\DataTables-1.10.24\js\dataTables.foundation.js" />
+    <Content Include="DataTables\DataTables-1.10.24\js\dataTables.foundation.min.js" />
+    <Content Include="DataTables\DataTables-1.10.24\js\dataTables.jqueryui.js" />
+    <Content Include="DataTables\DataTables-1.10.24\js\dataTables.jqueryui.min.js" />
+    <Content Include="DataTables\DataTables-1.10.24\js\dataTables.semanticui.js" />
+    <Content Include="DataTables\DataTables-1.10.24\js\dataTables.semanticui.min.js" />
+    <Content Include="DataTables\DataTables-1.10.24\js\jquery.dataTables.js" />
+    <Content Include="DataTables\DataTables-1.10.24\js\jquery.dataTables.min.js" />
+    <Content Include="DataTables\datatables.css" />
+    <Content Include="DataTables\datatables.js" />
+    <Content Include="DataTables\datatables.min.css" />
+    <Content Include="DataTables\datatables.min.js" />
+    <Content Include="DataTables\jquery-3.3.1.js" />
+    <Content Include="DisplayProdDT.aspx" />
     <Content Include="DisplaySales.aspx" />
+    <Content Include="DisplaySalesDT.aspx" />
     <Content Include="FinalBill.aspx" />
     <Content Include="ManageProducts.aspx" />
     <Content Include="SaleProducts.aspx" />
+    <Content Include="SalesData.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -82,12 +120,30 @@
     <Compile Include="AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
+    <Compile Include="AllProdcutFetchService.asmx.cs">
+      <DependentUpon>AllProdcutFetchService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DisplayProdDT.aspx.cs">
+      <DependentUpon>DisplayProdDT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisplayProdDT.aspx.designer.cs">
+      <DependentUpon>DisplayProdDT.aspx</DependentUpon>
+    </Compile>
     <Compile Include="DisplaySales.aspx.cs">
       <DependentUpon>DisplaySales.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="DisplaySales.aspx.designer.cs">
       <DependentUpon>DisplaySales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DisplaySalesDT.aspx.cs">
+      <DependentUpon>DisplaySalesDT.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DisplaySalesDT.aspx.designer.cs">
+      <DependentUpon>DisplaySalesDT.aspx</DependentUpon>
     </Compile>
     <Compile Include="FinalBill.aspx.cs">
       <DependentUpon>FinalBill.aspx</DependentUpon>
@@ -103,6 +159,8 @@
     <Compile Include="ManageProducts.aspx.designer.cs">
       <DependentUpon>ManageProducts.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Prod.cs" />
+    <Compile Include="Product.cs" />
     <Compile Include="ProductImageHandler.ashx.cs">
       <DependentUpon>ProductImageHandler.ashx</DependentUpon>
     </Compile>
@@ -113,6 +171,11 @@
     </Compile>
     <Compile Include="SaleProducts.aspx.designer.cs">
       <DependentUpon>SaleProducts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sales.cs" />
+    <Compile Include="SalesData.asmx.cs">
+      <DependentUpon>SalesData.asmx</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>

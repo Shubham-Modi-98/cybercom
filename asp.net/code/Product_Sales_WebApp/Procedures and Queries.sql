@@ -126,19 +126,20 @@ End
 Alter Proc spFetchProdData
 As
 Begin
-	/* Select ProdId,ProdName,ProdPrice,ProdImage from tblProduct
-	where ProdName In
-	(Select P.ProdName
-	from tblProduct P, tblSales S
-	where S.Id = P.Id
-	Group By P.ProdName) */
-
-	Select ROW_NUMBER() Over (ORDER BY ProdImage) as [RowNo],ProdId,ProdName,ProdPrice,ProdImage from tblProduct
+	Select ProdId,ProdName,ProdPrice,ProdImage from tblProduct
 	where ProdName In
 	(Select P.ProdName
 	from tblProduct P, tblSales S
 	where S.Id = P.Id
 	Group By P.ProdName)
+	/*
+	Select ROW_NUMBER() Over (ORDER BY ProdImage) as [RowNo],ProdId,ProdName,ProdPrice,ProdImage from tblProduct
+	where ProdName In
+	(Select P.ProdName
+	from tblProduct P, tblSales S
+	where S.Id = P.Id
+	Group By P.ProdName) 
+	*/
 End
 
 Alter Proc spGetSalesDataByName --'cbv'
@@ -181,6 +182,12 @@ Group By CONVERT(date,SalesDate)
 	Select * from tblSales
 	
 Update tblProduct set ProdQty = (ProdQty-10) where Id = 7
+
+Alter Procedure selectAllProduct
+As
+Begin
+	select ProdId,ProdName,ProdQty,ProdPrice,ProdImage from tblProduct
+End
 
 /*
 Truncate Table tblSales
