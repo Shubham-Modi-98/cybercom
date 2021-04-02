@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 
 namespace Product_Sales_MVC.Controllers
 {
@@ -62,7 +64,7 @@ namespace Product_Sales_MVC.Controllers
             return View();
         }
 
-        public ActionResult Display()
+        public ActionResult Display(int? pageNo)
         {
             #region Connect to Db here and Call
             //using (var contex = new ProdSalesEntities())
@@ -77,7 +79,7 @@ namespace Product_Sales_MVC.Controllers
             #endregion
 
             //Create method in Operation Class and Call
-            var result = salesOp.GetProducts();
+            var result = salesOp.GetProducts().ToPagedList(pageNo ?? 1,3);
             if (result != null)
             {
                 return View(result);

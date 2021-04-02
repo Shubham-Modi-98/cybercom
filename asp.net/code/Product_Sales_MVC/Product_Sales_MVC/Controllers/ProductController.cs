@@ -21,7 +21,7 @@ namespace Product_Sales_MVC.Controllers
         }
         public ActionResult Index(int? pageNo)
         {
-            var resultSet = operations.GetProducts().ToPagedList(pageNo ?? 1,1);
+            var resultSet = operations.GetProducts().ToPagedList(pageNo ?? 1,3);
             if (resultSet != null)
             {
                 return View(resultSet);

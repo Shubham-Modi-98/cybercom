@@ -97,14 +97,13 @@
         </tr>
     }
     <tr>
-        <td colspan="5">
+        <td colspan="6">
             @*<a class="page-link" href="@Html.PagedListPager(Model, pageNo => Url.Action("Index","Product", new { pageNo }) )"></a>*@
             @Html.PagedListPager(Model, pageNo => Url.Action("Index", "Product", new { pageNo }) )
         </td>
     </tr>
 </table>
 }
-
 
 
 @*<script>

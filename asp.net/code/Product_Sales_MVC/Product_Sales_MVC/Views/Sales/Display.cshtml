@@ -1,5 +1,6 @@
-﻿@model IEnumerable<ProductSales.Db.spGetProduct_Result>
-
+﻿@model PagedList<ProductSales.Db.spGetProduct_Result>
+@using PagedList
+@using PagedList.Mvc
 @{
     ViewBag.Title = "Display";
 }
@@ -7,15 +8,15 @@
 <h2>Display Sales Data</h2>
 
 <p>
-    @Html.ActionLink("Add New Product", "Create","Product")
+    @Html.ActionLink("Add New Product", "Create", "Product")
 </p>
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.ProdName)
+            @Html.DisplayNameFor(model => model.First().ProdName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Image)
+            @Html.DisplayNameFor(model => model.First().Image)
         </th>
         <th>
             @Html.DisplayName("Sales Details")
@@ -38,4 +39,9 @@
             </tr>
         }
     }
+    <tr>
+        <td colspan="6">
+            @Html.PagedListPager(Model, pageNo => Url.Action("Display", "Sales", new { pageNo }))
+        </td>
+    </tr>
 </table>
