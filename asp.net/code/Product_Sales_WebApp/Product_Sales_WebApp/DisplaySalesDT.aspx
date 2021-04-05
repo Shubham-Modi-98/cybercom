@@ -24,12 +24,11 @@
             $.ajax({
                 type: "POST",
                 dataType: "json",
-                url: "ProductSalesWS.asmx/fetchAllProd",
+                url: "ProductSalesWS.asmx/GetSalesData",
                 success: function (data) {
                     $('#prodTable').DataTable({
                         data: data,
                         columns: [
-                            { 'data': 'SalesId' },
                             { 'data': 'ProdName' },
                             {
                                 'data': 'Image', 'render': function (data, type, full, meta) {
@@ -38,7 +37,6 @@
                                 }
                             },
                             { 'data': 'Qty' },
-                            { 'data': 'Price' },
                             { 'data': 'TotalPrice' },
                             { 'data': 'SalesDate' }
                         ]
@@ -55,16 +53,13 @@
             <table class="table" id="prodTable">
                 <thead>
                     <tr>
-                        <td>No</td>
                         <td>Product Name</td>
                         <td>Image</td>
                         <td>Qty</td>
-                        <td>Price</td>
                         <td>Total Price</td>
                         <td>Sales Date</td>
                     </tr>
                 </thead>
-                
             </table>
         </form>
     </div>

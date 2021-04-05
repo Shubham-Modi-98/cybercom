@@ -22,7 +22,7 @@
             $.ajax({
                 type: "POST",
                 dataType: "json",
-                url: "ProductSalesWS.asmx/GetSalesData",
+                url: "ProductSalesWS.asmx/fetchAllProd",
                 success: function (data) {
                     $('#prodTable').DataTable({
                         data: data,

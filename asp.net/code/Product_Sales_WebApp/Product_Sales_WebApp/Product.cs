@@ -7,6 +7,7 @@ namespace Product_Sales_WebApp
 {
     public class Product
     {
+        public int Id { get; set; }
         public string ProdId { get; set; }
         public string ProdName { get; set; }
         public decimal ProdPrice { get; set; }

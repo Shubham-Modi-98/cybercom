@@ -22,7 +22,7 @@ namespace Product_Sales_WebApp
     {
 
         [WebMethod]
-        public void fetchAllProd()
+        public void GetSalesData()
         {
             string conString = ConfigurationManager.ConnectionStrings["ProductSalesCS"].ConnectionString;
             SqlCommand command = null;
@@ -30,7 +30,8 @@ namespace Product_Sales_WebApp
             List<Sales> lstProduct = new List<Sales>();
             using (connection = new SqlConnection(conString))
             {
-                command = new SqlCommand("spAllDataDT", connection);
+                //command = new SqlCommand("spAllDataDT", connection);
+                command = new SqlCommand("spGetSalesGroupByDate", connection);
                 command.CommandType = CommandType.StoredProcedure;
                 connection.Open();
                 SqlDataReader reader = command.ExecuteReader();
@@ -38,12 +39,10 @@ namespace Product_Sales_WebApp
                 {
                     Sales tblData = new Sales()
                     {
-                        SalesId = Convert.ToInt32(reader["SalesId"]),
+                        //SalesId = Convert.ToInt32(reader["SalesId"]),
                         Qty = Convert.ToInt32(reader["Qty"]),
-                        Price = Convert.ToDecimal(reader["Price"]),
                         TotalPrice = Convert.ToDecimal(reader["TotalPrice"]),
                         SalesDate = ((DateTime)reader["SalesDate"]).ToShortDateString(),
-                        Id = Convert.ToInt32(reader["Id"].ToString()),
                         ProdName = Convert.ToString(reader["ProdName"]),
                         Image = Convert.ToBase64String((byte[])reader["ProdImage"])
                     };
@@ -56,7 +55,7 @@ namespace Product_Sales_WebApp
         }
 
         [WebMethod]
-        public void GetSalesData()
+        public void fetchAllProd()
         {
             string conString = ConfigurationManager.ConnectionStrings["ProductSalesCS"].ConnectionString;
             SqlCommand command = null;

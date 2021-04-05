@@ -44,6 +44,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -107,6 +110,8 @@
     <Content Include="DisplaySalesDT.aspx" />
     <Content Include="FinalBill.aspx" />
     <Content Include="ManageProducts.aspx" />
+    <Content Include="ProductData.aspx" />
+    <Content Include="ProductDataService.asmx" />
     <Content Include="ProductSalesWS.asmx" />
     <Content Include="SaleProducts.aspx" />
     <Content Include="Web.config" />
@@ -119,6 +124,8 @@
     <Compile Include="AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
     </Compile>
+    <Compile Include="DataTableResponse.cs" />
+    <Compile Include="DBLayer.cs" />
     <Compile Include="DisplayProdDT.aspx.cs">
       <DependentUpon>DisplayProdDT.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -156,6 +163,17 @@
     </Compile>
     <Compile Include="Prod.cs" />
     <Compile Include="Product.cs" />
+    <Compile Include="ProductData.aspx.cs">
+      <DependentUpon>ProductData.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ProductData.aspx.designer.cs">
+      <DependentUpon>ProductData.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDataService.asmx.cs">
+      <DependentUpon>ProductDataService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ProductImageHandler.ashx.cs">
       <DependentUpon>ProductImageHandler.ashx</DependentUpon>
     </Compile>

@@ -57,3 +57,5 @@ F:\Cybercom Asp Git\asp.net\code\Product_Sales_WebApp\Product_Sales_WebApp\obj\D
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_WebApp\Product_Sales_WebApp\obj\Debug\Product_Sales_WebApp.csproj.CopyComplete
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_WebApp\Product_Sales_WebApp\obj\Debug\Product_Sales_WebApp.dll
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_WebApp\Product_Sales_WebApp\obj\Debug\Product_Sales_WebApp.pdb
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_WebApp\Product_Sales_WebApp\bin\Newtonsoft.Json.dll
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_WebApp\Product_Sales_WebApp\bin\Newtonsoft.Json.xml
