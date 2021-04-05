@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "IndexDT";
+}
+<h2>Display Data using DataTable</h2>
+<table class="table" id="prodTable">
+    <thead>
+        <tr>
+            <td>Product Id</td>
+            <td>Product Name</td>
+            <td>Image</td>
+            <td>Qty</td>
+            <td>Price</td>
+        </tr>
+    </thead>
+</table>
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.css" />
+@section scripts{
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.24/datatables.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#prodTable").DataTable({
+                "ajax": {
+                    "url": "/Product/GetListDT",
+                    "type": "GET",
+                    "datatype": "json"
+                },
+                "columns": [
+                    { "data": "ProdId" },
+                    { "data": "ProdName" },
+                    {
+                        "data": "Image", "render": function (data, type, full, meta) {
+                            var img = "data:img;base64," + data;
+                            return "<img src = " + img + " height=100px width=100px/>"
+                        }
+                    },
+                    { "data": "Qty" },
+                    { "data": "Price" }
+                ]
+            });
+        });
+    </script>
+}

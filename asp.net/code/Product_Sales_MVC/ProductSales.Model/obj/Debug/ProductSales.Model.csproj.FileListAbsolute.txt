@@ -1,6 +1,5 @@
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Model\bin\Debug\ProductSales.Model.dll
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Model\bin\Debug\ProductSales.Model.pdb
-F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Model\obj\Debug\ProductSales.Model.csprojAssemblyReference.cache
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Model\obj\Debug\ProductSales.Model.csproj.CoreCompileInputs.cache
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Model\obj\Debug\ProductSales.Model.dll
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\ProductSales.Model\obj\Debug\ProductSales.Model.pdb

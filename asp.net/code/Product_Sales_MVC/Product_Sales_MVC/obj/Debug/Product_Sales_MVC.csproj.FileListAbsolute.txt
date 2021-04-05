@@ -36,7 +36,10 @@ F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\EntityF
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\EntityFramework.SqlServer.dll
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\Microsoft.Web.Infrastructure.dll
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\MVC.Utilities.dll
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\Newtonsoft.Json.dll
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\PagedList.dll
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\PagedList.Mvc.dll
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\ProductSales.Db.dll
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\ProductSales.Model.dll
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\System.Web.Helpers.dll
@@ -54,6 +57,8 @@ F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\EntityF
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\EntityFramework.SqlServer.xml
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\Newtonsoft.Json.xml
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\PagedList.xml
+F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\PagedList.Mvc.xml
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\System.Web.Helpers.xml
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\System.Web.Mvc.xml
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\System.Web.Optimization.xml
@@ -67,8 +72,3 @@ F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\obj\Debug\P
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\obj\Debug\Product_Sales_MVC.csproj.CopyComplete
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\obj\Debug\Product_Sales_MVC.dll
 F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\obj\Debug\Product_Sales_MVC.pdb
-F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\MVC.Utilities.dll
-F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\PagedList.dll
-F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\PagedList.Mvc.dll
-F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\PagedList.xml
-F:\Cybercom Asp Git\asp.net\code\Product_Sales_MVC\Product_Sales_MVC\bin\PagedList.Mvc.xml

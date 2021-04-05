@@ -113,5 +113,16 @@ namespace Product_Sales_MVC.Controllers
             }
             return View("Error");
         }
+
+        public ActionResult IndexDT()
+        {
+            return View();
+        }
+
+        public ActionResult GetListDT()
+        {
+            var resultSet = operations.GetProducts();
+            return Json(new { data = resultSet }, JsonRequestBehavior.AllowGet);
+        }
     }
 }
