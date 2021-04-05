@@ -1,0 +1,9 @@
+Work Report on ASP.Net MVC [05/04/2021]
+
+-> Completed All task which is given by Sir
+	-> Add favicon in All Display Data pages [.net c# & MVC]
+	-> Display Pagination in Display Data Pages [.net c# & MVC]
+	-> Used jQueryData table for dsplay Data instead of GridView in [Asp.Net]
+	-> Also perform same in Asp.net MVC
+	-> Done task in jQuery DataTable serverside in Asp.net using Web Services
+-> All task is Completed and Learn more topics in jQuery Datatable.s
