@@ -9,8 +9,6 @@ namespace Product_Sales_WebApp
     {
         public string prodId { get; set; }
         public string prodName { get; set; }
-        public int prodQty { get; set; }
-        public decimal prodPrice { get; set; }
         public string prodImage { get; set; }
     }
 }

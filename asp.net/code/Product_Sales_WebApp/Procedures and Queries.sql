@@ -126,7 +126,7 @@ End
 Alter Proc spFetchProdData
 As
 Begin
-	Select ProdId,ProdName,ProdPrice,ProdImage from tblProduct
+	Select ProdId,ProdName,ProdImage,ProdQty,ProdPrice from tblProduct
 	where ProdName In
 	(Select P.ProdName
 	from tblProduct P, tblSales S
@@ -179,8 +179,16 @@ Group By CONVERT(date,SalesDate)
 	
 
 	Select * from tblProduct
-	Select * from tblSales
+	Select S.*,P.ProdName, P.ProdImage from tblSales S, tblProduct P 
+	where S.Id = P.Id
 	
+Create Procedure spAllDataDT
+As
+Begin
+	Select S.*,P.ProdName, P.ProdImage from tblSales S, tblProduct P 
+	where S.Id = P.Id
+End
+
 Update tblProduct set ProdQty = (ProdQty-10) where Id = 7
 
 Alter Procedure selectAllProduct

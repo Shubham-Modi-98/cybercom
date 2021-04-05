@@ -22,48 +22,45 @@
             $.ajax({
                 type: "POST",
                 dataType: "json",
-                url: "AllProdcutFetchService.asmx/fetchAllProd",
+                url: "ProductSalesWS.asmx/GetSalesData",
                 success: function (data) {
                     $('#prodTable').DataTable({
                         data: data,
                         columns: [
-                            { 'data': 'prodId' },
-                            { 'data': 'prodName' },
-                            { 'data': 'prodQty' },
-                            { 'data': 'prodPrice' },
+                            { 'data': 'ProdId' },
+                            { 'data': 'ProdName' },
                             {
-                                'data': 'prodImage', 'render': function (data, type, full, meta) {
+                                'data': 'ProdImage', 'render': function (data, type, full, meta) {
                                     var img = 'data:img;base64,' + data;
                                     return '<img src = "' + img + '" height="100px" width="100px" />'
                                 }
-                                //function (ProdName) {
-                                //    var date = new Date(parseInt(date.substr(6)));
-                                //    var month = date.getMonth() + 1;
-                                //    return date.getDate() + "/" + month + "/" + date.getFullYear();
-                                //}
-                            }
+                            },
+                            { 'data': 'ProdQty' },
+                            { 'data': 'ProdPrice' }
                         ]
                     });
                 }
             });
         });
     </script>
+
 </head>
 <body>
-    <form id="form1" runat="server">
-        <div>
-            <table class="table" id="prodTable">
+    <div style="margin-left: auto; margin-right: auto; padding-top: 20px;">
+        <h1 style="text-align: center; color: darkgoldenrod">All Products Data</h1>
+        <form id="form1" runat="server">
+            <table id="prodTable" class="table">
                 <thead>
                     <tr>
-                        <td>Product Id</td>
-                        <td>Name</td>
-                        <td>Qty</td>
-                        <td>Price</td>
+                        <td>Prod Id</td>
+                        <td>Prod Name</td>
                         <td>Image</td>
+                        <td>Quantity</td>
+                        <td>Price</td>
                     </tr>
                 </thead>
             </table>
-        </div>
-    </form>
+        </form>
+    </div>
 </body>
 </html>

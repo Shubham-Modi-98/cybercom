@@ -24,20 +24,23 @@
             $.ajax({
                 type: "POST",
                 dataType: "json",
-                url: "SalesData.asmx/GetSalesData",
+                url: "ProductSalesWS.asmx/fetchAllProd",
                 success: function (data) {
                     $('#prodTable').DataTable({
                         data: data,
                         columns: [
-                            { 'data': 'ProdId' },
+                            { 'data': 'SalesId' },
                             { 'data': 'ProdName' },
-                            { 'data': 'ProdPrice' },
                             {
-                                'data': 'ProdImage', 'render': function (data, type, full, meta) {
+                                'data': 'Image', 'render': function (data, type, full, meta) {
                                     var img = 'data:img;base64,' + data;
                                     return '<img src = "' + img + '" height="100px" width="100px" />'
                                 }
-                            }
+                            },
+                            { 'data': 'Qty' },
+                            { 'data': 'Price' },
+                            { 'data': 'TotalPrice' },
+                            { 'data': 'SalesDate' }
                         ]
                     });
                 }
@@ -49,48 +52,20 @@
     <div style="margin-left: auto; margin-right: auto; padding-top: 20px;">
         <h1 style="text-align: center; color: darkgoldenrod">Sales Products Data</h1>
         <form id="form1" runat="server">
-            <table id="prodTable" class="table">
-                <thead>
-                    <tr>
-                        <td>Prod Id</td>
-                        <td>Prod Name</td>
-                        <td>Price</td>
-                        <td>Image</td>
-                    </tr>
-                </thead>
-            </table>
-
-            <%--<table style="margin-left: auto; margin-right: auto; padding-top: 10px; border: dashed;">
-                <tr>
-                    <td colspan="2">
-                        <h1 style="text-align: center; color: darkorange; font-style: oblique;">Sales Data List</h1>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="vertical-align:baseline;text-align:left;">
-                        
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" style="text-align: center">
-                        <asp:Label ID="lblMessage" runat="server" Text=""></asp:Label>
-                    </td>
-                </tr>
+            <table class="table" id="prodTable">
                 <thead>
                     <tr>
                         <td>No</td>
-                        <td>Prod Id</td>
                         <td>Product Name</td>
+                        <td>Image</td>
+                        <td>Qty</td>
+                        <td>Price</td>
+                        <td>Total Price</td>
+                        <td>Sales Date</td>
                     </tr>
                 </thead>
+                
             </table>
-            <table style="margin-left: auto; margin-right: auto; padding-top: 10px; padding-bottom: 20px">
-                <tr>
-                    <td style="text-align: center; font-style: normal; font-weight: 600;">
-                        <asp:LinkButton ID="linkViewProduct" runat="server" PostBackUrl="~/AddProduct.aspx">Add Products</asp:LinkButton>
-                    </td>
-                </tr>
-            </table>--%>
         </form>
     </div>
 </body>

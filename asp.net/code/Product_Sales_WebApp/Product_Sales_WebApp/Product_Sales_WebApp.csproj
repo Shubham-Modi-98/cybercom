@@ -68,7 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AddProduct.aspx" />
-    <Content Include="AllProdcutFetchService.asmx" />
     <Content Include="DataTables\DataTables-1.10.24\css\dataTables.bootstrap.css" />
     <Content Include="DataTables\DataTables-1.10.24\css\dataTables.bootstrap.min.css" />
     <Content Include="DataTables\DataTables-1.10.24\css\dataTables.bootstrap4.css" />
@@ -108,8 +107,8 @@
     <Content Include="DisplaySalesDT.aspx" />
     <Content Include="FinalBill.aspx" />
     <Content Include="ManageProducts.aspx" />
+    <Content Include="ProductSalesWS.asmx" />
     <Content Include="SaleProducts.aspx" />
-    <Content Include="SalesData.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -119,10 +118,6 @@
     </Compile>
     <Compile Include="AddProduct.aspx.designer.cs">
       <DependentUpon>AddProduct.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="AllProdcutFetchService.asmx.cs">
-      <DependentUpon>AllProdcutFetchService.asmx</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="DisplayProdDT.aspx.cs">
       <DependentUpon>DisplayProdDT.aspx</DependentUpon>
@@ -164,6 +159,10 @@
     <Compile Include="ProductImageHandler.ashx.cs">
       <DependentUpon>ProductImageHandler.ashx</DependentUpon>
     </Compile>
+    <Compile Include="ProductSalesWS.asmx.cs">
+      <DependentUpon>ProductSalesWS.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SaleProducts.aspx.cs">
       <DependentUpon>SaleProducts.aspx</DependentUpon>
@@ -173,10 +172,6 @@
       <DependentUpon>SaleProducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Sales.cs" />
-    <Compile Include="SalesData.asmx.cs">
-      <DependentUpon>SalesData.asmx</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

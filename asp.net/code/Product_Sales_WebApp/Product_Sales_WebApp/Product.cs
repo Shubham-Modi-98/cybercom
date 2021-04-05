@@ -11,9 +11,9 @@ namespace Product_Sales_WebApp
         public string ProdName { get; set; }
         public decimal ProdPrice { get; set; }
         public string ProdImage { get; set; }
+        public int ProdQty { get; set; }
 
         //public virtual Sales Sales { get; set; }
 
-        //public int ProdQty { get; set; }
     }
 }
