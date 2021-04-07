@@ -1,0 +1,10 @@
+Work Report on ASP.Net MVC [07/04/2021]
+
+-> Completed All task which is given by Sir
+	-> Watch more videos on EntityFramework
+	-> Learn SweetAlert jQuery
+	-> Done task in jQuery DataTable serverside in Asp.net using Web Services
+-> Work on Project Mello Catering Admin Side and Database
+-> Understand the project database tables
+-> Asked doubts to sir and clear.
+-> All task is Completed and Learn more topics in jQuery Datatable
