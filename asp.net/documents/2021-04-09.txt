@@ -1,0 +1,6 @@
+Work Report on ASP.Net MVC [09/04/2021]
+
+-> Work on Project Mello Catering Admin Side and Database
+-> Understand the project database tables
+-. Understand Admin Panel of Mello Catering.
+-> Asked doubts to sir and clear.
