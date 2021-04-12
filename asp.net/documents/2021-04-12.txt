@@ -1,0 +1,8 @@
+Work Report on Project and Angular [12/04/2021]
+
+-> Work on Project Mello Catering in more details Admin Side and Database
+-> Add some random data from admin side and show effects.
+-> Also learn that never remove or delete data from database it is set to not shown to user
+-> Understand the project database tables and understand the used of IsDelete column
+-> Install angular and node in Laptop and Create one Demo project and run it.
+-> Learn Angular versions history and Introduction part.
