@@ -1,0 +1,9 @@
+Work Report on Angular [16/04/2021]
+
+-> Learn Angular component, module, service, directives.
+-> watch video tutorials on it which is given by mam also watch extra tutorials on Yotube
+-> Try to more and more clear with the concepts.
+-> Practice on all concepts and clear some doubts and solved errors.
+-> Create project, In that one form create and on That form you can add data and
+   below that added data display also give link to remove data
+-> In that used object, 2 way-data binding, if-else, for and functions of object
