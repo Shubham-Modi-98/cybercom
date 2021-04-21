@@ -1,0 +1,10 @@
+Work Report on Angular [21/04/2021]
+
+-> Learn Angular Reactive form more deeply
+-> watch video tutorials on it which is given by mam also watch extra tutorials on Yotube
+-> Try to more and more clear with the concepts.
+-> Create custom validators like unique name, confrim password and postal code, email, contains space.
+-> Practice on all concepts and clear some doubts and solved errors.
+-> Create project, In that one form create and on That form you can add data and
+   below that added data display also give link to remove data
+-> In that used and learn FormBuilder, CustomValidation, Radio,Dropdown and check Vlidations.
