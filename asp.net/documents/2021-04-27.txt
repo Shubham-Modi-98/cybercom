@@ -1,0 +1,7 @@
+Work Report on Web API [27/04/2021]
+
+-> Learn Web API on tutorials
+-> watch video tutorials on it which is given by sir also watch extra tutorials on Yotube
+-> Try to more and more clear with the concepts.
+-> Create demo api and run it on postman.
+-> Practice on WebAPI
