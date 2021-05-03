@@ -1,0 +1,12 @@
+F:\Cybercom Asp Git\asp.net\practice\ApiToken\DbLayer\bin\Debug\DbLayer.dll.config
+F:\Cybercom Asp Git\asp.net\practice\ApiToken\DbLayer\bin\Debug\DbLayer.dll
+F:\Cybercom Asp Git\asp.net\practice\ApiToken\DbLayer\bin\Debug\DbLayer.pdb
+F:\Cybercom Asp Git\asp.net\practice\ApiToken\DbLayer\bin\Debug\EntityFramework.dll
+F:\Cybercom Asp Git\asp.net\practice\ApiToken\DbLayer\bin\Debug\EntityFramework.SqlServer.dll
+F:\Cybercom Asp Git\asp.net\practice\ApiToken\DbLayer\bin\Debug\EntityFramework.xml
+F:\Cybercom Asp Git\asp.net\practice\ApiToken\DbLayer\bin\Debug\EntityFramework.SqlServer.xml
+F:\Cybercom Asp Git\asp.net\practice\ApiToken\DbLayer\obj\Debug\DbLayer.Db.csprojAssemblyReference.cache
+F:\Cybercom Asp Git\asp.net\practice\ApiToken\DbLayer\obj\Debug\DbLayer.Db.csproj.CoreCompileInputs.cache
+F:\Cybercom Asp Git\asp.net\practice\ApiToken\DbLayer\obj\Debug\DbLayer.Db.csproj.CopyComplete
+F:\Cybercom Asp Git\asp.net\practice\ApiToken\DbLayer\obj\Debug\DbLayer.dll
+F:\Cybercom Asp Git\asp.net\practice\ApiToken\DbLayer\obj\Debug\DbLayer.pdb

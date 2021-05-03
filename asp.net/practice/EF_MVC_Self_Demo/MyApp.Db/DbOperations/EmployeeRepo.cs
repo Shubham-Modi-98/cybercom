@@ -83,7 +83,7 @@ namespace MyApp.Db.DbOperations
             using (var conn = new DbDemoEFEntities())
             {
                 var result = conn.tblEmployee.FirstOrDefault(x => x.Id == id);
-                if (result != null)
+                if (result !=   null)
                 {
                     conn.tblEmployee.Remove(result);
                     conn.SaveChanges();

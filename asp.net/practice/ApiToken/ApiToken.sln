@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31205.134
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiToken", "ApiToken\ApiToken.csproj", "{6B307FF2-82D7-4EC7-954B-B840375FB402}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DbLayer.Db", "DbLayer\DbLayer.Db.csproj", "{50E68325-C45A-498A-A35E-E2D8B6E07B43}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B307FF2-82D7-4EC7-954B-B840375FB402}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B307FF2-82D7-4EC7-954B-B840375FB402}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B307FF2-82D7-4EC7-954B-B840375FB402}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B307FF2-82D7-4EC7-954B-B840375FB402}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50E68325-C45A-498A-A35E-E2D8B6E07B43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50E68325-C45A-498A-A35E-E2D8B6E07B43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50E68325-C45A-498A-A35E-E2D8B6E07B43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50E68325-C45A-498A-A35E-E2D8B6E07B43}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {30DB13F5-E8FA-4A97-B9E7-687E213805A8}
+	EndGlobalSection
+EndGlobal
