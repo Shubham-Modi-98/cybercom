@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
   checkAdmin(formData:any)
   {
     this.spinnerService.requestStarted();
-    if(formData.value.UserName === "Shubham" && formData.value.Password === "1998")
+    if(formData.value.UserName === "Admin@user.com" && formData.value.Password === "Admin@12345")
     {
       this.spinnerService.requestEnded();
       this.adminCred = {'userName':formData.value.UserName,'password':formData.value.Password};

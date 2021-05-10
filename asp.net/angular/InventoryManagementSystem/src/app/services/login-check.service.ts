@@ -22,13 +22,11 @@ export class LoginCheckService implements OnInit {
     // console.log(this.adminCheck.password);
     if(this.jsonData == null)  
     {
-      //console.log('Hello');
       this.router.navigateByUrl('');
     }
     else 
     {
-      if (this.jsonData["userName"] !== "Shubham" && this.jsonData["password"] !== "1998") {
-        console.log('index');
+      if (this.jsonData["userName"] !== "Admin@user.com" && this.jsonData["password"] !== "Admin@12345") {
         this.router.navigateByUrl('');
       }
     }
