@@ -1,0 +1,67 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" routerLink="">Admin - Inventory System</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+      <!-- <div class="navbar-collapse" id="navbarResponsive"> -->
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active ">
+            <a class="nav-link" routerLink ="dashboard" >Dashboard
+                  <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="customers" >Customer Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="products" >Product Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="orders" >Orders Details</a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" routerLink = "logout" >LogOut</a>
+          </li> -->
+          <li ngbDropdown class="nav-item dropdown">
+            <a ngbDropdownToggle class="nav-link dropdown-toggle" name="navDropdown" id="navDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Welcome,User
+            </a>
+            <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navDropdown">
+              <a class="dropdown-item" routerLink = "logout" >LogOut</a>
+              <!-- <a *ngIf="isUser" class="dropdown-item" routerLink = "logout" >LogOut</a>
+              <a *ngIf="!isUser" class="dropdown-item" routerLink = "" >Login First</a> -->
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+</nav>
+  
+<header>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+      <!-- <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol> -->
+      <div class="carousel-inner" role="listbox">
+        <!-- Slide One - Set the background image for this slide in the line below -->
+        <div class="carousel-item active" style="background-image: url('https://source.unsplash.com/RCAhiGJsUUE/1920x1080')">
+          <div class="carousel-caption d-none d-md-block">
+            <h3 class="display-4">Inventory Management System</h3>
+            <p class="lead">Admin Panel</p>
+          </div>
+        </div>
+      </div>
+      <!-- <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a> -->
+    </div>
+</header>

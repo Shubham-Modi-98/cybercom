@@ -1,0 +1,46 @@
+<!-- <ngx-spinner
+bdColor="rgba(0, 0, 0, 1)"
+template="<img src='https://media1.tenor.com/images/3a0c9909b542717ce9f651d07c4d4592/tenor.gif?itemid=8985245' />"
+>
+  <p style="font-size: 20px; color: white">Loading...</p>
+</ngx-spinner> -->
+<form [formGroup]="loginForm" (ngSubmit)="checkAdmin(loginForm)">
+    <div class="card">
+        <div class="card-header">
+            <h3>Login Page</h3>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Admin-Login</h5>
+            <div class="form-group col-md-5">
+                <label for="userName">User Name</label>
+                <input type="text" id="txtUserName" 
+                    placeholder="Enter User Name"
+                    formControlName=UserName class="form-control" />
+                <span class="form-control alert alert-danger"
+                    *ngIf="_form.UserName?.touched && _form.UserName?.invalid"> 
+                        User Name is Required
+                </span>
+            </div>
+            <div class="form-group col-md-5">
+                <label for="password">Password</label>
+                <input type="password" id="txtPassword"
+                placeholder="Enter Password" 
+                    formControlName=Password class="form-control" />
+                <span class="form-control alert alert-danger"
+                    *ngIf="_form.Password?.touched && _form.Password?.invalid"> 
+                        Password is Required
+                </span>
+            </div>
+            <div class="form-group col-md-5">
+                <button class="btn btn-primary" type="submit"id="btnSignUp"
+                    [disabled]="loginForm.invalid">Login
+                </button>
+            </div>
+            <div class="form-group col-md-5">
+                <div class="alert alert-danger" *ngIf="loginForm.errors">
+                    Invalid Login Credentials
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,76 @@
+<form [formGroup]="customerForm" (ngSubmit)="addCustomer(customerForm)">
+    <div class="card">
+        <div class="card-header">
+            <h3>
+                {{headingText}}
+            </h3>
+        </div>
+        <div class="card-body">
+            <!-- <h5 class="card-title">Admin-Login</h5> -->
+            <div class="form-group col-md-5">
+                <label for="custName">Customer Name *</label>
+                <input type="text" id="txtCustomerName" 
+                    placeholder="Enter Customer Name"
+                    formControlName=Name class="form-control" />
+                <div class="alert alert-danger"
+                    *ngIf="_form.Name.touched && _form.Name.invalid"> 
+                    <div *ngIf="_form.Name.errors?.required"> 
+                        Customer Name is Required
+                    </div>        
+                    <div *ngIf="_form.Name.errors?.minlength"> 
+                        Customer Name must contain minimum 3 characters
+                    </div>
+                    <div *ngIf="_form.Name.errors?.pattern"> 
+                        only allows alphabets and space.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-5">
+                <label for="email">Email *</label>
+                <input type="email" id="txtEmail"
+                placeholder="Enter Email" 
+                    formControlName=Email class="form-control" />
+                    <div class="alert alert-danger"
+                    *ngIf="_form.Email.touched && _form.Email.invalid"> 
+                    <div *ngIf="_form.Email.errors?.required"> 
+                        Email is Required
+                    </div>        
+                    <div *ngIf="_form.Email.errors?.pattern"> 
+                        Invalid Email Id format
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-5">
+                <label for="phone">Phone *</label>
+                <input type="text" id="txtPhone"
+                placeholder="Enter Phone Number" 
+                    formControlName=Phone class="form-control" />
+                    <div class="alert alert-danger"
+                    *ngIf="_form.Phone.touched && _form.Phone.invalid"> 
+                    <div *ngIf="_form.Phone.errors?.required"> 
+                        Phone Number is Required
+                    </div>   
+                    <div *ngIf="_form.Phone.errors?.minlength"> 
+                        Phone Number must contain minimum 10 characters
+                    </div>     
+                    <div *ngIf="_form.Phone.errors?.pattern"> 
+                        Invalid Phone number format
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-5">
+                <button class="btn btn-primary shadow-lg elavation" 
+                    type="submit"
+                    [disabled]="customerForm.invalid"
+                    id="btnAddCustomer">
+                        {{btnText}}
+                </button>
+            </div>
+            <div class="form-group col-md-5">
+                <div class="alert alert-danger" *ngIf="customerForm.errors">
+                    Invalid Form Data
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

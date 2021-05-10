@@ -1,0 +1,92 @@
+<div class="btnCont">
+    <button class='btn btn-primary pull-right shadow-lg' (click)="gotoAddCustomer()">
+        Add Customer
+    </button>
+</div>
+<div class="txtCont">
+    <input type="text" name="txtSearchName"
+        #txtSearchName
+        placeholder="Enter Name to Search" 
+        (keyup)="searchCustRec($event)"
+        class='form-control col-md-3 pull-left' />
+</div>
+<div class="cont">
+    <div class="card">
+        <div class="card-header">
+            <h3>Customers List</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-dark shadow-lg p-3 mb-5" >
+                <thead>
+                    <tr>
+                        <!-- <td>Customer Id</td> -->
+                        <th>Customer Name</th>
+                        <th>Customer Email</th>
+                        <th>Customer Phone</th>
+                        <th>Updated Date</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody *ngIf="txtSearchName.value.length == 0">
+                    <tr *ngFor="let customer of customerData | paginate: { itemsPerPage: itemsDisplayPerPage, 
+                        currentPage: page, totalItems:totalLength } ">
+                        <!-- <td>{{customer.CustomerID}}</td> -->
+                        <td>{{customer.Name}}</td>
+                        <td>{{customer.Email}}</td>
+                        <td>{{customer.Phone}}</td>
+                        <td>{{customer.UpdatedDate | date:'medium'}}</td>
+                        <td>
+                            <a class="btn btn-info" [routerLink]="['/customers/edit/',customer.CustomerID]">Edit
+                                <i class="fa fa-pencil"></i>
+                            </a> &nbsp;
+                            <a class="btn btn-danger" [routerLink]="['/customers/delete/',customer.CustomerID,customer.Name]" >Delete
+                                <i class="fa fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot *ngIf="txtSearchName.value.length == 0">
+                    <tr>
+                        <td colspan="7">
+                            <pagination-controls class="pagi" (pageChange)="pageNo($event)" ></pagination-controls>
+                        </td>
+                    </tr>
+                </tfoot>
+
+                <tbody *ngIf="txtSearchName.value.length != 0">
+                    <tr *ngFor="let customer of resultSearchData | paginate: { itemsPerPage: itemsDisplayPerPage, 
+                        currentPage: page, totalItems:totalLength } ">
+                        <!-- <td>{{customer.CustomerID}}</td> -->
+                        <td>{{customer.Name}}</td>
+                        <td>{{customer.Email}}</td>
+                        <td>{{customer.Phone}}</td>
+                        <td>{{customer.UpdatedDate | date:'medium'}}</td>
+                        <td>
+                            <a class="btn btn-info" [routerLink]="['/customers/edit/',customer.CustomerID]">Edit
+                                <i class="fa fa-pencil"></i>
+                            </a> &nbsp;
+                            <a class="btn btn-danger" [routerLink]="['/customers/delete/',customer.CustomerID,customer.Name]" >Delete
+                                <i class="fa fa-trash"></i>
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot *ngIf="txtSearchName.value.length != 0 && resultSearchData.length != 0 ">
+                    <tr>
+                        <td colspan="7">
+                            <pagination-controls class="pagi" (pageChange)="page = $event" ></pagination-controls>
+                        </td>
+                    </tr>
+                </tfoot>
+                
+                <tbody *ngIf="txtSearchName.value.length != 0 && resultSearchData.length == 0 ">
+                    <tr>
+                        <td colspan="7"><b>No Customers Found</b></td>
+                    </tr>
+                </tbody>
+
+            </table>
+            <!-- <pagination-controls class="shadow-lg p-3 mb-5" (pageChange)="page = $event" ></pagination-controls> -->
+        </div>
+    </div>
+</div>

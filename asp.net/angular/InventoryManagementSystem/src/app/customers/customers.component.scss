@@ -1,0 +1,44 @@
+.cont {
+    height: max-content;
+    padding-top: 50px;
+    min-height: 350px;
+    text-align: center;
+    background: #343a40;
+    // background: slategrey;
+    color: black;
+}
+
+.btnCont {
+    height: fit-content;
+    padding-top: 15px;
+    padding-right: 20px;
+    text-align: center;
+    background: #343a40;
+    // background: slategrey;
+    color: #000000;
+    transition: transform .2s;
+    :hover {
+        transform: scale(1.06);
+        background-color: darkblue;
+        color:white;
+    }
+}
+
+.txtCont {
+    height: fit-content;
+    padding-top: 10px;
+    padding-left: 20px;
+    text-align: center;
+    background: #343a40;
+    // background: slategrey;
+    color: black;
+    :hover {
+        transform: scale(1.05);
+        cursor: pointer;
+    }
+}
+
+.card {
+    background: #343a40;
+    color: white;
+}

@@ -1,0 +1,70 @@
+<form [formGroup]="productForm" (ngSubmit)="addProduct(productForm)">
+    <div class="card">
+        <div class="card-header">
+            <h3>
+                {{headingText}}
+            </h3>
+        </div>
+        <div class="card-body">
+            <!-- <h5 class="card-title">Admin-Login</h5> -->
+            <div class="form-group col-md-5">
+                <label for="prodName">Product Name *</label>
+                <input type="text" id="txtProductName" 
+                    placeholder="Enter Product Name"
+                    formControlName=Name class="form-control" />
+                <div class="alert alert-danger"
+                    *ngIf="_form.Name.touched && _form.Name.invalid"> 
+                    <div *ngIf="_form.Name.errors?.required"> 
+                        Product Name is Required
+                    </div>        
+                    <div *ngIf="_form.Name.errors?.minlength"> 
+                        Product Name must contain minimum 3 characters
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-5">
+                <label for="stock">Stocks(Qty) *</label>
+                <input type="number" id="txtStocks"
+                placeholder="Enter Quantity" 
+                    formControlName=Stock class="form-control" />
+                    <div class="alert alert-danger"
+                    *ngIf="_form.Stock.touched && _form.Stock.invalid"> 
+                    <div *ngIf="_form.Stock.errors?.required"> 
+                        Quantity is Required to Add Product.
+                    </div>        
+                    <div *ngIf="_form.Stock.errors?.pattern"> 
+                        Quantity must be Greater than 0 and not contains decimal.
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-5">
+                <label for="price">Price *</label>
+                <input type="number" id="txtPrice"
+                placeholder="Enter Product Price" 
+                    formControlName=Price class="form-control" />
+                    <div class="alert alert-danger"
+                    *ngIf="_form.Price.touched && _form.Price.invalid"> 
+                    <div *ngIf="_form.Price.errors?.required"> 
+                        Product Price is Required
+                    </div>  
+                    <div *ngIf="_form.Price.errors?.pattern"> 
+                        Product price must be greater than 0;
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-md-5">
+                <button class="btn btn-primary" 
+                    type="submit"
+                    [disabled]="productForm.invalid"
+                    id="btnAddProduct">
+                        {{btnText}}
+                </button>
+            </div>
+            <div class="form-group col-md-5">
+                <div class="alert alert-danger" *ngIf="productForm.errors">
+                    Invalid Form Data
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
